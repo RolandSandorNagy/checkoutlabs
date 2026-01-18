@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--
+    Hey! 👋 If you’re reading this, welcome behind the scenes.
+    CheckoutLabs landing page built with vanilla HTML/CSS. Say hi: roland.s.nagy@gmail.com
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CheckoutLabs — Shopify Plus & Checkout Development for Agencies</title>
+  <meta name="description" content="White-label Shopify Plus & Checkout UI Extensions support for agencies and technical teams — flexible monthly capacity, no full-time hire." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    console.clear();
+
+    console.log(
+      "%c⬢ CheckoutLabs",
+      //"font-size:20px;font-weight:700;color:#6366f1;"
+      "font-size:20px;font-weight:700;color:#22c55e;"      
+    );
+
+    console.log(
+      "%cHey 👋 Welcome to the console 🔒",
+      //"font-size:13px;color:#111827;"
+      //"font-size:13px;color:#6366f1;" 
+      //"font-size:13px;color:#F59E0B;"
+      "font-size:13px;color:#22c55e;"
+    );
+
+    console.log(
+      "%cBuilt with vanilla HTML & CSS · github.com/yourname/yourrepo",
+      //"font-size:12px;color:#6366f1;"
+      "font-size:12px;color:#22c55e;"
+      //"font-size:12px;color:#F59E0B;"
+    );
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="CheckoutLabs home">
+
+        <img src="assets/logo.avif" alt="CheckoutLabs logo" class="logo">
+
+        <span class="brand-mark" aria-hidden="true">
+          <!-- Simple, original SVG mark (bag + flask) -->
+          <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="10" width="36" height="32" rx="8" fill="#18A34A"/>
+            <path d="M16 10c0-2.2 1.8-4 4-4h8c2.2 0 4 1.8 4 4v2H16v-2z" fill="#0F7A35"/>
+            <path d="M26 16v6.3l6.2 10.8c.8 1.4-.2 3.1-1.8 3.1H17.6c-1.6 0-2.6-1.7-1.8-3.1L22 22.3V16" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19.8 30.5h8.4" stroke="#FDBA74" stroke-width="2.6" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Checkout<span class="accent">Labs</span></span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="#about">About Us</a>
+        <a class="nav-link" href="#howitworks">How It Works</a>
+        <a class="nav-link" href="#packages">Packages</a>
+        <a class="nav-link" href="#faqs">FAQs</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-primary" href="#book">Get Started</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" hidden>
+      <a class="mobile-link" href="#about">About Us</a>
+      <a class="mobile-link" href="#howitworks">How It Works</a>
+      <a class="mobile-link" href="#packages">Packages</a>
+      <a class="mobile-link" href="#faqs">FAQs</a>
+      <a class="btn btn-primary" href="#book">Get Started</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <span class="anchor-point" id="home"></span>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="pill">
+            <span class="pill-dot" aria-hidden="true"></span>
+            <span>Shopify Plus &amp; Checkout UI Experts</span>
+          </div>
+
+          <h1>
+            Expert Shopify Plus Development
+            <span class="hl">Without the Full-Time Hire</span>
+          </h1>
+
+          <p class="lede">
+            White-label Shopify Plus &amp; Checkout development for agencies and technical teams —
+            flexible monthly capacity, no full-time hire required.
+          </p>
+
+          <!--
+          <ul class="checks" aria-label="Key benefits">
+            <li>
+              <span class="check" aria-hidden="true">✓</span>
+              <div>
+                <div class="checks-title">Senior Plus Expertise</div>
+                <div class="checks-sub">Experienced developers who understand complex checkout flows and extensions.</div>
+              </div>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">✓</span>
+              <div>
+                <div class="checks-title">Integrated Delivery</div>
+                <div class="checks-sub">We slot into your workflow and ship like an in-house team.</div>
+              </div>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">✓</span>
+              <div>
+                <div class="checks-title">Predictable Monthly Capacity</div>
+                <div class="checks-sub">Simple 10h / 20h packages with clear scope and flexible scaling.</div>
+              </div>
+            </li>
+          </ul>
+          --> 
+          <ul class="checks" aria-label="Key benefits">
+            <li>
+              <span class="check" aria-hidden="true">✓</span>
+              <div>
+                <div class="checks-title">Checkout & Plus Engineering</div>
+                <div class="checks-sub">UI extensions, complex shipping/date logic, and conversion-focused checkout UX.</div>
+              </div>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">✓</span>
+              <div>
+                <div class="checks-title">App-Light, Native Solutions</div>
+                <div class="checks-sub">B2B pricing, MOQ rules, and workflows built with Shopify-native capabilities where possible.</div>
+              </div>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true">✓</span>
+              <div>
+                <div class="checks-title">White-Label Delivery for Agencies</div>
+                <div class="checks-sub">We plug into your tickets + comms and ship like an in-house team.</div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#book">Get Started</a>
+            <a class="btn btn-ghost" href="#packages">View Packages</a>
+          </div>
+
+          <div class="micro">
+            <span class="micro-dot" aria-hidden="true">●</span>
+            <span>No long-term contracts • Cancel anytime</span>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-hidden="true">
+          <div class="hero-media">
+            <!-- Original, non-copyrighted “illustration” using SVG shapes -->
+            <svg viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a team planning a project">
+              <defs>
+                <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stop-color="#E8F1FF"/>
+                  <stop offset="1" stop-color="#CFE3FF"/>
+                </linearGradient>
+                <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stop-color="#1D4ED8"/>
+                  <stop offset="1" stop-color="#3B82F6"/>
+                </linearGradient>
+                <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+                  <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0B1B3A" flood-opacity="0.18"/>
+                </filter>
+              </defs>
+              <rect x="12" y="12" width="736" height="416" rx="26" fill="url(#g1)" filter="url(#shadow)"/>
+              <rect x="54" y="62" width="300" height="220" rx="18" fill="#FFFFFF" opacity="0.92"/>
+              <rect x="380" y="62" width="330" height="120" rx="18" fill="#FFFFFF" opacity="0.92"/>
+              <rect x="380" y="202" width="330" height="80" rx="18" fill="#FFFFFF" opacity="0.92"/>
+              <rect x="380" y="302" width="330" height="86" rx="18" fill="#FFFFFF" opacity="0.92"/>
+
+              <!-- chart -->
+              <rect x="404" y="86" width="282" height="72" rx="12" fill="#F1F5FF"/>
+              <path d="M420 142 L455 118 L490 128 L525 104 L560 116 L595 92 L630 110 L666 84" fill="none" stroke="url(#g2)" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="455" cy="118" r="6" fill="#1D4ED8"/>
+              <circle cx="525" cy="104" r="6" fill="#1D4ED8"/>
+              <circle cx="595" cy="92" r="6" fill="#1D4ED8"/>
+              <circle cx="666" cy="84" r="6" fill="#1D4ED8"/>
+
+              <!-- cards text lines -->
+              <g opacity="0.55" fill="#35507A">
+                <rect x="94" y="92" width="220" height="14" rx="7"/>
+                <rect x="94" y="122" width="190" height="12" rx="6"/>
+                <rect x="94" y="146" width="170" height="12" rx="6"/>
+                <rect x="94" y="178" width="210" height="12" rx="6"/>
+                <rect x="94" y="202" width="160" height="12" rx="6"/>
+              </g>
+
+              <!-- people dots -->
+              <circle cx="120" cy="320" r="18" fill="#22C55E"/>
+              <circle cx="170" cy="320" r="18" fill="#3B82F6"/>
+              <circle cx="220" cy="320" r="18" fill="#F59E0B"/>
+              <rect x="94" y="352" width="260" height="14" rx="7" fill="#0F2550" opacity="0.22"/>
+              <rect x="94" y="374" width="220" height="12" rx="6" fill="#0F2550" opacity="0.18"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+     <!--
+    <section class="section">
+      <span class="anchor-point" id="packages"></span>
+      <div class="container">
+        <h2 class="section-title">Flexible Monthly Capacity Packages</h2>
+        <p class="section-sub">
+          Choose the package that fits your team’s needs. Scale up or down as your projects require.
+        </p>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <div class="price-top">
+              <span class="badge">Starter</span>
+              <h3>10 Hours/Month</h3>
+              <p class="muted">Perfect for ongoing maintenance and smaller enhancements</p>
+              <div class="price">
+                <span class="price-amount">€850</span>
+                <span class="price-period">/ month</span>
+              </div>
+              <div class="tiny">Billed monthly • No long-term commitment</div>
+            </div>
+
+            <ul class="feature-list">
+              <li><span class="fcheck">✓</span> 10 dedicated development hours</li>
+              <li><span class="fcheck">✓</span> Direct Slack/email communication</li>
+              <li><span class="fcheck">✓</span> Weekly progress updates</li>
+              <li><span class="fcheck">✓</span> Shopify Plus &amp; Checkout UI expertise</li>
+              <li><span class="fcheck">✓</span> White-label delivery</li>
+            </ul>
+
+            <a class="btn btn-soft" href="#book">Get Started</a>
+          </article>
+
+          <article class="price-card featured">
+            <div class="price-top">
+              <div class="price-row">
+                <span class="badge dark">Professional</span>
+                <span class="pill-small">Most Popular</span>
+              </div>
+              <h3>20 Hours/Month</h3>
+              <p class="muted">Ideal for active development and feature builds</p>
+              <div class="price">
+                <span class="price-amount">€1,650</span>
+                <span class="price-period">/ month</span>
+              </div>
+              <div class="tiny">Billed monthly • No long-term commitment</div>
+            </div>
+
+            <ul class="feature-list">
+              <li><span class="fcheck">✓</span> 20 dedicated development hours</li>
+              <li><span class="fcheck">✓</span> Priority Slack/email communication</li>
+              <li><span class="fcheck">✓</span> Bi-weekly strategy calls</li>
+              <li><span class="fcheck">✓</span> Shopify Plus &amp; Checkout UI expertise</li>
+              <li><span class="fcheck">✓</span> White-label delivery</li>
+              <li><span class="fcheck">✓</span> Faster turnaround times</li>
+            </ul>
+
+            <a class="btn btn-primary" href="#book">Get Started</a>
+          </article>
+        </div>
+
+        <p class="custom-package">
+          Need a custom package? <a href="#book">Let’s discuss your requirements</a>
+        </p>
+      </div>
+    </section>
+    -->
+    <!-- Packages -->
+    <section class="section">
+      <span class="anchor-point" id="packages"></span>
+      <div class="container">
+        <h2 class="section-title">Flexible Monthly Capacity Packages</h2>
+        <p class="section-sub">
+          Choose the package that fits your team’s needs. Scale up or down as your projects require.
+        </p>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <div class="price-top">
+              <span class="badge">Starter</span>
+              <h3>10 Hours/Month</h3>
+              <p class="muted">Perfect for ongoing maintenance and smaller enhancements</p>
+              <div class="price">
+                <!--
+                <span class="price-amount">€850</span>
+                -->
+                <span class="price-amount">$850</span>
+                <span class="price-period">/ month</span>
+              </div>
+              <div class="tiny">Billed monthly • No long-term commitment</div>
+            </div>
+
+            <ul class="feature-list">
+              <li><span class="fcheck">✓</span> 10 dedicated development hours</li>
+              <li><span class="fcheck">✓</span> Direct Slack/email communication</li>
+              <li><span class="fcheck">✓</span> Weekly progress updates</li>
+              <li><span class="fcheck">✓</span> Shopify Plus &amp; Checkout UI expertise</li>
+              <li><span class="fcheck">✓</span> White-label delivery</li>
+            </ul>
+
+            <a class="btn btn-soft" href="#book">Get Started</a>
+          </article>
+
+          <article class="price-card featured">
+            <div class="price-top">
+              <div class="price-row">
+                <span class="badge dark">Professional</span>
+                <span class="pill-small">Most Popular</span>
+              </div>
+              <h3>20 Hours/Month</h3>
+              <p class="muted">Ideal for active development and feature builds</p>
+              <div class="price">
+                <!--
+                <span class="price-amount">€1,650</span>
+                -->
+                <span class="price-amount">$1,650</span>
+                <span class="price-period">/ month</span>
+              </div>
+              <div class="tiny">Billed monthly • No long-term commitment</div>
+            </div>
+
+            <ul class="feature-list">
+              <li><span class="fcheck">✓</span> 20 dedicated development hours</li>
+              <li><span class="fcheck">✓</span> Priority Slack/email communication</li>
+              <li><span class="fcheck">✓</span> Bi-weekly strategy calls</li>
+              <li><span class="fcheck">✓</span> Shopify Plus &amp; Checkout UI expertise</li>
+              <li><span class="fcheck">✓</span> White-label delivery</li>
+              <li><span class="fcheck">✓</span> Faster turnaround times</li>
+            </ul>
+
+            <a class="btn btn-primary" href="#book">Get Started</a>
+          </article>
+
+          <!-- Custom -->
+          <!--
+          <article class="price-card custom">
+            <div class="price-top">
+              <span class="badge outline">Custom</span>
+              <h3>Custom Capacity</h3>
+              <p class="muted">For teams who need flexible availability, integrations, or long-term development</p>
+
+              <div class="price">
+                <span class="price-amount">Let’s talk</span>
+                <span class="price-period">/ custom</span>
+              </div>
+              <div class="tiny">Custom scope • Custom pricing • Response times based on capacity</div>
+            </div>
+
+            <ul class="feature-list">
+              <li><span class="fcheck">✓</span> Flexible monthly hours (30h+ available)</li>
+              <li><span class="fcheck">✓</span> Dedicated roadmap &amp; delivery planning</li>
+              <li><span class="fcheck">✓</span> Complex Shopify workflows &amp; integrations</li>
+              <li><span class="fcheck">✓</span> Optional async + calls cadence</li>
+              <li><span class="fcheck">✓</span> White-label delivery</li>
+            </ul>
+
+            <a class="btn btn-outline" href="#book">Let’s Talk →</a>
+          </article>
+          -->
+          <article class="price-card custom">
+            <div class="price-top">
+              <span class="badge outline">Custom</span>
+              <h3>Custom Plan</h3>
+              <p class="muted">
+                For teams who need more than 20 hours/month or complex projects.
+              </p>
+
+              <div class="tiny">
+                Custom scope • Custom pricing
+              </div>
+            </div>
+
+            <ul class="feature-list">
+              <li><span class="fcheck">✓</span> Flexible monthly capacity (30h+)</li>
+              <li><span class="fcheck">✓</span> Roadmap &amp; delivery planning</li>
+              <li><span class="fcheck">✓</span> Integrations &amp; complex workflows</li>
+            </ul>
+
+            <a class="btn btn-outline" href="#book">Let’s Talk →</a>
+          </article>
+
+        </div>
+
+        <p class="custom-package">
+          Not sure which package fits? <a href="#book">Tell us what you need</a> and we’ll recommend the best option.
+        </p>
+      </div>
+    </section>
+
+
+
+    <!-- Capabilities -->
+    <section class="section">
+      <span class="anchor-point" id="capabilities"></span>
+      <div class="container">
+        <h2 class="section-title">What We’re Great At</h2>
+        <p class="section-sub">
+          Senior Shopify engineering focused on performance, maintainability, and conversion — delivered white-label when needed.
+        </p>
+
+        <div class="cap-grid">
+          <article class="cap-card">
+            <div class="cap-icon" aria-hidden="true">🏷️</div>
+            <h3>Native B2B Pricing & Rules</h3>
+            <p class="muted">
+              Customer-based pricing logic, MOQ & bulk rules, and purchasing constraints built with Shopify-native patterns where possible.
+            </p>
+          </article>
+
+          <article class="cap-card">
+            <div class="cap-icon" aria-hidden="true">🧩</div>
+            <h3>Checkout UI Extensions</h3>
+            <p class="muted">
+              Dynamic checkout experiences (e.g., delivery date selection based on shipping method and address constraints).
+            </p>
+          </article>
+
+          <article class="cap-card">
+            <div class="cap-icon" aria-hidden="true">👟</div>
+            <h3>Product Configurators</h3>
+            <p class="muted">
+              Made-to-order flows with custom app + admin CMS, generating a single clean line item with configuration properties.
+            </p>
+          </article>
+
+          <article class="cap-card">
+            <div class="cap-icon" aria-hidden="true">🧠</div>
+            <h3>Conversion Quizzes</h3>
+            <p class="muted">
+              High-performance, app-free quizzes that recommend products, capture intent data, and enrich customer profiles.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- How it works -->
+    <section class="section section-alt">
+      <span class="anchor-point" id="howitworks"></span>
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-sub">
+          A straightforward process designed for agencies and technical teams who need reliable support.
+        </p>
+
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-num">1</div>
+            <h3>Intro Call</h3>
+            <p>We’ll discuss your team’s needs, technical requirements, and how our capacity packages can support you.</p>
+            <div class="step-meta">⏱ 15 minutes</div>
+          </article>
+
+          <div class="step-arrow" aria-hidden="true">→</div>
+
+          <article class="step-card">
+            <div class="step-num">2</div>
+            <h3>Proposal &amp; Package</h3>
+            <p>We’ll provide a clear proposal with your selected monthly package, scope boundaries, and communication protocol.</p>
+            <!--
+            <div class="step-meta">📄 Within 24 hours</div>
+            -->
+            <div class="step-meta">📄 Within 1 business day</div>
+          </article>
+
+          <div class="step-arrow" aria-hidden="true">→</div>
+
+          <article class="step-card">
+            <div class="step-num">3</div>
+            <h3>Ongoing Support</h3>
+            <p>We integrate with your workflow, deliver white-label work, and provide regular updates. Scale as your needs evolve.</p>
+            <div class="step-meta">∞ Month-to-month</div>
+          </article>
+        </div>
+
+        <div class="center">
+          <a class="btn btn-primary" href="#book">Get Started</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who we work with -->
+    <section class="section">
+      <span class="anchor-point" id="about"></span>
+      <div class="small-container">
+        <h2 class="section-title">Who We Work With</h2>
+        <p class="section-sub">
+          CheckoutLabs partners with agencies, technical teams, and digital partners who need senior-level Shopify Plus and Checkout development capacity without adding headcount.
+        </p>
+
+        <div class="with-grid">
+          <div class="with-media" aria-hidden="true">
+            <div class="with-image">
+              <!-- Simple “tech” illustration block (no external images) -->
+              <svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract technology illustration">
+                <defs>
+                  <linearGradient id="b" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="#0EA5E9" stop-opacity="0.15"/>
+                    <stop offset="1" stop-color="#1D4ED8" stop-opacity="0.15"/>
+                  </linearGradient>
+                  <filter id="s" x="-10%" y="-10%" width="120%" height="120%">
+                    <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0B1B3A" flood-opacity="0.18"/>
+                  </filter>
+                </defs>
+                <rect x="20" y="20" width="680" height="320" rx="24" fill="#0B2A57" filter="url(#s)"/>
+                <rect x="60" y="64" width="600" height="232" rx="18" fill="url(#b)"/>
+                <g fill="#93C5FD" opacity="0.85">
+                  <circle cx="130" cy="160" r="22"/>
+                  <circle cx="220" cy="120" r="14"/>
+                  <circle cx="320" cy="210" r="18"/>
+                  <circle cx="450" cy="140" r="12"/>
+                  <circle cx="560" cy="200" r="20"/>
+                </g>
+                <g stroke="#60A5FA" stroke-width="4" opacity="0.65" stroke-linecap="round">
+                  <path d="M130 160 L220 120 L450 140"/>
+                  <path d="M220 120 L320 210 L560 200"/>
+                </g>
+                <g fill="#E0F2FE" opacity="0.9">
+                  <rect x="92" y="252" width="220" height="14" rx="7"/>
+                  <rect x="92" y="276" width="180" height="12" rx="6" opacity="0.75"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="with-cards">
+            <article class="with-card">
+              <div class="with-icon" aria-hidden="true">🏢</div>
+              <div>
+                <h3>Shopify Agencies</h3>
+                <p>Scale your delivery capacity during peak seasons or complex Plus builds without hiring more developers.</p>
+              </div>
+            </article>
+
+            <article class="with-card">
+              <div class="with-icon" aria-hidden="true">🧩</div>
+              <div>
+                <h3>Technical Teams</h3>
+                <p>Augment your in-house team with specialized Checkout UI and Plus expertise for custom projects.</p>
+              </div>
+            </article>
+
+            <article class="with-card">
+              <div class="with-icon" aria-hidden="true">🤝</div>
+              <div>
+                <h3>Digital Partners</h3>
+                <p>Offer Shopify Plus development to your clients under your brand with our white-label support.</p>
+              </div>
+            </article>
+
+            <!--
+            <div class="trust">
+              <span class="trust-check" aria-hidden="true">✓</span>
+              <span><strong>Shopify Plus Experience</strong> — years of proven Plus &amp; Checkout UI delivery</span>
+            </div>
+            -->
+            <div class="trust">
+              <span class="trust-check" aria-hidden="true">✓</span>
+              <span>
+                <strong>6+ years in Shopify delivery</strong> — built across 20+ stores through an established ecommerce agency (Fullstory Marketing Ltd.).
+              </span>
+            </div>
+
+            <div class="anon-cases">
+              <div class="anon-pill">US DTC brand — made-to-order product configurator + admin CMS</div>
+              <div class="anon-pill">Food delivery store — Checkout UI extension with delivery date selection</div>
+              <div class="anon-pill">B2B catalogs — native pricing + MOQ/bulk rules without third-party apps</div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="section">
+      <span class="anchor-point" id="faqs"></span>
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-sub">Everything you need to know about our monthly capacity packages and how we work.</p>
+
+        <div class="faq">
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>What happens to unused hours each month?</span>
+              <span class="chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>Our packages are designed for reliable availability. Unused hours don’t roll over automatically, but we’re flexible within the same month if priorities shift.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>How do we communicate and collaborate?</span>
+              <span class="chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>Primarily async via Slack/email and your ticket system (Jira/Linear/Trello). We keep meetings minimal and focus on shipping.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>What’s the typical reaction time for requests?</span>
+              <span class="chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>Typically within 1 business day. Urgent issues can be flagged and handled faster if capacity allows.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>What are the scope boundaries for each package?</span>
+              <span class="chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>Retainers are ideal for ongoing development, improvements, bug fixes, and Plus/checkout work. Large greenfield builds or PM-heavy redesigns are better scoped as projects.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>What’s your cancellation policy?</span>
+              <span class="chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>Month-to-month. Cancel anytime before the next billing cycle.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>Can you work white-label for our clients?</span>
+              <span class="chev" aria-hidden="true">▾</span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>Yes. We regularly support agencies under their brand and integrate with their delivery process.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="center mt-28">
+          <div class="tiny">Still have questions?</div>
+          <a class="btn btn-primary" href="#book">Get Started</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA + Form -->
+    <section class="cta">
+      <span class="anchor-point" id="book"></span>
+      <div class="container">
+        <h2>Ready to Scale Your Shopify Plus Capacity?</h2>
+        <p>Let’s discuss how our monthly capacity packages can support your agency or technical team without the overhead of hiring full-time.</p>
+
+        <div class="form-card">
+          <!--
+          <h3>Book a Short Intro Call</h3>
+          -->
+          <h3>Send us a message</h3>
+          <p class="muted">We’ll explore your needs and see if we’re a good fit. No pressure, no commitment.</p>
+
+          <form
+            class="form"
+            action="https://formspree.io/f/meeeedvn"
+            method="POST"
+          >
+            <!-- Honeypot (spam ellen) -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <label>
+              <span class="label">Work Email</span>
+              <input name="email" type="email" autocomplete="email" placeholder="Work Email" required />
+            </label>
+
+            <label>
+              <span class="label">What do you need help with?</span>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="A short summary (store link optional)."
+                required
+              ></textarea>
+
+            </label>
+
+            <!-- Opcionális: óraszint kvalifikáció -->
+            <input type="hidden" name="source" value="checkoutlabs.dev landing" />
+
+            <!--
+            <button class="btn btn-primary" type="submit">Send message</button>
+            <div class="form-foot">🔒 We’ll respond within 24 hours • No sales pressure</div>
+
+            <p class="tiny">
+              Prefer a call? <a href="#" class="js-book-call">Book a 15-min intro call</a>
+            </p>
+            -->
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Send message</button>
+
+              <!--
+              <button class="btn btn-outline js-book-call" type="button">Book a 15-min intro call</button>
+              -->
+              <button
+                class="btn btn-outline js-book-call"
+                type="button"
+                data-cal-link="roland-nagy-jzu4ii/intro-call"
+                data-cal-config='{"layout":"month_view"}'
+              >
+                Book a 15-min intro call
+              </button>
+
+
+              <!--
+              <button
+                class="btn btn-outline" 
+                type="button"
+                data-cal-link="roland-nagy-jzu4ii/intro-call"
+                data-cal-config='{"layout":"month_view"}'
+              >
+                Book a 15-min intro call
+              </button>
+              -->
+
+            </div>
+
+            <div class="form-foot">🔒 We’ll respond within 1 business day • No sales pressure</div>
+
+            <p class="tiny">
+              Prefer email? Send a message above. Prefer talking? Book a short intro call.
+            </p>
+
+          </form>
+
+
+        </div>
+
+        <div class="cta-badges">
+          <div class="cta-badge"><span class="dot" aria-hidden="true"></span> No Long-Term Contracts</div>
+          <div class="cta-badge"><span class="dot" aria-hidden="true"></span> Cancel Anytime</div>
+          <div class="cta-badge"><span class="dot" aria-hidden="true"></span> White-Label Delivery</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand footer-logo">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="10" width="36" height="32" rx="8" fill="#18A34A"/>
+              <path d="M16 10c0-2.2 1.8-4 4-4h8c2.2 0 4 1.8 4 4v2H16v-2z" fill="#0F7A35"/>
+              <path d="M26 16v6.3l6.2 10.8c.8 1.4-.2 3.1-1.8 3.1H17.6c-1.6 0-2.6-1.7-1.8-3.1L22 22.3V16" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M19.8 30.5h8.4" stroke="#FDBA74" stroke-width="2.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand-name">Checkout<span class="accent">Labs</span></span>
+        </div>
+        <p class="footer-text">White-label Shopify Plus &amp; Checkout development for agencies and technical teams.</p>
+        <p class="footer-copy">© <span id="year"></span> CheckoutLabs. All rights reserved.</p>
+      </div>
+
+      <div>
+        <div class="footer-title">Company</div>
+        <a class="footer-link" href="#home">Home</a>
+        <a class="footer-link" href="#about">About Us</a>
+        <a class="footer-link" href="#howitworks">How It Works</a>
+        <a class="footer-link" href="#packages">Packages</a>
+      </div>
+
+      <div>
+        <div class="footer-title">Resources</div>
+        <a class="footer-link" href="#faqs">FAQs</a>
+        <a class="footer-link" href="#book">Get Started</a>
+      </div>
+
+      <div>
+        <div class="footer-title">Get in Touch</div>
+        <p class="footer-text">Ready to discuss your Shopify Plus needs?</p>
+        <a class="btn btn-primary" href="#book">Get Started</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <a class="footer-link" href="#" onclick="return false;">Privacy Policy</a>
+      <a class="footer-link" href="#" onclick="return false;">Terms of Service</a>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    Cal("init", { origin: "https://cal.com" });
+
+    // opcionális UI brand szín
+    Cal("ui", {
+      styles: { branding: { brandColor: "#22c55e" } }
+    });
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
