@@ -802,13 +802,26 @@ section {
   position:absolute;
   inset:-120px -120px -120px -120px;
   background:
-    radial-gradient(700px 420px at 18% 22%, rgba(34,197,94,0.14), transparent 60%),
-    radial-gradient(760px 460px at 82% 18%, rgba(59,130,246,0.12), transparent 62%),
-    radial-gradient(900px 520px at 55% 78%, rgba(245,158,11,0.10), transparent 62%);
+    radial-gradient(700px 420px at 18% 22%, rgba(34,197,94,0.20), transparent 60%),
+    radial-gradient(760px 460px at 82% 18%, rgba(59,130,246,0.18), transparent 62%),
+    radial-gradient(900px 520px at 55% 78%, rgba(245,158,11,0.14), transparent 62%);
   transform: translate3d(0, var(--parallaxY, 0px), 0);
-  transition: transform 120ms linear;
+  transition: none;
   z-index: 0;
   pointer-events: none;
+}
+.parallax-hero::after{
+  content:"";
+  position:absolute;
+  inset:-140px;
+  background:
+    radial-gradient(520px 360px at 30% 70%, rgba(34,197,94,0.10), transparent 62%),
+    radial-gradient(620px 420px at 75% 55%, rgba(59,130,246,0.10), transparent 64%);
+  transform: translate3d(0, var(--parallaxY2, 0px), 0);
+  z-index: 0;
+  pointer-events:none;
+  filter: blur(2px);
+  opacity: 0.9;
 }
 
 .parallax-hero > *{
@@ -827,19 +840,40 @@ section {
   position:absolute;
   inset:-140px -140px -140px -140px;
   background:
-    radial-gradient(900px 520px at 15% 15%, rgba(29,78,216,0.10), transparent 60%),
-    radial-gradient(900px 540px at 85% 10%, rgba(14,165,233,0.12), transparent 60%),
-    radial-gradient(900px 600px at 60% 90%, rgba(34,197,94,0.10), transparent 62%);
+    radial-gradient(900px 520px at 15% 15%, rgba(29,78,216,0.14), transparent 60%),
+    radial-gradient(900px 540px at 85% 10%, rgba(14,165,233,0.16), transparent 60%),
+    radial-gradient(900px 600px at 60% 90%, rgba(34,197,94,0.12), transparent 62%);
   transform: translate3d(0, var(--parallaxY, 0px), 0);
-  transition: transform 120ms linear;
+  transition: none;
   z-index: 0;
   pointer-events: none;
+}
+.parallax-alt::after{
+  content:"";
+  position:absolute;
+  inset:-160px;
+  background:
+    radial-gradient(620px 420px at 25% 60%, rgba(14,165,233,0.10), transparent 65%),
+    radial-gradient(740px 520px at 70% 70%, rgba(29,78,216,0.10), transparent 66%);
+  transform: translate3d(0, var(--parallaxY2, 0px), 0);
+  z-index: 0;
+  pointer-events:none;
+  opacity: 0.9;
 }
 
 .parallax-alt > *{
   position: relative;
   z-index: 1;
 }
+
+.parallax-hero::before,
+.parallax-alt::before { z-index: 0; }
+
+.parallax-hero::after,
+.parallax-alt::after { z-index: 0; }
+
+.parallax-hero > *,
+.parallax-alt > * { position: relative; z-index: 1; }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce){

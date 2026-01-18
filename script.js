@@ -146,9 +146,12 @@ if (form && statusEl) {
       const p = Math.max(-1, Math.min(1, progress));
 
       // move 0..10px (subtle!)
-      const y = p * -10;
+      const y1 = p * -18;   // foreground glow
+      const y2 = p * -9;    // slower layer
 
-      el.style.setProperty("--parallaxY", `${y.toFixed(2)}px`);
+      el.style.setProperty("--parallaxY", `${y1.toFixed(2)}px`);
+      el.style.setProperty("--parallaxY2", `${y2.toFixed(2)}px`);
+
     });
   }
 
