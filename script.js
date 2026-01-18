@@ -94,3 +94,34 @@ if (form && statusEl) {
     }
   });
 }
+
+// --- Scroll reveal (no library) ---
+(function () {
+  const els = Array.from(document.querySelectorAll(".reveal"));
+  if (!els.length) return;
+
+  // If reduced motion, just show
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (prefersReduced.matches) {
+    els.forEach(el => el.classList.add("is-visible"));
+    return;
+  }
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        io.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -10% 0px" }
+  );
+
+  els.forEach((el, i) => {
+    // subtle stagger
+    el.style.setProperty("--delay", `${Math.min(i * 45, 240)}ms`);
+    el.style.transitionDelay = el.getAttribute("data-delay") || `var(--delay)`;
+    io.observe(el);
+  });
+})();

@@ -759,3 +759,32 @@ section {
     transform: none;
   }
 }
+
+/* --- Scroll reveal --- */
+.reveal{
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 520ms ease,
+    transform 520ms cubic-bezier(.2,.8,.2,1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger support (optional) */
+.reveal[data-delay]{
+  transition-delay: var(--delay, 0ms);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .reveal{
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
