@@ -119,3 +119,48 @@ if (form && statusEl) {
 
   els.forEach(el => io.observe(el));
 })();
+
+// --- Subtle scroll parallax for backgrounds ---
+(function () {
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (prefersReduced.matches) return;
+
+  const heroes = document.querySelectorAll(".parallax-hero, .parallax-alt");
+  if (!heroes.length) return;
+
+  let ticking = false;
+
+  function update() {
+    ticking = false;
+
+    const vh = window.innerHeight || 800;
+
+    heroes.forEach((el) => {
+      const r = el.getBoundingClientRect();
+
+      // progress: -1..1 roughly around viewport center
+      const center = r.top + r.height / 2;
+      const progress = (center - vh / 2) / (vh / 2);
+
+      // clamp
+      const p = Math.max(-1, Math.min(1, progress));
+
+      // move 0..10px (subtle!)
+      const y = p * -10;
+
+      el.style.setProperty("--parallaxY", `${y.toFixed(2)}px`);
+    });
+  }
+
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(update);
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+
+  // initial
+  onScroll();
+})();
