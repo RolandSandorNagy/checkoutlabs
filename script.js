@@ -49,20 +49,48 @@ const y = document.getElementById('year');
 if (y) y.textContent = String(new Date().getFullYear());
 
 
-// cal.com
-/*
-document.addEventListener("DOMContentLoaded", () => {
-  window.addEventListener("cal:ready", () => {
-    document.querySelectorAll(".js-book-call").forEach(btn => {
-      btn.addEventListener("click", () => {
-        window.Cal.openModal({
-          calLink: "roland-nagy-jzu4ii/intro-call",
-          config: {
-            layout: "month_view"
-          }
-        });
+// Formspree form
+const form = document.getElementById("contact-form");
+const statusEl = document.getElementById("form-status");
+
+if (form && statusEl) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    statusEl.textContent = "";
+    statusEl.className = "form-status";
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn?.textContent;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+    }
+
+    try {
+      const formData = new FormData(form);
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" },
       });
-    });
+
+      if (res.ok) {
+        form.reset();
+        statusEl.textContent = "✅ Thanks! Message received — we’ll reply within 1 business day.";
+        statusEl.classList.add("is-success");
+      } else {
+        statusEl.textContent = "⚠️ Something went wrong. Please try again or email us directly.";
+        statusEl.classList.add("is-error");
+      }
+    } catch (err) {
+      statusEl.textContent = "⚠️ Network error. Please try again in a moment.";
+      statusEl.classList.add("is-error");
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText || "Send message";
+      }
+    }
   });
-});
-*/
+}
