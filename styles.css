@@ -543,7 +543,6 @@ input:focus, textarea:focus{outline:3px solid rgba(11,94,215,.18); border-color:
   .form-row{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
   .footer-bottom{justify-content:flex-start}
-  .anchor-point {top: -68px;}
 }
 
 
@@ -573,6 +572,10 @@ section {
   left: 0;
   top: -73px;
 }
+@media (max-width: 560px){
+  .anchor-point {top: -68px;}
+}
+
 .brand-mark,
 .brand-text {
   display: none;
