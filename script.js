@@ -146,11 +146,17 @@ if (form && statusEl) {
       const p = Math.max(-1, Math.min(1, progress));
 
       // move 0..10px (subtle!)
-      const y1 = p * -26;
-      const y2 = p * -12;
+      //const y1 = p * -26;
+      //const y2 = p * -12;
 
-      const x1 = p * 6;
-      const x2 = p * 3;
+      //const x1 = p * 6;
+      //const x2 = p * 3;
+
+      const y1 = p * -240; // DEBUG: nagy mozgás
+      const x1 = p * 60;   // DEBUG: nagy mozgás
+
+      const y2 = p * -360; // DEBUG: nagy mozgás
+      const x2 = p * 90;   // DEBUG: nagy mozgás
 
       el.style.setProperty("--parallaxY", `${y1.toFixed(2)}px`);
       el.style.setProperty("--parallaxY2", `${y2.toFixed(2)}px`);
