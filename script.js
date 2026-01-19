@@ -305,3 +305,56 @@ if (form && statusEl) {
     true
   );
 })();
+
+// --- Modal logic (native <dialog>) ---
+(function () {
+  const openButtons = document.querySelectorAll("[data-modal-open]");
+  const closeButtons = document.querySelectorAll("[data-modal-close]");
+
+  function openModal(which) {
+    const dlg = document.getElementById(`modal-${which}`);
+    if (!dlg) return;
+
+    // Native dialog support
+    if (typeof dlg.showModal === "function") {
+      dlg.showModal();
+    } else {
+      // Fallback: just unhide + simple overlay behavior
+      dlg.setAttribute("open", "");
+    }
+  }
+
+  function closeModal(dlg) {
+    if (!dlg) return;
+    if (typeof dlg.close === "function") dlg.close();
+    else dlg.removeAttribute("open");
+  }
+
+  openButtons.forEach((btn) => {
+    btn.addEventListener("click", () => openModal(btn.dataset.modalOpen));
+  });
+
+  closeButtons.forEach((btn) => {
+    btn.addEventListener("click", () => closeModal(btn.closest("dialog")));
+  });
+
+  // Close on backdrop click
+  document.querySelectorAll("dialog.modal").forEach((dlg) => {
+    dlg.addEventListener("click", (e) => {
+      const rect = dlg.getBoundingClientRect();
+      const inDialog =
+        e.clientX >= rect.left &&
+        e.clientX <= rect.right &&
+        e.clientY >= rect.top &&
+        e.clientY <= rect.bottom;
+
+      // If click is outside the dialog card, close
+      if (!inDialog) closeModal(dlg);
+    });
+
+    // ESC closes automatically in native dialogs; for fallback, we handle keydown
+    dlg.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeModal(dlg);
+    });
+  });
+})();

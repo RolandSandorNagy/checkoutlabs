@@ -163,7 +163,6 @@
         <div class="hero-card" aria-hidden="true">
           <div class="hero-media">
             <!-- Original, non-copyrighted “illustration” using SVG shapes -->
-            <!--
             <svg viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a team planning a project">
               <defs>
                 <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
@@ -205,8 +204,9 @@
               <rect x="94" y="352" width="260" height="14" rx="7" fill="#0F2550" opacity="0.22"/>
               <rect x="94" y="374" width="220" height="12" rx="6" fill="#0F2550" opacity="0.18"/>
             </svg>
-            -->
+            <!--
             <img src="assets/hero.avif" alt="Hero Image">
+            -->
             
           </div>
         </div>
@@ -265,7 +265,7 @@
               <li><span class="fcheck">✓</span> 20 dedicated development hours</li>
               <li><span class="fcheck">✓</span> Priority Slack/email communication</li>
               <li><span class="fcheck">✓</span> Bi-weekly strategy calls</li>
-              <li><span class="fcheck">✓</span> Shopify Plus &amp; Checkout UI expertise</li>
+              <li><span class="fcheck">✓</span> Senior support for complex Shopify builds (incl. checkout customization)</li>
               <li><span class="fcheck">✓</span> White-label delivery</li>
               <li><span class="fcheck">✓</span> Faster turnaround times</li>
             </ul>
@@ -443,7 +443,7 @@
               <div class="with-icon" aria-hidden="true">🏢</div>
               <div>
                 <h3>Shopify Agencies</h3>
-                <p>Scale your delivery capacity during peak seasons or complex Plus builds without hiring more developers.</p>
+                <p>Scale your delivery capacity during peak seasons or complex builds without hiring more developers.</p>
               </div>
             </article>
 
@@ -451,7 +451,7 @@
               <div class="with-icon" aria-hidden="true">🧩</div>
               <div>
                 <h3>Technical Teams</h3>
-                <p>Augment your in-house team with specialized Checkout UI and Plus expertise for custom projects.</p>
+                <p>Augment your in-house team with senior support for custom apps, integrations, and checkout customizations.</p>
               </div>
             </article>
 
@@ -459,7 +459,7 @@
               <div class="with-icon" aria-hidden="true">🤝</div>
               <div>
                 <h3>Digital Partners</h3>
-                <p>Offer Shopify Plus development to your clients under your brand with our white-label support.</p>
+                <p>Offer Shopify development to your clients under your brand with our white-label support.</p>
               </div>
             </article>
 
@@ -525,7 +525,7 @@
               <span class="chev" aria-hidden="true">▾</span>
             </button>
             <div class="faq-a" hidden>
-              <p>Retainers are ideal for ongoing development, improvements, bug fixes, and Plus/checkout work. Large greenfield builds or PM-heavy redesigns are better scoped as projects.</p>
+              <p>Retainers are ideal for ongoing development, improvements, bug fixes, and advanced Shopify work (including checkout customizations). Large greenfield builds or PM-heavy redesigns are better scoped as projects.</p>
             </div>
           </div>
 
@@ -647,7 +647,7 @@
           </span>
           <span class="brand-name">Checkout<span class="accent">Labs</span></span>
         </div>
-        <p class="footer-text">White-label Shopify Plus &amp; Checkout development for agencies and technical teams.</p>
+        <p class="footer-text">White-label Shopify development for agencies and technical teams — apps, integrations, and advanced builds.</p>
         <p class="footer-copy">© <span id="year"></span> CheckoutLabs. All rights reserved.</p>
       </div>
 
@@ -667,14 +667,14 @@
 
       <div>
         <div class="footer-title">Get in Touch</div>
-        <p class="footer-text">Ready to discuss your Shopify Plus needs?</p>
+        <p class="footer-text">Ready to discuss your Shopify development needs?</p>
         <a class="btn btn-primary" href="#book">Get Started</a>
       </div>
     </div>
 
     <div class="container footer-bottom">
-      <a class="footer-link" href="#" onclick="return false;">Privacy Policy</a>
-      <a class="footer-link" href="#" onclick="return false;">Terms of Service</a>
+      <button class="footer-link linklike" type="button" data-modal-open="privacy">Privacy Policy</button>
+      <button class="footer-link linklike" type="button" data-modal-open="terms">Terms of Service</button>
     </div>
   </footer>
 
@@ -715,6 +715,73 @@
     });
   </script>
   -->
+
+  <dialog class="modal" id="modal-privacy" aria-labelledby="privacy-title">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 id="privacy-title">Privacy Policy</h3>
+        <button class="modal-x" type="button" data-modal-close aria-label="Close">×</button>
+      </div>
+
+      <div class="modal-body">
+        <p><strong>Summary:</strong> We only collect the information needed to respond to your inquiry.</p>
+
+        <h4>What we collect</h4>
+        <ul>
+          <li><strong>Contact form:</strong> work email and message content you submit.</li>
+          <li><strong>Analytics:</strong> anonymous usage data via Plausible (privacy-friendly analytics).</li>
+        </ul>
+
+        <h4>How we use your data</h4>
+        <ul>
+          <li>To respond to your request and communicate about potential work.</li>
+          <li>To improve the website’s content and performance.</li>
+        </ul>
+
+        <h4>Processors / third parties</h4>
+        <ul>
+          <li><strong>Form submissions:</strong> Formspree (handles message delivery).</li>
+          <li><strong>Analytics:</strong> Plausible.</li>
+        </ul>
+
+        <h4>Data retention</h4>
+        <p>We keep messages as long as needed to communicate and for basic record-keeping.</p>
+
+        <h4>Your rights</h4>
+        <p>You can request access, correction, or deletion of your personal data by emailing: <strong>roland.s.nagy@gmail.com</strong>.</p>
+
+        <p class="muted small">Last updated: <span id="privacy-updated">2026-01-01</span></p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="modal-terms" aria-labelledby="terms-title">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 id="terms-title">Terms of Service</h3>
+        <button class="modal-x" type="button" data-modal-close aria-label="Close">×</button>
+      </div>
+
+      <div class="modal-body">
+        <p>These terms govern the use of this website and any inquiry submitted through it.</p>
+
+        <h4>No warranties</h4>
+        <p>This website is provided “as is”. We do our best to keep information accurate, but we make no warranties of any kind.</p>
+
+        <h4>Engagement terms</h4>
+        <p>Any development work is subject to a separate written agreement (scope, pricing, timelines, and responsibilities).</p>
+
+        <h4>Limitation of liability</h4>
+        <p>To the maximum extent permitted by law, we are not liable for indirect or consequential damages arising from the use of this website.</p>
+
+        <h4>Governing law</h4>
+        <p>Unless otherwise agreed in writing, disputes are governed by applicable laws in our operating jurisdiction.</p>
+
+        <p class="muted small">Last updated: <span id="terms-updated">2026-01-01</span></p>
+      </div>
+    </div>
+  </dialog>
+
 
   <script src="script.js"></script>
 
