@@ -628,6 +628,9 @@ section {
 
 @media (max-width: 980px){
   .cap-grid{grid-template-columns:1fr; }
+  .anchor-point {
+    top: -68px;
+  }
 }
 
 .form-actions{
