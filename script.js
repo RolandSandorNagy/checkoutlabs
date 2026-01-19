@@ -173,3 +173,129 @@ if (form && statusEl) {
   // initial
   onScroll();
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// --- Cal.com embed: lazy-load on first click (GitHub Pages friendly) ---
+(function () {
+  const CAL_SRC = "https://app.cal.com/embed/embed.js";
+  const btn = document.querySelector(".js-book-call");
+  if (!btn) return;
+
+  let booted = false;
+  let booting = false;
+
+  function bootCalIfNeeded() {
+    if (booted) return Promise.resolve();
+    if (booting) {
+      return new Promise((resolve) => {
+        const t = setInterval(() => {
+          if (booted) {
+            clearInterval(t);
+            resolve();
+          }
+        }, 50);
+      });
+    }
+    booting = true;
+
+    // ✅ Official Cal element-click snippet logic (unchanged)
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal, ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else {
+            p(cal, ar);
+          }
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, CAL_SRC, "init");
+
+    // Init + UI config (this matches your previous inline snippet style)
+    window.Cal("init", { origin: "https://cal.com" });
+
+    // Ha ez mégis gondot okozna, kommenteld ki első körben, és teszteld úgy.
+    window.Cal("ui", {
+      styles: { branding: { brandColor: "#22c55e" } },
+    });
+
+    // wait until script is actually loaded
+    return new Promise((resolve) => {
+      const s = document.querySelector(`script[src="${CAL_SRC}"]`);
+      if (!s) {
+        booted = true;
+        booting = false;
+        resolve();
+        return;
+      }
+      s.addEventListener("load", () => {
+        booted = true;
+        booting = false;
+        resolve();
+      });
+      // fallback: in case load already happened
+      setTimeout(() => {
+        booted = true;
+        booting = false;
+        resolve();
+      }, 600);
+    });
+  }
+
+  btn.addEventListener(
+    "click",
+    async (e) => {
+      if (booted) return; // Cal is ready, let it handle the click normally
+
+      e.preventDefault();
+
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = "Loading calendar…";
+
+      try {
+        await bootCalIfNeeded();
+        btn.disabled = false;
+        btn.textContent = originalText;
+
+        // Re-trigger click so Cal's element-click handler opens the popup
+        setTimeout(() => btn.click(), 0);
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = originalText;
+        console.error(err);
+        alert("Sorry — the calendar failed to load. Please try again.");
+      }
+    },
+    true
+  );
+})();
