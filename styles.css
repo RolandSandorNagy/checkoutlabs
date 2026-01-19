@@ -313,6 +313,7 @@ h1{
 .price{display:flex; align-items:baseline; gap:8px; margin:14px 0 2px}
 .price-amount{font-size:34px; font-weight:800; letter-spacing:-0.03em}
 .price-period{color:var(--muted2)}
+.price-period-light{color:rgba(255,255,255,.85)}
 .tiny{font-size:12px; color:var(--muted2)}
 
 .m-b {margin-bottom: 12px;}
@@ -805,7 +806,8 @@ section {
     radial-gradient(700px 420px at 18% 22%, rgba(34,197,94,0.20), transparent 60%),
     radial-gradient(760px 460px at 82% 18%, rgba(59,130,246,0.18), transparent 62%),
     radial-gradient(900px 520px at 55% 78%, rgba(245,158,11,0.14), transparent 62%);
-  transform: translate3d(0, var(--parallaxY, 0px), 0);
+  transform: translate3d(var(--parallaxX, 0px), var(--parallaxY, 0px), 0) scale(1.06);
+  transform-origin: center;
   transition: none;
   z-index: 0;
   pointer-events: none;
@@ -817,7 +819,8 @@ section {
   background:
     radial-gradient(520px 360px at 30% 70%, rgba(34,197,94,0.10), transparent 62%),
     radial-gradient(620px 420px at 75% 55%, rgba(59,130,246,0.10), transparent 64%);
-  transform: translate3d(0, var(--parallaxY2, 0px), 0);
+  transform: translate3d(var(--parallaxX2, 0px), var(--parallaxY2, 0px), 0) scale(1.04);
+  transform-origin: center;
   z-index: 0;
   pointer-events:none;
   filter: blur(2px);
@@ -843,7 +846,8 @@ section {
     radial-gradient(900px 520px at 15% 15%, rgba(29,78,216,0.14), transparent 60%),
     radial-gradient(900px 540px at 85% 10%, rgba(14,165,233,0.16), transparent 60%),
     radial-gradient(900px 600px at 60% 90%, rgba(34,197,94,0.12), transparent 62%);
-  transform: translate3d(0, var(--parallaxY, 0px), 0);
+  transform: translate3d(0, var(--parallaxY, 0px), 0) scale(1.06);
+  transform-origin: center;
   transition: none;
   z-index: 0;
   pointer-events: none;
@@ -855,7 +859,8 @@ section {
   background:
     radial-gradient(620px 420px at 25% 60%, rgba(14,165,233,0.10), transparent 65%),
     radial-gradient(740px 520px at 70% 70%, rgba(29,78,216,0.10), transparent 66%);
-  transform: translate3d(0, var(--parallaxY2, 0px), 0);
+  transform: translate3d(0, var(--parallaxY2, 0px), 0) scale(1.04);
+  transform-origin: center;
   z-index: 0;
   pointer-events:none;
   opacity: 0.9;
@@ -878,7 +883,9 @@ section {
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce){
   .parallax-hero::before,
-  .parallax-alt::before{
+  .parallax-hero::after,
+  .parallax-alt::before,
+  .parallax-alt::after{
     transform: none !important;
     transition: none !important;
   }
