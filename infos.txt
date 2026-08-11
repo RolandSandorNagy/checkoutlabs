@@ -1,0 +1,298 @@
+INFOK:
+
+LINKEDIN:
+I currently work with agencies and technical teams as a senior software engineer, providing flexible, async-first development capacity.
+
+Most of my recent work is focused on Shopify-based systems — custom apps, integrations, and advanced builds — typically in a white-label setup.
+
+If your team needs short-term senior capacity without long-term hiring, feel free to reach out.
+
+
+COLD EMAIL:
+Hi {{FirstName}},
+
+I’m reaching out because we work with Shopify agencies that occasionally need extra senior development capacity without adding headcount.
+
+I’m a senior Shopify developer (6+ years), currently supporting agencies on a white-label basis with:
+– custom Shopify apps
+– integrations & complex business logic
+– advanced storefront and checkout customizations
+
+The model is simple: monthly capacity, async-first, no long-term contracts.
+Agencies use us when delivery pressure spikes or when senior bandwidth is tight.
+
+If this is ever useful, I’d be happy to share details or jump on a short intro call.
+
+Best,  
+Roland
+CheckoutLabs  
+https://checkoutlabs.dev
+
+
+FOLLOW UP #1:
+Hi {{FirstName}},
+
+Just wanted to quickly follow up on my previous note.
+
+We help Shopify agencies add senior dev capacity in a flexible, white-label way — typically used for overflow work, complex tickets, or short-term spikes.
+
+No worries if this isn’t relevant right now.
+Happy to reconnect later if timing changes.
+
+Best,  
+Roland
+
+
+FOLLOW UP #2:
+Hi {{FirstName}},
+
+I’ll close the loop here.
+
+If you ever need extra Shopify development capacity without hiring — even short-term — feel free to reach out anytime.
+
+Wishing you a smooth delivery season.
+
+Best,  
+Roland
+
+
+REPLY:
+Great to hear, {{FirstName}}.
+
+Typically agencies start with a small monthly capacity (10–20h) to test fit.
+Work is fully white-label, async-first, and integrated into your existing workflow.
+
+If helpful, we can do a quick 15-minute intro call to see if there’s a fit — or I can answer questions over email.
+
+What works better for you?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PENNYWELL EVENTS:
+
+Events I see on the excel sheet that are not on the frontend:
+
+Magic March Pass:
+- Sign Up Page:
+- Sign Up Klaviyo Form:
+- Automated Klaviyo Email Flow:
+- Landing Page:
+
+Back2School MEGA Offer:
+- Sign Up Page:
+- Sign Up Klaviyo Form:
+- Automated Klaviyo Email Flow:
+- Landing Page:
+
+------------------------------:
+
+Events I see both on the frontend and on the excel sheet:
+
+Early Bird Season Ticket Sale:
+- Sign Up Page:
+- Sign Up Klaviyo Form:
+- Automated Klaviyo Email Flow:
+- Landing Page:
+
+Unlimited Free Returns Feb Half Term:
+- Sign Up Page:
+- Sign Up Klaviyo Form:
+- Automated Klaviyo Email Flow:
+- Landing Page: https://pennywellfarm.co.uk/pages/9daysoffun/
+notes: Sign up page missing?, landing page convention, landing page has sign up form
+
+Mother’s Day Offer:
+- Sign Up Page: -
+- Sign Up Klaviyo Form:
+- Automated Klaviyo Email Flow:
+- Landing Page: https://pennywellfarm.co.uk/blogs/events/mothers-day-at-pennywell-farm-vip-upgrade-for-all-mums
+note: Sign up page missing?, landing page convention, landing leads to /pages/buy-day-out-tickets
+
+Easter Egg-Stravaganza:
+- Sign Up Page: -
+- Sign Up Klaviyo Form:
+- Automated Klaviyo Email Flow:
+- Landing Page: https://pennywellfarm.co.uk/pages/easter-eggstravaganza
+notes: Sign up page missing?, landing goes to cart, landing page has sign up form
+
+Date Night At The Farm:
+- Sign Up Page: https://pennywellfarm.co.uk/pages/date-night-at-the-farm
+- Sign Up Klaviyo Form:
+- Automated Klaviyo Email Flow:
+- Landing Page: -
+notes: landing page missing?, sign up page  convention
+
+Magical Unicorn Festival:
+- Sign Up Page: -
+- Sign Up Klaviyo Form:
+- Automated Klaviyo Email Flow:
+- Landing Page: https://pennywellfarm.co.uk/pages/magical-unicorn-week
+notes: Sign up page missing?, landing page convention, landing goes to cart, landing page has sign up form
+
+Father’s Day Offer:
+- Sign Up Page: -
+- Sign Up Klaviyo Form:
+- Automated Klaviyo Email Flow:
+- Landing Page: https://pennywellfarm.co.uk/blogs/events/fathers-day-at-pennywell-farm-vip-offer-for-dads
+notes: Sign up page missing?, landing page convention, landing goes to cart
+
+Pumpkin Festival:
+- Sign Up Page: https://pennywellfarm.co.uk/pages/pumpkin-festival-sign-up
+- Sign Up Klaviyo Form:
+- Automated Klaviyo Email Flow:
+- Landing Page: https://pennywellfarm.co.uk/pages/pumpkin-patch
+notes: Sign up page convention, landing page convention, landing goes to cart
+
+Pumpkin Nights:
+- Sign Up Page: https://pennywellfarm.co.uk/pages/pumpkin-nights-sign-up
+- Sign Up Klaviyo Form:
+- Automated Klaviyo Email Flow:
+- Landing Page: https://pennywellfarm.co.uk/pages/pumpkin-nights
+notes: Sign up page convention, landing goes to cart
+
+Super Early Bird Season Ticket Sale:
+- Sign Up Page: https://pennywellfarm.co.uk/pages/seasonticket-superearlybird-signup-old
+- Sign Up Klaviyo Form:
+- Automated Klaviyo Email Flow:
+- Landing Page: https://pennywellfarm.co.uk/pages/super-early-bird-season-ticket-sale-old
+notes: Sign up page convention, landing page convention, landing goes to /pages/early-bird-season-ticket-sale
+
+Christmas Experience:
+- Sign Up Page: https://pennywellfarm.co.uk/pages/sign-up-christmas (NEW)
+- Sign Up Klaviyo Form:
+- Automated Klaviyo Email Flow:
+- Landing Page: https://pennywellfarm.co.uk/pages/buy-christmas-nativity-tickets
+notes: landing page convention
+
+-----------------------:
+
+Events I see on the frontend that are not on the excel sheet:
+
+Toddler Time:
+- Sign Up Page: -
+- Sign Up Klaviyo Form:
+- Automated Klaviyo Email Flow:
+- Landing Page: https://pennywellfarm.co.uk/pages/toddlertime
+notes: Sign up page missing?, landing goes to cart
+
+Bubble & Bop:
+- Sign Up Page: -
+- Sign Up Klaviyo Form:
+- Automated Klaviyo Email Flow:
+- Landing Page: https://pennywellfarm.co.uk/pages/bubble-and-bop
+note: Sign up page missing?, landing leads to /pages/buy-day-out-tickets
+
+
+
+
+
+
+
+
+
+HYPOTETICALLY DONE:
+- christmas experience
+- pimpkin festival
+- pumpkin nights
+- easter egg-stravaganza
+- date night at the farm
+- magical unicorn festival
+- unlimited free returns feb half term
+
+
+REMAININGS:
+- early bird season tickets
+- super early bird season tickets
+- magic march Pass
+- mother's day
+- father's day
+- Back2School MEGA Offer
+- bubble bop
+- toddler time 
+
+
+
+REDIRECTS (MIGHT BE) NEEDED:
+
+/pages/cart-pumpkin-nights  →  /pages/sign-up-pumpkin-nights
+pumpkin-nights cart/basket oldal → sign-up
+
+/pages/pumpkin-patch → /pages/pumpkin-festival
+/pages/pumpkin-festival-sign-up → /pages/sign-up-pumpkin-festival
+pumpkin-festival cart/basket oldal → sign-up
+
+
+/pages/magical-unicorn-week → /pages/magical-unicorn-festival
+
+
+/pages/9daysoffun/ → új landing)
+
+super-early-bird-season-ticket-sale-old ->  https://pennywellfarm.co.uk/pages/super-early-bird-season-ticket-sale
+
+/pages/super-early-bird-season-ticket-sale-old → /pages/super-early-bird-season-ticket-sale
+
+/pages/cart-super-early-bird-season-tickets-old → /pages/cart-super-early-bird-season-ticket-sale
+
+/pages/seasonticket-superearlybird-signup-old → /pages/sign-up-super-early-bird-season-ticket-sale
+
+
+/pages/buy-christmas-nativity-tickets -> christmas-experience
+
+
+cart-super-early-bird-season-tickets -> sign-up-super-early-bird-season-ticket-sale
+
+
