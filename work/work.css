@@ -163,6 +163,15 @@
   box-shadow:0 16px 30px rgba(11,27,58,.10);
 }
 
+.project-shot img{
+  display:block;
+  width:auto;
+  max-width:170px;
+  height:48px;
+  object-fit:contain;
+  margin-bottom:14px;
+}
+
 .project-shot strong{
   display:block;
   margin-top:8px;
@@ -263,6 +272,104 @@
   text-decoration:underline;
 }
 
+.work-logo-block{
+  margin-top:28px;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(220,230,248,.86);
+  border-radius:22px;
+  padding:24px;
+  box-shadow:var(--shadow2);
+}
+
+.work-logo-copy{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:20px;
+}
+
+.work-logo-copy h3{
+  margin:0;
+  font-size:22px;
+  letter-spacing:-0.03em;
+}
+
+.work-logo-copy p{
+  color:var(--muted2);
+  margin:0;
+  max-width:58ch;
+  line-height:1.55;
+}
+
+.logo-grid-work{
+  grid-template-columns:repeat(5, minmax(0, 1fr));
+}
+
+.logo-grid-work > img,
+.logo-grid-compact > img,
+.logo-grid-education > img{
+  background:#fff;
+  min-height:86px;
+}
+
+.logo-grid-work > img{
+  height:82px;
+  padding:16px;
+}
+
+.logo-category-section{
+  padding:54px 0;
+}
+
+.logo-category-grid,
+.education-panel{
+  display:grid;
+  grid-template-columns:minmax(0, .85fr) minmax(360px, 1fr);
+  gap:28px;
+  align-items:center;
+}
+
+.logo-category-title,
+.logo-category-sub{
+  text-align:left;
+}
+
+.logo-category-title{
+  font-size:30px;
+}
+
+.logo-category-sub{
+  margin-left:0;
+  margin-right:0;
+}
+
+.logo-grid-compact{
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+}
+
+.logo-grid-compact > img{
+  height:92px;
+  padding:18px;
+}
+
+.education-panel{
+  background:#fff;
+  border:1px solid #DCE6F8;
+  border-radius:22px;
+  padding:24px;
+  box-shadow:var(--shadow2);
+}
+
+.logo-grid-education{
+  grid-template-columns:1.35fr .75fr;
+}
+
+.logo-grid-education > img{
+  height:98px;
+  padding:18px;
+}
+
 .expertise-grid,
 .work-mode-grid{
   margin-top:34px;
@@ -346,8 +453,16 @@
   .cred-grid,
   .project-grid,
   .expertise-grid,
-  .work-mode-grid{
+  .work-mode-grid,
+  .logo-grid-work,
+  .logo-category-grid,
+  .education-panel{
     grid-template-columns:1fr 1fr;
+  }
+
+  .work-logo-copy{
+    align-items:flex-start;
+    flex-direction:column;
   }
 }
 
@@ -360,14 +475,21 @@
   .cred-grid,
   .project-grid,
   .expertise-grid,
-  .work-mode-grid{
+  .work-mode-grid,
+  .logo-grid-work,
+  .logo-grid-compact,
+  .logo-grid-education,
+  .logo-category-grid,
+  .education-panel{
     grid-template-columns:1fr;
   }
 
   .profile-panel,
   .project-content,
   .expertise-card,
-  .work-mode{
+  .work-mode,
+  .work-logo-block,
+  .education-panel{
     padding:18px;
   }
 
