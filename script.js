@@ -24,7 +24,11 @@ if (toggle && mobileNav) {
   if (!header) return;
 
   function updateHeaderState() {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
+
     header.classList.toggle("is-scrolled", window.scrollY > 8);
+    header.style.setProperty("--scrollProgress", progress.toFixed(4));
   }
 
   updateHeaderState();

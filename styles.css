@@ -39,6 +39,19 @@ a{color:inherit; text-decoration:none}
   border-bottom:1px solid rgba(229,234,243,.8);
   transition:box-shadow .24s ease, background-color .24s ease, border-color .24s ease;
 }
+.site-header::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-1px;
+  width:100%;
+  height:2px;
+  background:linear-gradient(90deg, var(--primary2), var(--green));
+  transform:scaleX(var(--scrollProgress, 0));
+  transform-origin:left center;
+  opacity:.92;
+  pointer-events:none;
+}
 .site-header.is-scrolled{
   background:rgba(255,255,255,.96);
   border-bottom-color:rgba(203,213,225,.92);
