@@ -18,6 +18,19 @@ if (toggle && mobileNav) {
   });
 }
 
+// Header depth after scroll
+(function () {
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+
+  function updateHeaderState() {
+    header.classList.toggle("is-scrolled", window.scrollY > 8);
+  }
+
+  updateHeaderState();
+  window.addEventListener("scroll", updateHeaderState, { passive: true });
+})();
+
 // FAQ accordion
 document.querySelectorAll('.faq-item').forEach((item) => {
   const btn = item.querySelector('.faq-q');
@@ -97,6 +110,17 @@ if (form && statusEl) {
 
 // --- Scroll reveal (manual stagger classes supported) ---
 (function () {
+  const autoRevealTargets = document.querySelectorAll(
+    ".logo-section-head, .logo-item, .logo-grid > img, .work-logo-block, .logo-category-grid, .education-panel"
+  );
+
+  autoRevealTargets.forEach((el, index) => {
+    el.classList.add("reveal");
+    if (!el.classList.contains("reveal-1") && !el.classList.contains("reveal-2") && !el.classList.contains("reveal-3") && !el.classList.contains("reveal-4")) {
+      el.classList.add(`reveal-${(index % 4) + 1}`);
+    }
+  });
+
   const els = Array.from(document.querySelectorAll(".reveal"));
   if (!els.length) return;
 
@@ -145,18 +169,11 @@ if (form && statusEl) {
       // clamp
       const p = Math.max(-1, Math.min(1, progress));
 
-      // move 0..10px (subtle!)
-      //const y1 = p * -26;
-      //const y2 = p * -12;
+      const y1 = p * -26;
+      const x1 = p * 8;
 
-      //const x1 = p * 6;
-      //const x2 = p * 3;
-
-      const y1 = p * -240; // DEBUG: nagy mozgás
-      const x1 = p * 60;   // DEBUG: nagy mozgás
-
-      const y2 = p * -360; // DEBUG: nagy mozgás
-      const x2 = p * 90;   // DEBUG: nagy mozgás
+      const y2 = p * -14;
+      const x2 = p * 4;
 
       el.style.setProperty("--parallaxY", `${y1.toFixed(2)}px`);
       el.style.setProperty("--parallaxY2", `${y2.toFixed(2)}px`);
@@ -178,6 +195,36 @@ if (form && statusEl) {
 
   // initial
   onScroll();
+})();
+
+// --- Pointer depth for prominent cards ---
+(function () {
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (prefersReduced.matches) return;
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+  const cards = document.querySelectorAll(".project-card-featured, .profile-panel");
+  if (!cards.length) return;
+
+  cards.forEach((card) => {
+    card.addEventListener("pointermove", (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+      const y = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
+
+      card.style.setProperty("--tiltX", `${(-y * 1.2).toFixed(2)}deg`);
+      card.style.setProperty("--tiltY", `${(x * 1.2).toFixed(2)}deg`);
+      card.style.setProperty("--glintX", `${((x + 1) * 50).toFixed(1)}%`);
+      card.style.setProperty("--glintY", `${((y + 1) * 50).toFixed(1)}%`);
+    });
+
+    card.addEventListener("pointerleave", () => {
+      card.style.setProperty("--tiltX", "0deg");
+      card.style.setProperty("--tiltY", "0deg");
+      card.style.setProperty("--glintX", "50%");
+      card.style.setProperty("--glintY", "50%");
+    });
+  });
 })();
 
 

@@ -37,6 +37,12 @@ a{color:inherit; text-decoration:none}
   background:rgba(255,255,255,.92);
   backdrop-filter: blur(10px);
   border-bottom:1px solid rgba(229,234,243,.8);
+  transition:box-shadow .24s ease, background-color .24s ease, border-color .24s ease;
+}
+.site-header.is-scrolled{
+  background:rgba(255,255,255,.96);
+  border-bottom-color:rgba(203,213,225,.92);
+  box-shadow:0 10px 30px rgba(11,27,58,.08);
 }
 .header-inner{
   display:flex; align-items:center; justify-content:space-between;
@@ -677,11 +683,24 @@ section {
   background:rgba(255,255,255,.78);
   border:1px solid rgba(220,230,248,.84);
   padding:14px;
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, opacity .22s ease, filter .22s ease;
 }
 .logo-item{
+  position:relative;
+  overflow:hidden;
   display:flex;
   align-items:center;
   justify-content:center;
+}
+.logo-item::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(115deg, transparent 28%, rgba(255,255,255,.72) 48%, transparent 66%);
+  opacity:0;
+  transform:translateX(-120%);
+  transition:transform .7s ease, opacity .28s ease;
+  pointer-events:none;
 }
 .logo-grid > img{
   display:block;
@@ -710,6 +729,10 @@ section {
     box-shadow:0 12px 26px rgba(11,27,58,.09);
     transform:translateY(-2px);
     opacity:1;
+  }
+  .logo-item:hover::before{
+    opacity:1;
+    transform:translateX(120%);
   }
   .logo-item:hover img,
   .logo-grid > img:hover{
@@ -1193,9 +1216,11 @@ section {
 .reveal{
   opacity: 0;
   transform: translateY(18px);
+  filter: blur(6px);
   transition:
     opacity 520ms ease,
-    transform 520ms cubic-bezier(.2,.8,.2,1);
+    transform 520ms cubic-bezier(.2,.8,.2,1),
+    filter 520ms ease;
   will-change: opacity, transform;
   transition-delay: 0ms;
 }
@@ -1203,6 +1228,7 @@ section {
 .reveal.is-visible{
   opacity: 1;
   transform: translateY(0);
+  filter: blur(0);
 }
 
 /* Manual stagger (same section) */
@@ -1215,6 +1241,7 @@ section {
   .reveal{
     opacity: 1;
     transform: none;
+    filter: none;
     transition: none;
     transition-delay: 0ms;
   }
@@ -1239,6 +1266,7 @@ section {
   transition: none;
   z-index: 0;
   pointer-events: none;
+  will-change: transform;
 }
 .parallax-hero::after{
   content:"";
@@ -1253,6 +1281,7 @@ section {
   pointer-events:none;
   filter: blur(2px);
   opacity: 0.9;
+  will-change: transform;
 }
 
 .parallax-hero > *{
@@ -1279,6 +1308,7 @@ section {
   transition: none;
   z-index: 0;
   pointer-events: none;
+  will-change: transform;
 }
 .parallax-alt::after{
   content:"";
@@ -1292,6 +1322,7 @@ section {
   z-index: 0;
   pointer-events:none;
   opacity: 0.9;
+  will-change: transform;
 }
 
 .parallax-alt > *{
