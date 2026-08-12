@@ -65,6 +65,41 @@ document.querySelectorAll('.faq-item').forEach((item) => {
 const y = document.getElementById('year');
 if (y) y.textContent = String(new Date().getFullYear());
 
+// Start logo marquees only after the logo images are ready enough to render.
+(function () {
+  const marquees = document.querySelectorAll(".logo-marquee");
+  if (!marquees.length) return;
+
+  marquees.forEach((marquee) => {
+    const images = Array.from(marquee.querySelectorAll("img"));
+    if (!images.length) {
+      marquee.classList.add("is-ready");
+      return;
+    }
+
+    const ready = images.map((img) => {
+      img.loading = "eager";
+      img.decoding = "async";
+
+      if (img.complete && img.naturalWidth > 0) {
+        return typeof img.decode === "function" ? img.decode().catch(() => {}) : Promise.resolve();
+      }
+
+      return new Promise((resolve) => {
+        img.addEventListener("load", resolve, { once: true });
+        img.addEventListener("error", resolve, { once: true });
+      }).then(() => (typeof img.decode === "function" ? img.decode().catch(() => {}) : undefined));
+    });
+
+    Promise.race([
+      Promise.allSettled(ready),
+      new Promise((resolve) => window.setTimeout(resolve, 2500)),
+    ]).then(() => {
+      marquee.classList.add("is-ready");
+    });
+  });
+})();
+
 
 // Formspree form
 const form = document.getElementById("contact-form");
@@ -115,7 +150,7 @@ if (form && statusEl) {
 // --- Scroll reveal (manual stagger classes supported) ---
 (function () {
   const autoRevealTargets = document.querySelectorAll(
-    ".logo-section-head, .logo-item, .logo-grid > img, .work-logo-block, .logo-category-grid, .education-panel"
+    ".logo-section-head, .logo-grid:not(.logo-grid-home) .logo-item, .logo-grid > img, .work-logo-block, .logo-category-grid, .education-panel"
   );
 
   autoRevealTargets.forEach((el, index) => {

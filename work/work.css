@@ -264,6 +264,8 @@
   flex-direction:column;
   align-items:center;
   justify-content:space-between !important;
+  width: calc(100% - 32px) !important;
+  flex-direction: row;
 }
 
 .project-logo{
@@ -286,14 +288,6 @@
   margin-top:6px;
   font-size:15px;
   letter-spacing:-0.03em;
-}
-
-.shot-label{
-  color:var(--primary2);
-  font-size:10px;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:.08em;
 }
 
 .project-shot-yoza{
