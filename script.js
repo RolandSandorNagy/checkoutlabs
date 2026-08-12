@@ -23,6 +23,7 @@ if (toggle && mobileNav) {
 (function () {
   const header = document.querySelector(".site-header");
   if (!header) return;
+  const progressBar = document.querySelector(".site-scroll-progress");
 
   let lastScrollY = window.scrollY;
   let ticking = false;
@@ -38,6 +39,7 @@ if (toggle && mobileNav) {
 
     header.classList.toggle("is-scrolled", currentScrollY > 8);
     header.style.setProperty("--scrollProgress", progress.toFixed(4));
+    if (progressBar) progressBar.style.setProperty("--scrollProgress", progress.toFixed(4));
 
     if (currentScrollY <= 24 || mobileMenuOpen) {
       header.classList.remove("is-hidden");
