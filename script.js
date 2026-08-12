@@ -7,6 +7,7 @@ if (toggle && mobileNav) {
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!expanded));
     mobileNav.hidden = expanded;
+    document.querySelector(".site-header")?.classList.remove("is-hidden");
   });
 
   // Close mobile nav when clicking a link
@@ -23,16 +24,43 @@ if (toggle && mobileNav) {
   const header = document.querySelector(".site-header");
   if (!header) return;
 
-  function updateHeaderState() {
-    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
+  let lastScrollY = window.scrollY;
+  let ticking = false;
 
-    header.classList.toggle("is-scrolled", window.scrollY > 8);
+  function updateHeaderState() {
+    ticking = false;
+
+    const currentScrollY = Math.max(0, window.scrollY);
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? Math.min(1, Math.max(0, currentScrollY / scrollable)) : 0;
+    const delta = currentScrollY - lastScrollY;
+    const mobileMenuOpen = mobileNav && !mobileNav.hidden;
+
+    header.classList.toggle("is-scrolled", currentScrollY > 8);
     header.style.setProperty("--scrollProgress", progress.toFixed(4));
+
+    if (currentScrollY <= 24 || mobileMenuOpen) {
+      header.classList.remove("is-hidden");
+    } else if (Math.abs(delta) > 6) {
+      header.classList.toggle("is-hidden", delta > 0 && currentScrollY > 140);
+    }
+
+    lastScrollY = currentScrollY;
   }
 
+  function requestHeaderUpdate() {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(updateHeaderState);
+  }
+
+  header.addEventListener("focusin", () => {
+    header.classList.remove("is-hidden");
+  });
+
   updateHeaderState();
-  window.addEventListener("scroll", updateHeaderState, { passive: true });
+  window.addEventListener("scroll", requestHeaderUpdate, { passive: true });
+  window.addEventListener("resize", requestHeaderUpdate);
 })();
 
 // FAQ accordion
