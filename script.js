@@ -37,7 +37,7 @@ if (toggle && mobileNav) {
     const delta = currentScrollY - lastScrollY;
     const mobileMenuOpen = mobileNav && !mobileNav.hidden;
 
-    header.classList.toggle("is-scrolled", currentScrollY > 8);
+    header.classList.toggle("is-scrolled", currentScrollY > 0);
     header.style.setProperty("--scrollProgress", progress.toFixed(4));
     if (progressBar) progressBar.style.setProperty("--scrollProgress", progress.toFixed(4));
 
