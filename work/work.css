@@ -137,6 +137,14 @@
   flex-direction:column;
 }
 
+.project-card-pennywell{
+  order:-2;
+}
+
+.project-card-yoza{
+  order:-1;
+}
+
 .project-card-featured{
   position:relative;
   display:grid;
