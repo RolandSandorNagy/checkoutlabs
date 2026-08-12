@@ -151,6 +151,7 @@
   height:clamp(250px, 24vw, 300px);
   min-height:0;
   aspect-ratio:auto;
+  height:-webkit-fill-available;
 }
 
 .project-card-featured::after,
@@ -177,7 +178,7 @@
   min-height:0;
   height:220px;
   aspect-ratio:auto;
-  padding:18px;
+  padding:16px;
   background:
     linear-gradient(135deg, rgba(11,94,215,.12), rgba(34,197,94,.10)),
     #F8FBFF;
@@ -198,18 +199,22 @@
 .device-preview{
   position:relative;
   z-index:1;
-  height:100%;
-  display:grid;
-  grid-template-columns:minmax(0, 1fr) clamp(58px, 18%, 86px);
-  gap:12px;
-  align-items:stretch;
+  width:calc(100% - 32px);
+  height:calc(100% - 32px);
+  border-radius:16px;
+  padding:18px;
+  background:rgba(255,255,255,.84);
+  border:1px solid rgba(255,255,255,.74);
+  box-shadow:0 16px 30px rgba(11,27,58,.10);
+  display:flex;
+  justify-content:flex-start;
+  box-sizing:border-box;
 }
 
 .desktop-shot{
-  position:static;
-  width:100%;
-  height:100%;
-  max-height:none;
+  width:86%;
+  height:auto;
+  max-height:calc(100% - 34px);
   object-fit:cover;
   object-position:top center;
   border:1px solid rgba(203,213,225,.92);
@@ -219,14 +224,14 @@
 }
 
 .mobile-shot{
-  position:static;
-  justify-self:end;
-  align-self:start;
-  width:100%;
-  height:min(100%, 168px);
-  max-width:none;
-  min-width:0;
-  max-height:none;
+  position:absolute;
+  right:16px;
+  bottom:34px;
+  width:21%;
+  max-width:188px;
+  min-width:158px;
+  height:auto;
+  max-height:calc(100% - 44px);
   aspect-ratio:9 / 16;
   object-fit:cover;
   object-position:top center;
@@ -242,13 +247,15 @@
   bottom:18px;
   z-index:3;
   width:auto;
-  min-width:124px;
-  max-width:150px;
   border-radius:12px;
-  padding:9px 11px;
-  background:rgba(255,255,255,.96);
+  padding:10px 12px;
+  background:rgba(255,255,255,.94);
   border:1px solid rgba(220,230,248,.92);
   box-shadow:0 16px 30px rgba(11,27,58,.10);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between !important;
 }
 
 .project-logo{
@@ -308,18 +315,23 @@
 }
 
 .project-shot-compact .desktop-shot{
-  width:100%;
-  max-height:none;
+  width:86%;
+  max-height:calc(100% - 28px);
 }
 
 .project-shot-compact .mobile-shot{
+  right:14px;
+  bottom:26px;
+  max-width:92px;
+  min-width:68px;
   border-width:4px;
   border-radius:14px;
 }
 
 .project-shot-compact .device-preview{
-  grid-template-columns:minmax(0, 1fr) clamp(48px, 16%, 66px);
-  gap:10px;
+  width:calc(100% - 28px);
+  height:calc(100% - 28px);
+  padding:14px;
 }
 
 .project-content{
