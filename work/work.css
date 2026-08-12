@@ -140,14 +140,15 @@
 .project-card-featured{
   position:relative;
   display:grid;
-  grid-template-columns:minmax(260px, .72fr) minmax(0, 1fr);
+  grid-template-columns:minmax(280px, .62fr) minmax(0, 1fr);
   grid-column:1 / -1;
   transform:perspective(1100px) rotateX(var(--tiltX, 0deg)) rotateY(var(--tiltY, 0deg)) translateY(0);
   transform-style:preserve-3d;
 }
 
 .project-card-featured .project-shot{
-  min-height:360px;
+  min-height:0;
+  aspect-ratio:4 / 3;
 }
 
 .project-card-featured::after,
@@ -171,8 +172,9 @@
 .project-shot{
   position:relative;
   overflow:hidden;
-  min-height:230px;
-  padding:20px;
+  min-height:0;
+  aspect-ratio:16 / 9;
+  padding:14px;
   display:flex;
   align-items:flex-end;
   background:
@@ -205,9 +207,9 @@
 .project-shot-caption{
   position:relative;
   z-index:2;
-  width:100%;
+  width:min(260px, 100%);
   border-radius:16px;
-  padding:18px;
+  padding:14px;
   background:rgba(255,255,255,.84);
   border:1px solid rgba(255,255,255,.74);
   box-shadow:0 16px 30px rgba(11,27,58,.10);
@@ -215,23 +217,23 @@
 
 .project-logo{
   display:block;
-  width:min(190px, 100%);
+  width:min(150px, 100%);
   max-width:100%;
   height:auto;
   object-fit:contain;
-  margin-bottom:14px;
+  margin-bottom:10px;
   border:1px solid rgba(220,230,248,.86);
   border-radius:10px;
 }
 
 .project-shot-compact .project-logo{
-  width:min(170px, 100%);
+  width:min(140px, 100%);
 }
 
 .project-shot strong{
   display:block;
-  margin-top:8px;
-  font-size:22px;
+  margin-top:6px;
+  font-size:18px;
   letter-spacing:-0.03em;
 }
 
@@ -258,7 +260,7 @@
 }
 
 .project-shot-compact{
-  min-height:210px;
+  aspect-ratio:16 / 8.8;
   border-right:0;
   border-bottom:1px solid #DCE6F8;
 }
@@ -309,18 +311,18 @@
 .evidence-strip{
   display:grid;
   grid-template-columns:repeat(3, minmax(0, 1fr));
-  gap:10px;
+  gap:8px;
 }
 
 .evidence-strip img{
   width:100%;
-  aspect-ratio:16 / 10;
+  height:64px;
   object-fit:cover;
   object-position:top center;
   border:1px solid #DCE6F8;
-  border-radius:12px;
+  border-radius:10px;
   background:#fff;
-  box-shadow:0 10px 22px rgba(11,27,58,.08);
+  box-shadow:0 8px 16px rgba(11,27,58,.06);
 }
 
 .evidence-strip img:last-child{
@@ -553,6 +555,10 @@
     border-bottom:1px solid #DCE6F8;
   }
 
+  .project-card-featured .project-shot{
+    aspect-ratio:16 / 9;
+  }
+
   .cred-grid,
   .project-grid,
   .expertise-grid,
@@ -599,5 +605,25 @@
   .project-footer{
     align-items:flex-start;
     flex-direction:column;
+  }
+
+  .project-shot,
+  .project-card-featured .project-shot,
+  .project-shot-compact{
+    aspect-ratio:16 / 10;
+  }
+
+  .project-shot-caption{
+    width:min(230px, 100%);
+    padding:12px;
+  }
+
+  .project-logo,
+  .project-shot-compact .project-logo{
+    width:min(130px, 100%);
+  }
+
+  .evidence-strip img{
+    height:54px;
   }
 }
