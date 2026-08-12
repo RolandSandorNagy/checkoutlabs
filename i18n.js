@@ -379,24 +379,66 @@
     });
   }
 
+  function stripLanguagePrefix(pathname) {
+    const normalizedPath = pathname || "/";
+    const match = normalizedPath.match(/^\/(hu|de)(\/.*)?$/);
+    if (!match) return normalizedPath;
+    return match[2] || "/";
+  }
+
+  function getLanguageFromPath() {
+    const firstSegment = window.location.pathname.split("/").filter(Boolean)[0];
+    return firstSegment === "hu" || firstSegment === "de" ? firstSegment : "en";
+  }
+
+  function buildLocalizedPath(language, pathname) {
+    const basePath = stripLanguagePrefix(pathname);
+    if (language === "en") return basePath;
+    return `/${language}${basePath === "/" ? "/" : basePath}`;
+  }
+
+  function buildLocalizedUrl(language) {
+    return `${buildLocalizedPath(language, window.location.pathname)}${window.location.search}${window.location.hash}`;
+  }
+
+  function localizeInternalHref(href, language) {
+    if (!href || href.startsWith("#")) return href;
+    if (/^(mailto:|tel:|https?:\/\/)/i.test(href)) return href;
+
+    const url = new URL(href, window.location.origin);
+    if (url.origin !== window.location.origin) return href;
+
+    return `${buildLocalizedPath(language, url.pathname)}${url.search}${url.hash}`;
+  }
+
+  function updateLocalizedLinks(language) {
+    document.querySelectorAll("a[href]").forEach((link) => {
+      const href = link.getAttribute("href");
+      const localizedHref = localizeInternalHref(href, language);
+      if (localizedHref !== href) link.setAttribute("href", localizedHref);
+    });
+  }
+
   function updateLanguageButtons(language) {
     document.querySelectorAll("[data-language]").forEach((button) => {
       const isActive = button.dataset.language === language;
       button.classList.toggle("is-active", isActive);
       button.setAttribute("aria-pressed", String(isActive));
+      button.setAttribute("aria-label", `View site in ${button.textContent.trim()}`);
     });
   }
 
   function applyTranslations() {
-    const language = window.i18next.language || "en";
+    const language = getLanguageFromPath();
     document.documentElement.lang = language;
+    updateLocalizedLinks(language);
     translateTextNodes();
     translateAttributes();
     updateLanguageButtons(language);
   }
 
   window.i18next.init({
-    lng: window.localStorage.getItem("checkoutlabs-language") || "en",
+    lng: getLanguageFromPath(),
     fallbackLng: "en",
     resources: {
       en: { translation: {} },
@@ -413,9 +455,6 @@
     if (!button) return;
 
     const language = button.dataset.language;
-    window.localStorage.setItem("checkoutlabs-language", language);
-    window.i18next.changeLanguage(language).then(() => {
-      window.location.reload();
-    });
+    window.location.href = buildLocalizedUrl(language);
   });
 })();
