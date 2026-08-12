@@ -524,6 +524,16 @@
   font-weight:700;
 }
 
+.additional-store-actions{
+  display:flex;
+  justify-content:center;
+  margin-top:20px;
+}
+
+.additional-store-actions[hidden]{
+  display:none;
+}
+
 .logo-grid-work{
   grid-template-columns:repeat(5, minmax(0, 1fr));
 }

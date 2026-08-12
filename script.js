@@ -100,6 +100,40 @@ if (y) y.textContent = String(new Date().getFullYear());
   });
 })();
 
+// Additional store work progressive reveal
+(function () {
+  document.querySelectorAll("[data-load-more-list]").forEach((list) => {
+    const cards = Array.from(list.querySelectorAll(".additional-store-card"));
+    if (!cards.length) return;
+
+    const initialVisible = Number(list.dataset.initialVisible) || 6;
+    const visibleStep = Number(list.dataset.visibleStep) || 3;
+    const trigger = list.parentElement?.querySelector("[data-load-more-trigger]");
+    const actions = trigger?.closest(".additional-store-actions");
+
+    let visibleCount = Math.min(initialVisible, cards.length);
+
+    function render() {
+      cards.forEach((card, index) => {
+        card.hidden = index >= visibleCount;
+      });
+
+      const hasMore = visibleCount < cards.length;
+      if (actions) actions.hidden = !hasMore;
+      if (trigger) trigger.setAttribute("aria-expanded", String(!hasMore));
+    }
+
+    render();
+
+    if (!trigger) return;
+
+    trigger.addEventListener("click", () => {
+      visibleCount = Math.min(visibleCount + visibleStep, cards.length);
+      render();
+    });
+  });
+})();
+
 
 // Formspree form
 const form = document.getElementById("contact-form");
