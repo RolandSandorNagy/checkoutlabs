@@ -709,7 +709,7 @@ section {
   animation-play-state:paused;
 }
 .logo-marquee .logo-item{
-  flex:0 0 148px;
+  flex:0 0 250px;
 }
 @keyframes logo-marquee{
   from{transform:translateX(0)}
@@ -753,13 +753,13 @@ section {
 .logo-item img{
   max-width:100%;
   width:auto;
-  height:62px;
+  height:100px;
   object-fit:contain;
   filter:saturate(.82) contrast(.96);
   opacity:.88;
 }
 .logo-item-wide img{
-  height:62px;
+  height:100px;
 }
 @media (hover: hover) and (pointer: fine){
   .logo-item:hover,
