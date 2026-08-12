@@ -148,7 +148,7 @@
 }
 
 .project-card-featured .project-shot{
-  height:clamp(250px, 26vw, 320px);
+  height:clamp(250px, 24vw, 300px);
   min-height:0;
   aspect-ratio:auto;
 }
@@ -177,9 +177,7 @@
   min-height:0;
   height:220px;
   aspect-ratio:auto;
-  padding:14px;
-  display:flex;
-  align-items:flex-end;
+  padding:0;
   background:
     linear-gradient(135deg, rgba(11,94,215,.12), rgba(34,197,94,.10)),
     #F8FBFF;
@@ -199,13 +197,17 @@
 
 .device-preview{
   position:absolute;
-  inset:14px;
+  inset:18px;
   z-index:1;
 }
 
 .desktop-shot{
-  width:80%;
-  height:100%;
+  position:absolute;
+  left:0;
+  top:0;
+  width:86%;
+  height:auto;
+  max-height:calc(100% - 34px);
   object-fit:cover;
   object-position:top center;
   border:1px solid rgba(203,213,225,.92);
@@ -216,11 +218,13 @@
 
 .mobile-shot{
   position:absolute;
-  right:12px;
-  bottom:12px;
-  width:22%;
-  max-width:96px;
-  min-width:64px;
+  right:0;
+  top:34px;
+  width:21%;
+  max-width:88px;
+  min-width:58px;
+  height:auto;
+  max-height:calc(100% - 44px);
   aspect-ratio:9 / 16;
   object-fit:cover;
   object-position:top center;
@@ -231,15 +235,18 @@
 }
 
 .project-shot-caption{
-  position:relative;
+  position:absolute;
+  left:18px;
+  bottom:18px;
   z-index:3;
-  width:min(190px, 52%);
-  border-radius:14px;
-  padding:11px 12px;
-  background:rgba(255,255,255,.78);
-  border:1px solid rgba(255,255,255,.74);
+  width:auto;
+  min-width:138px;
+  max-width:180px;
+  border-radius:12px;
+  padding:10px 12px;
+  background:rgba(255,255,255,.94);
+  border:1px solid rgba(220,230,248,.92);
   box-shadow:0 16px 30px rgba(11,27,58,.10);
-  backdrop-filter:blur(10px);
 }
 
 .project-logo{
@@ -295,23 +302,26 @@
 
 .project-shot-compact .project-shot-caption{
   padding:10px 11px;
-  width:min(170px, 56%);
+  min-width:128px;
+  max-width:168px;
 }
 
 .project-shot-compact .device-preview{
-  inset:12px;
+  inset:18px;
 }
 
 .project-shot-compact .desktop-shot{
-  width:82%;
+  width:86%;
+  max-height:calc(100% - 30px);
 }
 
 .project-shot-compact .mobile-shot{
-  right:10px;
-  bottom:10px;
-  width:20%;
-  max-width:72px;
-  min-width:54px;
+  right:0;
+  top:30px;
+  width:19%;
+  max-width:66px;
+  min-width:48px;
+  max-height:calc(100% - 38px);
   border-width:4px;
   border-radius:14px;
 }
@@ -671,7 +681,9 @@
   }
 
   .project-shot-caption{
-    width:min(170px, 58%);
+    width:auto;
+    min-width:126px;
+    max-width:160px;
     padding:10px 11px;
   }
 
