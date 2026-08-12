@@ -186,11 +186,13 @@
 
 .project-shot img{
   display:block;
-  width:auto;
-  max-width:170px;
-  height:48px;
+  width:min(190px, 100%);
+  max-width:100%;
+  height:auto;
   object-fit:contain;
   margin-bottom:14px;
+  border:1px solid rgba(220,230,248,.86);
+  border-radius:10px;
 }
 
 .project-shot strong{
@@ -331,12 +333,12 @@
 .logo-grid-compact > img,
 .logo-grid-education > img{
   background:#fff;
-  min-height:86px;
+  min-height:96px;
 }
 
 .logo-grid-work > img{
-  height:82px;
-  padding:16px;
+  height:104px;
+  padding:8px;
 }
 
 .logo-category-section{
@@ -370,8 +372,8 @@
 }
 
 .logo-grid-compact > img{
-  height:92px;
-  padding:18px;
+  height:106px;
+  padding:8px;
 }
 
 .education-panel{
@@ -387,8 +389,8 @@
 }
 
 .logo-grid-education > img{
-  height:98px;
-  padding:18px;
+  height:110px;
+  padding:8px;
 }
 
 .expertise-grid,

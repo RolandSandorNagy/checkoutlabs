@@ -691,11 +691,11 @@ section {
 }
 .logo-item,
 .logo-grid > img{
-  min-height:76px;
+  min-height:86px;
   border-radius:14px;
   background:rgba(255,255,255,.78);
   border:1px solid rgba(220,230,248,.84);
-  padding:14px;
+  padding:8px 12px;
   transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, opacity .22s ease, filter .22s ease;
 }
 .logo-item{
@@ -727,13 +727,13 @@ section {
 .logo-item img{
   max-width:100%;
   width:auto;
-  height:42px;
+  height:62px;
   object-fit:contain;
   filter:saturate(.82) contrast(.96);
   opacity:.88;
 }
 .logo-item-wide img{
-  height:34px;
+  height:62px;
 }
 @media (hover: hover) and (pointer: fine){
   .logo-item:hover,
@@ -767,14 +767,14 @@ section {
   }
   .logo-item,
   .logo-grid > img{
-    min-height:72px;
-    padding:12px;
+    min-height:78px;
+    padding:8px;
   }
   .logo-grid > img{
     height:72px;
   }
   .logo-item img{
-    height:36px;
+    height:56px;
   }
 }
 
