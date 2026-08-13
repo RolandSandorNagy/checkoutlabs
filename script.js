@@ -381,20 +381,35 @@ if (y) y.textContent = String(new Date().getFullYear());
     render();
   }
 
+  function getEvidenceImageFromEvent(event) {
+    const target = event.target;
+    if (!(target instanceof Element)) return null;
+    const img = target.closest(".evidence-strip img");
+    return img instanceof HTMLImageElement ? img : null;
+  }
+
+  function canOpenFromImage(img) {
+    const strip = img.closest(".evidence-strip");
+    return !strip?.classList.contains("is-dragging") && strip?.dataset.dragJustEnded !== "true";
+  }
+
   evidenceImages.forEach((img) => {
     img.classList.add("is-lightbox-trigger");
-    img.addEventListener("click", (event) => {
-      const strip = img.closest(".evidence-strip");
-      if (strip?.classList.contains("is-dragging") || strip?.dataset.dragJustEnded === "true") return;
-      event.preventDefault();
-      openLightbox(img);
-    });
+  });
 
-    img.addEventListener("keydown", (event) => {
-      if (event.key !== "Enter" && event.key !== " ") return;
-      event.preventDefault();
-      openLightbox(img);
-    });
+  document.addEventListener("click", (event) => {
+    const img = getEvidenceImageFromEvent(event);
+    if (!img || !canOpenFromImage(img)) return;
+    event.preventDefault();
+    openLightbox(img);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    const img = getEvidenceImageFromEvent(event);
+    if (!img || !canOpenFromImage(img)) return;
+    event.preventDefault();
+    openLightbox(img);
   });
 
   closeButton.addEventListener("click", closeLightbox);
