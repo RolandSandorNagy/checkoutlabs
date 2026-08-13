@@ -293,3 +293,29 @@
 - The current card should use the Bramley for Business storefront screenshot where available.
 - The Bramley Products card should use the separate Bramley Products logo plus desktop/mobile homepage screenshots.
 - Public details can include Liquid, JavaScript, variants, metafields, metaobjects, bulk buying, business customer fields, purchasing constraints, and price-list behavior.
+
+## Ormonde Jayne
+
+### Context
+
+- Work happened through Fullstory / agency delivery context.
+- Work happened several years ago, but the current public storefront still appears to use the design implementation delivered during that engagement.
+- The work was not remembered as a deeply complex backend/integration project, but it was substantial storefront/frontend and design implementation work.
+
+### Personal Contribution
+
+- Roland personally implemented the full Shopify storefront frontend from Figma designs.
+- Work included theme/frontend redesign implementation across the store.
+- Built store finder functionality; there were multiple versions over time, including a map-based version earlier.
+- The current visible store finder appears to be one Roland built.
+- Store finder likely used Shopify metaobjects/content data and custom JavaScript.
+- There may have been GeoIP/location-based behavior in the earlier map-based version to show nearby stores.
+- Performance work was done.
+- During the engagement, there were ongoing smaller changes, fixes, and frontend refinements.
+
+### Public Representation Decision
+
+- Strongest public angle: Figma-to-Shopify storefront implementation plus custom store finder.
+- Keep wording conservative around GeoIP and map functionality unless we later inspect repo/history or add screenshots.
+- Current card should mention storefront implementation, performance refinements, ongoing production fixes, Shopify content data, and JavaScript store finder.
+- If available later, add a store finder screenshot as supporting evidence.
