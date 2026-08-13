@@ -1024,7 +1024,8 @@ body.evidence-lightbox-open{
   }
 
   .project-shot-compact{
-    height:240px;
+    height:300px;
+    padding: 10px;
   }
 
   .project-card-featured{
@@ -1032,7 +1033,7 @@ body.evidence-lightbox-open{
   }
 
   .project-card-featured .project-shot{
-    height:322px;
+    height:412px;
     padding:10px;
   }
 
@@ -1061,7 +1062,7 @@ body.evidence-lightbox-open{
 
   .device-preview,
   .project-shot-compact .device-preview{
-    width:calc(100% - 14px);
+    width:calc(100% - 0px);
     height:calc(100% - 14px);
     padding:10px;
     border-radius:14px;
@@ -1069,9 +1070,10 @@ body.evidence-lightbox-open{
 
   .desktop-shot,
   .project-shot-compact .desktop-shot{
-    width:84%;
+    width:100%;
     max-height:calc(100% - 22px);
     border-radius:11px;
+    padding: 8px 8px 0 8px
   }
 
   .mobile-shot,
