@@ -313,7 +313,7 @@
 
 .project-shot-compact .project-shot-caption{
   min-width:116px;
-  max-width:142px;
+  max-width:calc(100% - 62px);
 }
 
 .project-shot-compact .desktop-shot{
