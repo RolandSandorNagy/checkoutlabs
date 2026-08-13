@@ -640,6 +640,18 @@ input:focus, textarea:focus{outline:3px solid rgba(11,94,215,.18); border-color:
 .footer-link:hover{color:#fff}
 .footer-text{margin:10px 0 10px; color:rgba(255,255,255,.72); font-size:14px; line-height:1.6}
 .footer-copy{margin:14px 0 0; color:rgba(255,255,255,.55); font-size:13px}
+.footer-logo{
+  display:inline-flex;
+  width:max-content;
+  padding:6px 8px;
+  border-radius:10px;
+  background:#fff;
+}
+.footer-logo-img{
+  height:40px;
+  width:auto;
+  display:block;
+}
 
 .footer-bottom{
   margin-top:22px;
@@ -684,6 +696,7 @@ input:focus, textarea:focus{outline:3px solid rgba(11,94,215,.18); border-color:
 
   .header-inner{padding:12px 20px;}
   .logo{display:none}
+  .footer-logo-img{display:block}
   .brand-mobile{display:inline-flex}
   .brand-mobile-text{font-size:16px}
   .header-cta{gap:8px}
