@@ -285,8 +285,10 @@
   - Bramley for Business: custom B2B commerce implementation.
 - Public wording should be careful not to overclaim full ownership of the entire business system, because Roland implemented the technical Shopify pieces requested by the agency/team.
 
-### Open Questions
+### Public Representation Decision
 
-- Should Bramley B2C and Bramley for Business remain separate cards, or should Bramley for Business be the main case item with Bramley B2C mentioned as related experience?
-- Which screenshots best show the B2B work: homepage, product page, bulk ordering, account/company form, or pricing rules?
-- What B2B details can be shown publicly without exposing commercial logic?
+- Bramley for Business should be the main public card.
+- Bramley B2C should be mentioned as related storefront/theme/design implementation experience, not as a separate detailed case until more precise historical details are recovered.
+- The strongest public angle is custom B2B Shopify commerce implemented without Shopify Plus native B2B.
+- The current card should use the Bramley for Business storefront screenshot where available.
+- Public details can include Liquid, JavaScript, variants, metafields, metaobjects, bulk buying, business customer fields, purchasing constraints, and price-list behavior.
