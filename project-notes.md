@@ -295,6 +295,12 @@
 - The current card should use the Bramley for Business storefront screenshot where available.
 - The Bramley Products card should use the separate Bramley Products logo plus desktop/mobile homepage screenshots.
 - Bramley for Business now also has PDP and brand-kit screenshots available as supporting evidence.
+- Bramley Products now also has PDP and PLP screenshots available as supporting evidence:
+  - `assets/screenshots/bramley-products-pdp-desktop.png`
+  - `assets/screenshots/bramley-products-pdp-mobile.png`
+  - `assets/screenshots/bramley-products-plp-desktop.png`
+  - `assets/screenshots/bramley-products-plp-mobile.png`
+  - Optimized `.webp` versions are used in the work page evidence strip.
 - Public details can include Liquid, JavaScript, variants, metafields, metaobjects, bulk buying, business customer fields, purchasing constraints, and price-list behavior.
 
 ## Ormonde Jayne
