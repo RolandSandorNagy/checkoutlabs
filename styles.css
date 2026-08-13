@@ -357,20 +357,20 @@ h1{
 .hero-media img{width:100%; height:auto; display:block}
 
 .hero-proof-card{
-  padding:16px;
-  background:rgba(255,255,255,.9);
+  padding:18px;
+  background:rgba(255,255,255,.92);
   border:1px solid rgba(220,230,248,.92);
 }
 
 .hero-proof{
   position:relative;
-  min-height:390px;
+  min-height:382px;
   overflow:hidden;
-  padding:22px;
+  padding:26px;
   border:1px solid rgba(214,230,255,.85);
   background:
-    radial-gradient(420px 220px at 78% 16%, rgba(59,130,246,.18), transparent 64%),
-    radial-gradient(380px 220px at 14% 88%, rgba(34,197,94,.16), transparent 62%),
+    radial-gradient(420px 220px at 78% 16%, rgba(59,130,246,.14), transparent 64%),
+    radial-gradient(380px 220px at 14% 88%, rgba(34,197,94,.13), transparent 62%),
     linear-gradient(135deg, #F8FBFF 0%, #EAF4FF 100%);
 }
 
@@ -380,12 +380,13 @@ h1{
   border:1px solid rgba(203,213,225,.92);
   border-radius:18px;
   background:#fff;
-  box-shadow:0 24px 46px rgba(11,27,58,.16);
+  box-shadow:0 22px 42px rgba(11,27,58,.14);
 }
 
 .proof-browser-main{
-  width:78%;
-  aspect-ratio:16 / 10.2;
+  width:74%;
+  aspect-ratio:16 / 10.4;
+  transform:rotate(-.35deg);
 }
 
 .proof-browser-bar{
@@ -418,16 +419,16 @@ h1{
 
 .proof-caption{
   position:absolute;
-  left:18px;
-  bottom:18px;
+  left:32px;
+  bottom:76px;
   z-index:3;
-  max-width:72%;
-  padding:12px 14px;
+  max-width:48%;
+  padding:11px 14px;
   border:1px solid rgba(220,230,248,.86);
   border-radius:14px;
-  background:rgba(255,255,255,.92);
-  box-shadow:0 18px 34px rgba(11,27,58,.12);
-  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,.95);
+  box-shadow:0 16px 30px rgba(11,27,58,.10);
+  backdrop-filter:blur(12px);
 }
 
 .proof-caption span,
@@ -447,60 +448,56 @@ h1{
   display:block;
   margin-top:4px;
   color:var(--text);
-  font-size:15px;
+  font-size:14px;
   line-height:1.2;
 }
 
 .proof-phone{
   position:absolute;
-  right:26px;
-  top:76px;
-  width:24%;
-  min-width:116px;
-  max-width:150px;
-  padding:8px 8px 34px;
+  right:34px;
+  top:86px;
+  z-index:2;
+  width:18%;
+  min-width:96px;
+  max-width:122px;
+  padding:7px;
   border:5px solid #fff;
-  border-radius:22px;
+  border-radius:20px;
   background:#fff;
-  box-shadow:0 24px 42px rgba(11,27,58,.22);
+  box-shadow:0 22px 38px rgba(11,27,58,.18);
   transform:rotate(2.5deg);
 }
 
 .proof-phone img{
-  height:190px;
+  height:178px;
   object-fit:cover;
   object-position:top center;
-  border-radius:15px;
+  border-radius:14px;
   border:1px solid rgba(203,213,225,.92);
 }
 
 .proof-phone span{
-  position:absolute;
-  left:10px;
-  right:10px;
-  bottom:10px;
-  text-align:center;
-  font-size:10px;
+  display:none;
 }
 
 .proof-card{
   position:absolute;
   z-index:4;
   display:grid;
-  grid-template-columns:88px minmax(0, 1fr);
-  gap:12px;
+  grid-template-columns:76px minmax(0, 1fr);
+  gap:10px;
   align-items:center;
-  width:min(310px, 48%);
+  width:min(270px, 43%);
   padding:10px;
   border:1px solid rgba(220,230,248,.9);
   border-radius:16px;
-  background:rgba(255,255,255,.94);
-  box-shadow:0 20px 38px rgba(11,27,58,.14);
-  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,.96);
+  box-shadow:0 18px 34px rgba(11,27,58,.12);
+  backdrop-filter:blur(12px);
 }
 
 .proof-card img{
-  height:58px;
+  height:50px;
   object-fit:cover;
   object-position:top center;
   border:1px solid rgba(220,230,248,.92);
@@ -509,14 +506,16 @@ h1{
 }
 
 .proof-card-checkout{
-  left:34px;
+  left:48px;
   right:auto;
-  bottom:28px;
+  bottom:24px;
+  transform:rotate(-.4deg);
 }
 
 .proof-card-b2b{
-  right:24px;
-  bottom:78px;
+  right:28px;
+  bottom:44px;
+  transform:rotate(.35deg);
 }
 
 /* Sections */
@@ -844,11 +843,11 @@ input:focus, textarea:focus{outline:3px solid rgba(11,94,215,.18); border-color:
   }
   .proof-phone{
     right:18px;
-    top:64px;
-    min-width:104px;
+    top:72px;
+    min-width:92px;
   }
   .proof-card{
-    width:min(300px, 52%);
+    width:min(280px, 50%);
   }
   h1{font-size:40px}
   .pricing-grid{grid-template-columns:1fr}
@@ -901,23 +900,21 @@ input:focus, textarea:focus{outline:3px solid rgba(11,94,215,.18); border-color:
     position:absolute;
     top:52px;
     right:10px;
-    width:23%;
-    min-width:82px;
-    padding:6px 6px 25px;
+    z-index:4;
+    width:22%;
+    min-width:76px;
+    padding:5px;
     border-width:3px;
     border-radius:16px;
   }
   .proof-phone img{
-    height:128px;
+    height:118px;
     border-radius:11px;
-  }
-  .proof-phone span{
-    bottom:7px;
-    font-size:8px;
   }
   .proof-caption{
     left:10px;
     bottom:10px;
+    max-width:68%;
     padding:9px 10px;
     border-radius:12px;
   }
