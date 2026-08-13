@@ -365,3 +365,103 @@
 - Keep Bird Eyewear in Additional Store Work.
 - Public copy can mention Shopify frontend, UI implementation, eyewear storefront, and prescription/product recommendation frontend experience.
 - Do not mention that the experience is no longer used.
+
+## Additional Store Work Notes
+
+### Savyll
+
+- Early Fullstory / agency project.
+- Full UI design implementation was personally handled by Roland.
+- Compact storefront with a small product catalog.
+- Current site still appears close to the implemented design, with only smaller later changes.
+- Public angle: clean design-led Shopify storefront implementation.
+
+### DuoBoots
+
+- Early Fullstory / agency project with substantial storefront work.
+- Similar proof category to Bramley: repeated UI/design implementations, custom filtering/search, and quiz-based product recommendation experiences.
+- Current site no longer appears to use the original design or quiz work, so public copy should avoid implying the visible site is the delivered implementation.
+- Public angle: Shopify frontend, custom search/filtering, and recommendation quiz work.
+
+### iS Clinical
+
+- Fullstory / agency project.
+- Similar proof category to Bramley and DuoBoots, but with less personal involvement.
+- Current site has since changed to a newer design not implemented by Roland.
+- Public copy should stay concise and conservative.
+
+### Deesse Pro
+
+- Similar public proof category to iS Clinical.
+- Keep as concise commerce storefront/frontend contribution unless more detail is recovered.
+
+### Noughty
+
+- Similar proof category to Bramley.
+- Public copy can mention Shopify storefront/theme work, UI implementation, and production frontend fixes.
+- Keep concise unless more concrete scope is recovered later.
+
+### Spiller & Tait
+
+- Similar proof category to Savyll.
+- Public angle: compact design-led storefront UI implementation through an agency team.
+
+### Hawkins Coffee
+
+- Similar proof category to Spiller & Tait.
+- Public angle: compact storefront UI implementation and frontend development for a retail coffee storefront.
+
+### Black Diamond Coatings
+
+- Full UI redesign implementation.
+- Built quiz-based product recommendation work that ranked products from customer input and recommended the best-fit product.
+- Current usage is not confirmed, so avoid saying it is currently live.
+- Public angle: UI implementation plus product recommendation quiz.
+
+### Malone Souliers
+
+- Storefront UI redesign implementation.
+- Stronger technical project: custom made-to-order shoe configurator app.
+- The MTO app was a PHP embedded Shopify app with backend admin UI for shoes, shoe parts, materials, and colors.
+- Customer-facing frontend allowed users to configure custom shoes with realistic images.
+- Roland built the app end to end personally.
+- The app is no longer live and screenshots are currently missing, so public copy should mention it carefully and avoid overpromising visual proof.
+- Potential future task: recover the GitHub repo enough to generate screenshots or a private demo.
+
+### Merched
+
+- Self-acquired work through Gabor / PaprikaSoft.
+- Main technical work: finish and fix a Stella Stanley API sync script.
+- GitHub Actions runs a weekly sync.
+- Sync covers products, variants, colors, inventory, prices, metafields, and related Shopify product data.
+- Frontend/PDP work included custom print selection logic implemented with cross-product behavior.
+- Also implemented minimum order amount / quantity behavior.
+- Public angle: API sync, GitHub Actions automation, Shopify product data, PDP custom print selection.
+
+### Moonwatch
+
+- Work came through Gabor / PaprikaSoft.
+- Template was already prepared.
+- Main work: product data preparation for Chrono24 compatibility.
+- Added / structured many Shopify metafields.
+- Modified PDP output so watch product information displayed correctly.
+- Public angle: product data, metafields, PDP updates, Chrono24-compatible structure.
+
+### Elixir
+
+- Small direct project acquired via Facebook.
+- Scope: integrate two MailerLite forms and build a webinar page template.
+- Public angle: small direct Shopify implementation project.
+
+### Petit Puk
+
+- Work happened through TiS.
+- Small scope: minor Shopify fixes and updates.
+- Keep concise in Additional Store Work.
+
+### The Boxspring Club
+
+- Work happened through TiS.
+- Existing 3D product configurator needed fixes, stabilization, and small modifications.
+- Also handled smaller storefront changes and bugfixes.
+- Public angle: Shopify storefront fixes and 3D configurator stabilization.
