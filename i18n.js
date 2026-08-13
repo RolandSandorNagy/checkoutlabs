@@ -688,7 +688,9 @@
       const key = normalizeText(node.nodeValue);
       const translated = window.i18next.t(key);
       if (translated === key) return;
-      node.nodeValue = node.nodeValue.replace(key, translated);
+      const leadingWhitespace = node.nodeValue.match(/^\s*/)?.[0] || "";
+      const trailingWhitespace = node.nodeValue.match(/\s*$/)?.[0] || "";
+      node.nodeValue = `${leadingWhitespace}${translated}${trailingWhitespace}`;
     });
   }
 
