@@ -229,12 +229,14 @@ if (y) y.textContent = String(new Date().getFullYear());
     let isDragging = false;
     let dragStartX = 0;
     let dragStartScroll = 0;
+    let didDrag = false;
 
     strip.addEventListener("pointerdown", (event) => {
       if (event.pointerType !== "mouse") return;
       if (getMaxScroll() <= 2) return;
 
       isDragging = true;
+      didDrag = false;
       dragStartX = event.clientX;
       dragStartScroll = strip.scrollLeft;
       strip.classList.add("is-dragging");
@@ -244,6 +246,7 @@ if (y) y.textContent = String(new Date().getFullYear());
     strip.addEventListener("pointermove", (event) => {
       if (!isDragging) return;
       event.preventDefault();
+      if (Math.abs(event.clientX - dragStartX) > 6) didDrag = true;
       strip.scrollLeft = dragStartScroll - (event.clientX - dragStartX);
     });
 
@@ -251,6 +254,12 @@ if (y) y.textContent = String(new Date().getFullYear());
       if (!isDragging) return;
       isDragging = false;
       strip.classList.remove("is-dragging");
+      if (didDrag) {
+        strip.dataset.dragJustEnded = "true";
+        window.setTimeout(() => {
+          delete strip.dataset.dragJustEnded;
+        }, 80);
+      }
       if (event?.pointerId !== undefined) strip.releasePointerCapture?.(event.pointerId);
     }
 
@@ -271,9 +280,136 @@ if (y) y.textContent = String(new Date().getFullYear());
 
     strip.querySelectorAll("img").forEach((img) => {
       if (!img.complete) img.addEventListener("load", update, { once: true });
+      img.tabIndex = 0;
+      img.setAttribute("role", "button");
+      img.setAttribute("aria-label", `${img.alt || "Project screenshot"} - open larger preview`);
     });
 
     update();
+  });
+})();
+
+// Evidence screenshot lightbox
+(function () {
+  const evidenceImages = Array.from(document.querySelectorAll(".evidence-strip img"));
+  if (!evidenceImages.length) return;
+
+  const lightbox = document.createElement("div");
+  lightbox.className = "evidence-lightbox";
+  lightbox.hidden = true;
+  lightbox.setAttribute("role", "dialog");
+  lightbox.setAttribute("aria-modal", "true");
+  lightbox.setAttribute("aria-label", "Project screenshot preview");
+
+  const closeButton = document.createElement("button");
+  closeButton.className = "evidence-lightbox-close";
+  closeButton.type = "button";
+  closeButton.setAttribute("aria-label", "Close screenshot preview");
+  closeButton.innerHTML = "&times;";
+
+  const previousButton = document.createElement("button");
+  previousButton.className = "evidence-lightbox-nav evidence-lightbox-prev";
+  previousButton.type = "button";
+  previousButton.setAttribute("aria-label", "Previous screenshot");
+  previousButton.innerHTML = "&#8249;";
+
+  const nextButton = document.createElement("button");
+  nextButton.className = "evidence-lightbox-nav evidence-lightbox-next";
+  nextButton.type = "button";
+  nextButton.setAttribute("aria-label", "Next screenshot");
+  nextButton.innerHTML = "&#8250;";
+
+  const figure = document.createElement("figure");
+  figure.className = "evidence-lightbox-figure";
+
+  const image = document.createElement("img");
+  image.className = "evidence-lightbox-image";
+  image.alt = "";
+
+  const caption = document.createElement("figcaption");
+  caption.className = "evidence-lightbox-caption";
+
+  figure.append(image, caption);
+  lightbox.append(closeButton, previousButton, figure, nextButton);
+  document.body.appendChild(lightbox);
+
+  let activeImages = [];
+  let activeIndex = 0;
+  let lastFocus = null;
+
+  function render() {
+    const activeImage = activeImages[activeIndex];
+    if (!activeImage) return;
+
+    image.src = activeImage.currentSrc || activeImage.src;
+    image.alt = activeImage.alt || "Project screenshot";
+    caption.textContent = activeImage.alt || "";
+
+    const hasMultiple = activeImages.length > 1;
+    previousButton.hidden = !hasMultiple;
+    nextButton.hidden = !hasMultiple;
+  }
+
+  function openLightbox(targetImage) {
+    const strip = targetImage.closest(".evidence-strip");
+    activeImages = Array.from(strip?.querySelectorAll("img") || [targetImage]);
+    activeIndex = Math.max(0, activeImages.indexOf(targetImage));
+    lastFocus = document.activeElement;
+
+    render();
+    lightbox.hidden = false;
+    document.body.classList.add("evidence-lightbox-open");
+    window.requestAnimationFrame(() => lightbox.classList.add("is-open"));
+    closeButton.focus({ preventScroll: true });
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("is-open");
+    document.body.classList.remove("evidence-lightbox-open");
+    window.setTimeout(() => {
+      lightbox.hidden = true;
+      image.removeAttribute("src");
+    }, 160);
+    if (lastFocus && typeof lastFocus.focus === "function") {
+      lastFocus.focus({ preventScroll: true });
+    }
+  }
+
+  function move(direction) {
+    if (activeImages.length <= 1) return;
+    activeIndex = (activeIndex + direction + activeImages.length) % activeImages.length;
+    render();
+  }
+
+  evidenceImages.forEach((img) => {
+    img.classList.add("is-lightbox-trigger");
+    img.addEventListener("click", (event) => {
+      const strip = img.closest(".evidence-strip");
+      if (strip?.classList.contains("is-dragging") || strip?.dataset.dragJustEnded === "true") return;
+      event.preventDefault();
+      openLightbox(img);
+    });
+
+    img.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      openLightbox(img);
+    });
+  });
+
+  closeButton.addEventListener("click", closeLightbox);
+  previousButton.addEventListener("click", () => move(-1));
+  nextButton.addEventListener("click", () => move(1));
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (lightbox.hidden) return;
+    if (event.key === "Escape") closeLightbox();
+    if (event.key === "ArrowLeft") move(-1);
+    if (event.key === "ArrowRight") move(1);
   });
 })();
 
