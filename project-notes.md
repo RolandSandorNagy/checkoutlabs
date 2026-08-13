@@ -185,3 +185,56 @@
 ### Open Questions
 
 - Which screenshots best show the checkout date picker and shipping method behavior?
+
+## YOZA
+
+### Context
+
+- Fresh project from the current year.
+- Direct client acquired by Roland through a Facebook post.
+- New Shopify website was mostly ready when Roland joined.
+- Remaining work included smaller frontend changes/fixes and the main configurator integration.
+
+### Work Delivered
+
+- Integrated an existing 3D configurator into the Shopify storefront.
+- The configurator was likely built with Three.js.
+- Roland's main work was Shopify integration rather than building the 3D engine from scratch.
+- Ensured Shopify products and variants worked correctly with the configurator so configured products could be purchased.
+- Implemented BOM-based add-to-cart behavior where each component/part is added as a separate Shopify line item.
+- Implemented or adjusted smaller frontend/theme fixes.
+- Configured shipping methods / shipping profiles.
+- Translated the site from English to Hungarian.
+- Configured Shopify Markets, shipping profiles, and the Translate & Adapt app.
+- No backend app/API work; theme/frontend-only integration.
+
+### Configuration Persistence
+
+- The order stores a link to the ordered configuration.
+- Opening the link shows the purchased configuration, making the configuration shareable/reviewable after purchase.
+
+### Positioning Notes
+
+- Strongest public angle: direct-client Shopify 3D configurator integration.
+- This should be positioned as Shopify integration and commerce logic for an existing 3D configurator, not as custom 3D engine development.
+- Strong technical points:
+  - product/variant integration
+  - BOM-style multi-line-item cart logic
+  - saved configuration links on orders
+  - Shopify Markets and localization setup
+  - shipping profile/method setup
+- Public copy should not mention:
+  - direct client acquisition
+  - Facebook source
+  - that the 3D engine already existed
+  - theme/frontend-only scope
+- Public copy can mention:
+  - BOM / multi-line-item cart logic
+  - Shopify product and variant integration
+  - saved/shareable configuration links
+  - Markets, shipping profiles, and localization setup
+
+### Open Questions
+
+- Which screenshots best show the configurator, cart line-item behavior, and saved configuration state?
+- Are there any constraints around publicly describing BOM / line-item architecture?
