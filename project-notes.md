@@ -41,6 +41,9 @@
 
 - Many smaller improvements and maintenance tasks happened over a 2-3 year period.
 - The project involved Shopify platform work, storefront implementation, custom business logic, booking flow logic, and operational tooling.
+- Roland personally handled the migration, new storefront design implementation, booking flow, and most non-app work.
+- The app codebases were initially vibe-coded by Ben, but contained many bugs and regressions.
+- Over the last ~6 months Roland has been fixing bugs, regressions, and production issues across the app ecosystem.
 
 ### Repo Review Findings
 
@@ -126,6 +129,8 @@
 - Attribution should stay conservative: agency/team delivery context, with clear wording around contribution.
 - Strong proof angle: migration from custom platform to Shopify, then Shopify-native constraints solved with custom app architecture.
 - Stronger current positioning: multi-year Shopify ticketing platform engineering across storefront booking UX, custom Shopify app infrastructure, shared capacity management, admission/check-in tooling, season ticket membership operations, and analytics/admin workflows.
+- Public attribution can be more direct for migration, storefront, redesign, and booking flow work: these were personally delivered by Roland.
+- Public attribution for the app ecosystem should emphasize stabilization, bug fixing, regression cleanup, production support, and hardening, unless specific app features are confirmed as personally authored.
 
 ### Open Questions
 
