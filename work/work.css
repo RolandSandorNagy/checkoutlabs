@@ -265,6 +265,16 @@
   box-shadow:0 12px 24px rgba(11,27,58,.14);
 }
 
+.project-card-featured .project-logo{
+  transform:
+    rotateX(calc(var(--tiltX, 0deg) * -1.8))
+    rotateY(calc(var(--tiltY, 0deg) * -1.8))
+    rotate(2deg);
+  transform-style:preserve-3d;
+  transition:transform .18s ease;
+  will-change:transform;
+}
+
 .project-shot-yoza{
   background:
     linear-gradient(135deg, rgba(11,94,215,.18), rgba(245,158,11,.16)),
