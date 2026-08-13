@@ -1,50 +1,84 @@
 # CheckoutLabs Website Roadmap
 
-## Visual And Positioning
+## Prioritas
 
-- Replace or revise the current hero visual with something more specific to senior Shopify development, custom apps, integrations, checkout work, or storefront engineering.
-- Review the full brand direction: colors, typography, spacing, imagery, and overall feel for professional high-value client acquisition.
-- Revisit the homepage hero separately from the about and work heroes so the first screen has a clearer, more distinct role.
-- Differentiate the about hero and work hero; they currently feel too similar.
+- Elso korben a proof es conversion erositesere erdemes menni: Selected Work, project leirasok, screenshot megjelenites, majd homepage hero.
+- Masodik korben johet a Technologies section, amikor megvannak a megfelelo logo assetek.
+- Harmadik korben erdemes az About oldalt melyiteni szemelyesebb, de professzionalis tartalommal.
 
-## Work And Proof
+## Homepage Es Pozicionalas
 
-- Improve Selected Work visuals with stronger store/project presentation.
-- Review whether every relevant store should have a work item, while still keeping priority and depth clear.
-- Review the Who I Work With section and sharpen the targeting for agencies, technical teams, merchants, and digital partners.
-- Improve the What I Handle section with more and better cards.
-- Expand and refine FAQ questions and answers.
+- A homepage hero kep helyett specifikusabb Shopify/dev fokuszu visual kell.
+- A homepage hero lehet teljesen mas karakteru, mint az about es work hero.
+- At kell nezni, hogy a homepage pontosan kinek szol: agency owner, technical lead, merchant, founder vagy digital partner.
+- A conversion path legyen tiszta: package valasztas, uzenetkuldes, intro call.
 
-## Technologies
+## Work Page Es Proof
 
-- Add a Technologies section near Technical Expertise on the work page.
-- Collect technology logos for the tools and platforms that are genuinely part of the service offer.
-- Suggested logo groups:
-  - Shopify, Shopify Plus, Liquid, Shopify Functions, Checkout UI Extensions, Shopify Admin API, Storefront API
-  - JavaScript, TypeScript, Node.js, React
-  - HTML, CSS, Tailwind CSS or the actual styling stack used
-  - REST APIs, GraphQL
-  - Git, GitHub
-  - Vercel or the actual deployment stack used
-  - MongoDB, SQL or the databases actually used in client work
-  - i18next for the current implementation, until server-rendered localization replaces it
+- A Selected Work sectiont tovabb kell erositeni jobb case study, screenshot es proof megjelenitessel.
+- Ahol van reszletes screenshot, peldaul 3D configurator, booking flow vagy checkout extension, legyen kattinthato es nyiljon meg nagyban lightbox/modal nezettel.
+- Egyesevel at kell beszelni az osszes projectet, hogy pontosan mi volt a feladat, milyen kornyezetben tortent, milyen technologiakkal, milyen felelosseggel es milyen uzleti problemat oldott meg.
+- A project atbeszeles utan pontosabb, hitelesebb mini case study leirasokat kell irni a Selected Work es Additional Store Work elemekhez.
+- A proof hierarchy-t rendezni kell: a legerosebb referenciak legyenek elol, a kisebb store-ok tamogato bizonyitekkent jelenjenek meg.
+- At kell nezni, hogy melyik store marad full project item, es melyik eleg Additional Store Work elemkent.
+
+## Technologies Section
+
+- A work page-en a Technical Expertise ele vagy utan kell egy Technologies section.
+- Olyan tech logokat kell gyujteni, amik valoban kapcsolodnak a szolgaltatasi ajanlathoz.
+- Javasolt tech logok:
+  - Shopify
+  - Shopify Plus
+  - Liquid
+  - Shopify Functions
+  - Checkout UI Extensions
+  - Shopify Admin API
+  - Shopify Storefront API
+  - JavaScript
+  - TypeScript
+  - Node.js
+  - React
+  - HTML
+  - CSS
+  - REST APIs
+  - GraphQL
+  - Git
+  - GitHub
+  - MongoDB vagy SQL, ha relevans client workben
+  - deployment stack, peldaul Vercel, Netlify vagy ami tenylegesen hasznalt
 
 ## About Page
 
-- Add an about section with a personal photo.
-- Plan a professional working photo: sitting at the computer, natural workspace, monitor visible but not distracting, with subtle code or a small easter egg on screen.
-- Keep the personal story short and credible: early interest in software, self-learning programming as a teenager, Commodore 64 / Turbo Pascal background, then formal CS and AI studies.
-- Consider adding hobby projects and university learning projects, but separate them clearly from commercial Shopify proof so the page still sells senior professional work.
-- Include BSc and MSc context where it supports credibility, especially AI and computer science background.
+- Kell egy szemelyesebb about section, ahol van rolad kep.
+- A foto lehet professzionalis dolgozos kep: gepnel ulsz, termeszetes workspace, monitoron kod vagy egy finom easter egg.
+- A szemelyes tortenet legyen rovid es hiteles: korai erdeklodes a szoftverfejlesztes irant, Commodore 64 / Turbo Pascal, onallo tanulas tinikent, majd formal Computer Science es AI tanulmanyok.
+- Be lehet mutatni a BSc es jelenlegi MSc hatteret, foleg ahol erositi az AI / CS credibility-t.
+- Meg lehet mutatni hobby projecteket es egyetemi / tanulo projecteket, de tisztan el kell kuloniteni a kereskedelmi Shopify referenciaktol.
 
-## Localization And SEO
+## Sections To Review
 
-- Later modernize localization so Hungarian and German pages are served as real localized HTML, instead of translating client-side with i18next.
-- Keep English as the default route, with `/hu/` and `/de/` as localized routes.
-- This is important for SEO, but not an immediate priority.
+- About hero es Work hero tul hasonlo, ezeket kulon karakterrel kell ellatni.
+- What I Handle section: tobb es jobb kartyak kellenek.
+- Who I Work With section: celcsoport, copy es pozicionalas felulvizsgalasa.
+- FAQ: kerdesek es valaszok alaposabb atnezese, pontositas, bovites.
+- Teljes arculat audit: szinek, fontok, spacing, vizualis minoseg, high-value ugyfelszerzeshez valo alkalmassag.
 
-## Possible Next Focus
+## Blog
 
-- First: strengthen proof and conversion by improving Selected Work and the homepage hero.
-- Second: add Technologies after the logo assets are collected.
-- Third: polish About with a personal section and photo concept.
+- Kesobb erdemes blogot inditani SEO es szakertoi hitelesseg miatt.
+- Lehetseges temak:
+  - Shopify Checkout UI Extensions
+  - Shopify B2B
+  - product configurators
+  - white-label Shopify agency support
+  - performance es maintainability
+  - internationalization / localization
+  - custom apps es integrations
+
+## SEO, Performance Es Analytics
+
+- Kesobb modernizalni kell a lokalizaciot: kliensoldali i18next helyett valodi, szerver altal kiszolgalt magyar es nemet HTML oldalak.
+- Angol maradjon default route, a magyar es nemet pedig `/hu/` es `/de/`.
+- SEO basics: title, meta description, heading struktura, Open Graph kepek oldalankent.
+- Figyelni kell a performance-ra es Core Web Vitals-ra, mert sok logo, screenshot es animacio van az oldalon.
+- Kesobb analytics eventeket is erdemes meresre beallitani: CTA kattintasok, package gombok, form submit, intro call kattintas.
