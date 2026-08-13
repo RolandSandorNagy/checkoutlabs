@@ -267,8 +267,8 @@
 
 .project-card-featured .project-logo{
   transform:
-    rotateX(calc(var(--tiltX, 0deg) * -1.8))
-    rotateY(calc(var(--tiltY, 0deg) * -1.8))
+    rotateX(calc(var(--tiltX, 0deg) * -3.6))
+    rotateY(calc(var(--tiltY, 0deg) * -3.6))
     rotate(2deg);
   transform-style:preserve-3d;
   transition:transform .18s ease;
