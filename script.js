@@ -226,6 +226,38 @@ if (y) y.textContent = String(new Date().getFullYear());
       strip.scrollBy({ left: direction * distance, behavior: "smooth" });
     }
 
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartScroll = 0;
+
+    strip.addEventListener("pointerdown", (event) => {
+      if (event.pointerType !== "mouse") return;
+      if (getMaxScroll() <= 2) return;
+
+      isDragging = true;
+      dragStartX = event.clientX;
+      dragStartScroll = strip.scrollLeft;
+      strip.classList.add("is-dragging");
+      strip.setPointerCapture?.(event.pointerId);
+    });
+
+    strip.addEventListener("pointermove", (event) => {
+      if (!isDragging) return;
+      event.preventDefault();
+      strip.scrollLeft = dragStartScroll - (event.clientX - dragStartX);
+    });
+
+    function stopDragging(event) {
+      if (!isDragging) return;
+      isDragging = false;
+      strip.classList.remove("is-dragging");
+      if (event?.pointerId !== undefined) strip.releasePointerCapture?.(event.pointerId);
+    }
+
+    strip.addEventListener("pointerup", stopDragging);
+    strip.addEventListener("pointercancel", stopDragging);
+    strip.addEventListener("pointerleave", stopDragging);
+
     prev.addEventListener("click", () => move(-1));
     next.addEventListener("click", () => move(1));
     strip.addEventListener("scroll", () => window.requestAnimationFrame(update), { passive: true });
