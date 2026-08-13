@@ -17,6 +17,7 @@
 
 - A Selected Work sectiont tovabb kell erositeni jobb case study, screenshot es proof megjelenitessel.
 - Ahol van reszletes screenshot, peldaul 3D configurator, booking flow vagy checkout extension, legyen kattinthato es nyiljon meg nagyban lightbox/modal nezettel.
+- A nagyobb projectekhez kulon case study page-et kell kesziteni, peldaul `/work/pennywell-farm/`, ahol van context, challenge, work delivered, screenshots, system areas es outcome.
 - Egyesevel at kell beszelni az osszes projectet, hogy pontosan mi volt a feladat, milyen kornyezetben tortent, milyen technologiakkal, milyen felelosseggel es milyen uzleti problemat oldott meg.
 - A project atbeszeles utan pontosabb, hitelesebb mini case study leirasokat kell irni a Selected Work es Additional Store Work elemekhez.
 - A proof hierarchy-t rendezni kell: a legerosebb referenciak legyenek elol, a kisebb store-ok tamogato bizonyitekkent jelenjenek meg.
