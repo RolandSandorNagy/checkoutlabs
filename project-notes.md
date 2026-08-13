@@ -142,3 +142,46 @@
 - Should Fullstory be named publicly, or should this stay phrased as agency delivery context?
 - Can we mention PassKit / wallet passes publicly for the Season Tickets app?
 - Can we mention capacity sync / oversell prevention publicly?
+
+## Edenmoor / Pipers Farm
+
+### Context
+
+- Work happened through Fullstory / agency delivery context.
+- At the time of the work the brand was still Pipers Farm; it later became Edenmoor.
+- Roland has not meaningfully worked with the project since the Edenmoor rebrand.
+- The store already existed when the work started.
+- A delivery date selector already existed, built by another company, but it was not on the checkout page.
+
+### Problem
+
+- The existing delivery date selection happened before checkout.
+- This caused issues because the precise postcode and shipping methods are only known during checkout.
+- Delivery date selection needed to align with checkout-specific postcode and shipping method logic.
+
+### Work Delivered
+
+- A Shopify Checkout UI Extension was built for delivery date selection.
+- Roland personally built the extension.
+- Roland also handled the shipping method logic.
+- The backend app portion was not personally built by Roland.
+- The checkout page is publicly reachable, so the date picker can be shown in screenshots.
+- Stack: Node.js, React, Remix, Shopify Checkout UI Extensions.
+- The date picker validated checkout progress and could block checkout until a valid delivery date was selected.
+- The shipping method logic ran in the extension.
+
+### Additional Storefront Work
+
+- During the broader engagement there was also frontend/storefront work.
+- This likely included design implementation, product page UI work, variant selector work, and other storefront updates.
+- Exact details are less clear and should be phrased conservatively unless recovered from repo/history.
+
+### Positioning Notes
+
+- Strongest public angle: Checkout UI Extension for delivery date selection, driven by postcode/cart/shipping-method constraints.
+- The work should be presented as checkout customization / delivery logic rather than generic frontend work.
+- Public wording should mention Pipers Farm / now Edenmoor carefully, e.g. "Edenmoor, formerly Pipers Farm".
+
+### Open Questions
+
+- Which screenshots best show the checkout date picker and shipping method behavior?
