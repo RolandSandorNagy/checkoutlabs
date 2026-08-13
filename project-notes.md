@@ -292,6 +292,7 @@
 - The strongest public angle is custom B2B Shopify commerce implemented without Shopify Plus native B2B.
 - The current card should use the Bramley for Business storefront screenshot where available.
 - The Bramley Products card should use the separate Bramley Products logo plus desktop/mobile homepage screenshots.
+- Bramley for Business now also has PDP and brand-kit screenshots available as supporting evidence.
 - Public details can include Liquid, JavaScript, variants, metafields, metaobjects, bulk buying, business customer fields, purchasing constraints, and price-list behavior.
 
 ## Ormonde Jayne
@@ -346,3 +347,19 @@
 - Public copy should focus on multi-language Shopify storefront development, Figma-to-theme implementation, Core Web Vitals, production fixes, and localized theme repo complexity.
 - Do not mention the reviews app unless later verified and worth showing.
 - Avoid implying the current screenshot is the exact redesign delivered at the time.
+
+## Bird Eyewear
+
+### Context
+
+- Work happened through Fullstory / agency delivery context.
+- Work included multiple frontend and UI design implementation tasks.
+- Built a prescription/product recommendation frontend experience that recommended products based on multiple customer inputs.
+- The recommendation experience does not appear to be used currently.
+- There is not enough remembered detail to make this a featured case study yet.
+
+### Public Representation Decision
+
+- Keep Bird Eyewear in Additional Store Work.
+- Public copy can mention Shopify frontend, UI implementation, eyewear storefront, and prescription/product recommendation frontend experience.
+- Do not mention that the experience is no longer used.
