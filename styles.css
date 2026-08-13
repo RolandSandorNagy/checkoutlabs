@@ -392,7 +392,43 @@ h1{
 }
 .badge.dark{background:rgba(255,255,255,.14); border-color:rgba(255,255,255,.25); color:#fff}
 
-.price{display:flex; align-items:baseline; gap:8px; margin:14px 0 2px}
+.price-anchor{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:14px;
+}
+.old-price{
+  color:var(--muted2);
+  font-size:15px;
+  font-weight:800;
+  letter-spacing:-0.02em;
+  text-decoration:line-through;
+  text-decoration-thickness:2px;
+  text-decoration-color:rgba(75,85,99,.56);
+}
+.intro-rate{
+  display:inline-flex;
+  align-items:center;
+  border:1px solid #BFE0FF;
+  border-radius:999px;
+  padding:4px 8px;
+  background:#EEF7FF;
+  color:#0B5ED7;
+  font-size:11px;
+  font-weight:800;
+}
+.price-anchor-light .old-price{
+  color:rgba(255,255,255,.72);
+  text-decoration-color:rgba(255,255,255,.52);
+}
+.price-anchor-light .intro-rate{
+  color:#fff;
+  background:rgba(255,255,255,.14);
+  border-color:rgba(255,255,255,.28);
+}
+.price{display:flex; align-items:baseline; gap:8px; margin:6px 0 2px}
 .price-amount{font-size:34px; font-weight:800; letter-spacing:-0.03em}
 .price-period{color:var(--muted2)}
 .price-period-light{color:rgba(255,255,255,.85)}
