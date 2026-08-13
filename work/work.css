@@ -880,19 +880,81 @@
   .project-shot,
   .project-card-featured .project-shot,
   .project-shot-compact{
-    height:210px;
     aspect-ratio:auto;
   }
 
+  .project-shot{
+    height:230px;
+    padding:12px;
+  }
+
+  .project-card-featured .project-shot{
+    height:260px;
+  }
+
+  .project-shot-compact{
+    height:240px;
+  }
+
+  .device-preview,
+  .project-shot-compact .device-preview{
+    width:calc(100% - 14px);
+    height:calc(100% - 14px);
+    padding:10px;
+    border-radius:14px;
+  }
+
+  .desktop-shot,
+  .project-shot-compact .desktop-shot{
+    width:84%;
+    max-height:calc(100% - 22px);
+    border-radius:11px;
+  }
+
+  .mobile-shot,
+  .project-shot-compact .mobile-shot{
+    right:8px;
+    bottom:18px;
+    width:24%;
+    min-width:72px;
+    max-width:92px;
+    max-height:calc(100% - 30px);
+    border-width:3px;
+    border-radius:13px;
+  }
+
   .project-logo{
-    width:min(96px, calc(100% - 20px));
+    top:8px;
+    right:8px;
+    width:min(88px, calc(100% - 16px));
+    border-radius:9px;
+  }
+
+  .project-content h3{
+    font-size:21px;
+    letter-spacing:-0.02em;
+  }
+
+  .project-content p,
+  .responsibility-list{
+    font-size:15px;
+    line-height:1.55;
+  }
+
+  .tag-row{
+    gap:7px;
+  }
+
+  .tag-row span{
+    padding:6px 9px;
+    font-size:12px;
   }
 
   .evidence-strip img{
-    height:120px;
+    height:112px;
   }
 
   .evidence-strip-single img{
-    height:120px;
+    height:112px;
   }
 }
