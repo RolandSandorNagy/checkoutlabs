@@ -164,6 +164,87 @@ if (y) y.textContent = String(new Date().getFullYear());
   });
 })();
 
+// Evidence screenshot sliders
+(function () {
+  const strips = Array.from(document.querySelectorAll(".evidence-strip"));
+  if (!strips.length) return;
+
+  strips.forEach((strip) => {
+    if (strip.closest(".evidence-slider")) return;
+
+    const slider = document.createElement("div");
+    slider.className = "evidence-slider";
+    strip.parentNode.insertBefore(slider, strip);
+    slider.appendChild(strip);
+
+    const controls = document.createElement("div");
+    controls.className = "evidence-slider-controls";
+
+    const prev = document.createElement("button");
+    prev.className = "evidence-slider-button";
+    prev.type = "button";
+    prev.setAttribute("aria-label", "Previous screenshot");
+    prev.innerHTML = "&#8249;";
+
+    const track = document.createElement("div");
+    track.className = "evidence-slider-track";
+    track.setAttribute("aria-hidden", "true");
+
+    const thumb = document.createElement("span");
+    thumb.className = "evidence-slider-thumb";
+    track.appendChild(thumb);
+
+    const next = document.createElement("button");
+    next.className = "evidence-slider-button";
+    next.type = "button";
+    next.setAttribute("aria-label", "Next screenshot");
+    next.innerHTML = "&#8250;";
+
+    controls.append(prev, track, next);
+    slider.appendChild(controls);
+
+    function getMaxScroll() {
+      return Math.max(0, strip.scrollWidth - strip.clientWidth);
+    }
+
+    function update() {
+      const maxScroll = getMaxScroll();
+      const isScrollable = maxScroll > 2;
+      const progress = isScrollable ? Math.min(1, Math.max(0, strip.scrollLeft / maxScroll)) : 0;
+
+      slider.classList.toggle("is-scrollable", isScrollable);
+      slider.classList.toggle("is-at-start", !isScrollable || strip.scrollLeft <= 2);
+      slider.classList.toggle("is-at-end", !isScrollable || strip.scrollLeft >= maxScroll - 2);
+      slider.style.setProperty("--evidenceProgress", isScrollable ? Math.max(.08, progress).toFixed(4) : "0");
+
+      prev.disabled = !isScrollable || strip.scrollLeft <= 2;
+      next.disabled = !isScrollable || strip.scrollLeft >= maxScroll - 2;
+    }
+
+    function move(direction) {
+      const distance = Math.max(180, Math.floor(strip.clientWidth * .72));
+      strip.scrollBy({ left: direction * distance, behavior: "smooth" });
+    }
+
+    prev.addEventListener("click", () => move(-1));
+    next.addEventListener("click", () => move(1));
+    strip.addEventListener("scroll", () => window.requestAnimationFrame(update), { passive: true });
+
+    if (typeof ResizeObserver === "function") {
+      const observer = new ResizeObserver(update);
+      observer.observe(strip);
+    } else {
+      window.addEventListener("resize", update);
+    }
+
+    strip.querySelectorAll("img").forEach((img) => {
+      if (!img.complete) img.addEventListener("load", update, { once: true });
+    });
+
+    update();
+  });
+})();
+
 
 // Formspree form
 const form = document.getElementById("contact-form");
