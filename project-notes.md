@@ -288,7 +288,8 @@
 ### Public Representation Decision
 
 - Bramley for Business should be the main public card.
-- Bramley B2C should be mentioned as related storefront/theme/design implementation experience, not as a separate detailed case until more precise historical details are recovered.
+- Bramley Products / B2C should have a separate conservative public card focused on storefront, theme, PDP, redesign implementation, and production Shopify frontend work.
 - The strongest public angle is custom B2B Shopify commerce implemented without Shopify Plus native B2B.
 - The current card should use the Bramley for Business storefront screenshot where available.
+- The Bramley Products card should use the separate Bramley Products logo plus desktop/mobile homepage screenshots.
 - Public details can include Liquid, JavaScript, variants, metafields, metaobjects, bulk buying, business customer fields, purchasing constraints, and price-list behavior.
