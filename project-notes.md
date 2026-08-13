@@ -319,3 +319,30 @@
 - Keep wording conservative around GeoIP and map functionality unless we later inspect repo/history or add screenshots.
 - Current card should mention storefront implementation, performance refinements, ongoing production fixes, Shopify content data, and JavaScript store finder.
 - If available later, add a store finder screenshot as supporting evidence.
+
+## FaceTheory
+
+### Context
+
+- Work happened through Fullstory / agency delivery context.
+- FaceTheory came to Fullstory with an existing Shopify store roughly 3-4 years ago.
+- The store had a complex multi-language setup with around 9-11 languages.
+- Each language had its own repository because localized storefronts differed in content and not only translated strings.
+- The setup was difficult to maintain.
+- The current public screenshot no longer exactly represents the redesign implemented during the engagement.
+
+### Personal Contribution
+
+- Roland personally handled most of the frontend redesign implementation from Figma designs.
+- Worked in the existing multi-repository, localized Shopify theme setup.
+- Attempted to unify the multi-language setup under one repository, but that effort was not completed.
+- Still delivered multiple smaller fixes and improvements across the localized storefronts.
+- Worked on Core Web Vitals / frontend performance improvements.
+- Handled production bugfixes and change requests.
+- There was custom reviews app work, likely PHP backend plus frontend, but it should not be mentioned publicly because it may not have gone live.
+
+### Public Representation Decision
+
+- Public copy should focus on multi-language Shopify storefront development, Figma-to-theme implementation, Core Web Vitals, production fixes, and localized theme repo complexity.
+- Do not mention the reviews app unless later verified and worth showing.
+- Avoid implying the current screenshot is the exact redesign delivered at the time.
