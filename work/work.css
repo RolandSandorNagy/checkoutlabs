@@ -477,16 +477,21 @@
 }
 
 .evidence-slider-track{
-  position:absolute;
-  left:50%;
-  bottom:8px;
-  width:min(96px, calc(100% - 88px));
+  position:relative;
+  display:block;
+  width:min(132px, 42%);
   height:3px;
   overflow:hidden;
   border-radius:999px;
   background:rgba(207,224,251,.78);
   box-shadow:0 1px 6px rgba(11,27,58,.08);
-  transform:translateX(-50%);
+  margin:10px auto 0;
+  opacity:0;
+  transition:opacity .16s ease;
+}
+
+.evidence-slider.is-scrollable .evidence-slider-track{
+  opacity:1;
 }
 
 .evidence-slider-thumb{
@@ -1129,6 +1134,11 @@ body.evidence-lightbox-open{
     grid-template-columns:1fr;
     gap:10px;
     padding:16px;
+  }
+
+  .evidence-slider-track{
+    width:min(150px, 56%);
+    margin-top:8px;
   }
 
   .evidence-lightbox-figure{

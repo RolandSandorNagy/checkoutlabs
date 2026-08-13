@@ -200,8 +200,9 @@ if (y) y.textContent = String(new Date().getFullYear());
     next.setAttribute("aria-label", "Next screenshot");
     next.innerHTML = "&#8250;";
 
-    controls.append(prev, track, next);
+    controls.append(prev, next);
     slider.appendChild(controls);
+    slider.appendChild(track);
 
     function getMaxScroll() {
       return Math.max(0, strip.scrollWidth - strip.clientWidth);
