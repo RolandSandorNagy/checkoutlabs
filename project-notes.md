@@ -238,3 +238,55 @@
 
 - Which screenshots best show the configurator, cart line-item behavior, and saved configuration state?
 - Are there any constraints around publicly describing BOM / line-item architecture?
+
+## Bramley / Bramley for Business
+
+### Context
+
+- Work happened through Fullstory / agency delivery context.
+- Bramley was one of Roland's early Fullstory projects.
+- Fullstory has worked with Bramley for many years, likely 4-6 years, including ongoing marketing work.
+- Roland worked heavily on Bramley in the earlier years.
+- Important distinction:
+  - Bramley / Bramley Products: older B2C store.
+  - Bramley for Business: later B2B store/project, built from scratch around 3-4 years ago.
+
+### B2C Bramley Work
+
+- Multiple frontend/theme/design implementation projects over the years.
+- Work likely included custom PDPs, theme updates, redesign implementations, and smaller storefront fixes.
+- Exact details are less clear, so public copy should remain conservative for the B2C side unless recovered from repo/history.
+
+### Bramley for Business B2B Work
+
+- Roland was involved from the beginning of the B2B store.
+- Built through Fullstory.
+- Roland handled the technical Shopify implementation for requirements defined by the team.
+- The project was not Shopify Plus / native Shopify B2B.
+- It used custom B2B logic with Liquid, JavaScript, and Shopify-native primitives.
+- Relevant implementation areas:
+  - company name / business customer fields
+  - bulk purchasing
+  - buying limitations / constraints
+  - custom price lists
+  - customer/group-like B2B behavior
+  - MOQ or order rule style logic
+  - gated or segmented purchasing behavior where needed
+  - product variants, metafields, and metaobjects
+- No substantial backend/API/app work remembered.
+- B2B theme/frontend implementation was done once and appears to still be in use.
+
+### Positioning Notes
+
+- Strongest public angle: custom B2B Shopify implementation without Shopify Plus/native B2B.
+- This is useful proof for merchants or agencies needing B2B behavior using Shopify-native building blocks and custom theme logic.
+- Public copy should distinguish:
+  - Bramley B2C: ongoing storefront/theme contribution.
+  - Bramley for Business: custom B2B commerce implementation.
+- Public wording should be careful not to overclaim full ownership of the entire business system, because Roland implemented the technical Shopify pieces requested by the agency/team.
+
+### Open Questions
+
+- Should Bramley B2C and Bramley for Business remain separate cards, or should Bramley for Business be the main case item with Bramley B2C mentioned as related experience?
+- Which screenshots best show the B2B work: homepage, product page, bulk ordering, account/company form, or pricing rules?
+- What B2B details can be shown publicly without exposing commercial logic?
