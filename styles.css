@@ -498,14 +498,21 @@ h1{
   box-shadow:var(--shadow2);
   min-height:210px;
 }
+.step-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+}
 .step-num{
+  flex:0 0 auto;
   width:44px; height:44px; border-radius:12px;
   background: var(--primary);
   color:#fff;
   display:flex; align-items:center; justify-content:center;
   font-weight:800;
 }
-.step-card h3{margin:14px 0 8px}
+.step-card h3{margin:0}
 .step-card p{margin:0; color:var(--muted); line-height:1.55}
 .step-meta{margin-top:14px; color:var(--muted2); font-size:13px}
 .step-arrow{font-size:30px; color:#8AA7D6}
