@@ -25,6 +25,12 @@
   - other ticket types
   - annual passes
 - Before this, different ticket types had separate cart pages.
+- Current work page evidence screenshots include:
+  - `assets/screenshots/pennywell-booking-flow-start.png`
+  - `assets/screenshots/pennywell-booking-flow-date-picker.png`
+  - `assets/screenshots/pennywell-booking-flow-quantity-selector.png`
+  - `assets/screenshots/pennywell-booking-flow-add-on.png`
+  - Optimized `.webp` versions are used in the evidence strip.
 
 ### Platform Evolution
 
