@@ -502,6 +502,7 @@
   - `assets/screenshots/malone-mto.gif`: 1517x988 GIF showing the 5-step MTO popup during the monogram/personalisation step.
   - `assets/screenshots/malone-mto-mobile.jpeg`: 750x1334 mobile screenshot showing MTO style selection / entry state.
 - These assets are usable as compact supporting evidence, but they do not fully show the strongest technical areas such as material/colour configuration, admin CMS, summary/add-to-cart, or cart reconstruction.
+- Current site representation: promoted from Additional Store Work into Selected Work & Case Studies beside FaceTheory, positioned as a historical/archived MTO configurator app rather than a live case study.
 
 ### Merched
 
