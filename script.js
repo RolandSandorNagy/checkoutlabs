@@ -230,6 +230,14 @@ if (y) y.textContent = String(new Date().getFullYear());
     let dragStartX = 0;
     let dragStartScroll = 0;
     let didDrag = false;
+    let pendingLightboxImage = null;
+
+    function getPointerImage(event) {
+      const target = event.target;
+      if (!(target instanceof Element)) return null;
+      const img = target.closest(".evidence-strip img");
+      return img instanceof HTMLImageElement ? img : null;
+    }
 
     strip.addEventListener("pointerdown", (event) => {
       if (event.pointerType !== "mouse") return;
@@ -237,6 +245,7 @@ if (y) y.textContent = String(new Date().getFullYear());
 
       isDragging = true;
       didDrag = false;
+      pendingLightboxImage = getPointerImage(event);
       dragStartX = event.clientX;
       dragStartScroll = strip.scrollLeft;
       strip.classList.add("is-dragging");
@@ -250,22 +259,30 @@ if (y) y.textContent = String(new Date().getFullYear());
       strip.scrollLeft = dragStartScroll - (event.clientX - dragStartX);
     });
 
-    function stopDragging(event) {
+    function stopDragging(event, allowOpen = false) {
       if (!isDragging) return;
+      const shouldOpenLightbox = allowOpen && !didDrag && pendingLightboxImage;
       isDragging = false;
       strip.classList.remove("is-dragging");
-      if (didDrag) {
+      if (didDrag || shouldOpenLightbox) {
         strip.dataset.dragJustEnded = "true";
         window.setTimeout(() => {
           delete strip.dataset.dragJustEnded;
-        }, 80);
+        }, 120);
       }
       if (event?.pointerId !== undefined) strip.releasePointerCapture?.(event.pointerId);
+      if (shouldOpenLightbox) {
+        pendingLightboxImage.dispatchEvent(new CustomEvent("evidenceLightboxOpen", {
+          bubbles: true,
+          detail: { image: pendingLightboxImage },
+        }));
+      }
+      pendingLightboxImage = null;
     }
 
-    strip.addEventListener("pointerup", stopDragging);
-    strip.addEventListener("pointercancel", stopDragging);
-    strip.addEventListener("pointerleave", stopDragging);
+    strip.addEventListener("pointerup", (event) => stopDragging(event, true));
+    strip.addEventListener("pointercancel", (event) => stopDragging(event));
+    strip.addEventListener("pointerleave", (event) => stopDragging(event));
 
     prev.addEventListener("click", () => move(-1));
     next.addEventListener("click", () => move(1));
@@ -401,6 +418,12 @@ if (y) y.textContent = String(new Date().getFullYear());
     const img = getEvidenceImageFromEvent(event);
     if (!img || !canOpenFromImage(img)) return;
     event.preventDefault();
+    openLightbox(img);
+  });
+
+  document.addEventListener("evidenceLightboxOpen", (event) => {
+    const img = event.detail?.image;
+    if (!(img instanceof HTMLImageElement)) return;
     openLightbox(img);
   });
 
