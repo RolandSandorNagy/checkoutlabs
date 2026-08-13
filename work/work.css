@@ -155,8 +155,11 @@
   align-items:start;
   max-width:100%;
   overflow:hidden;
-  transform:perspective(1100px) rotateX(var(--tiltX, 0deg)) rotateY(var(--tiltY, 0deg)) translateY(0);
   transform-style:preserve-3d;
+}
+
+.project-card-featured.is-visible{
+  transform:perspective(1100px) rotateX(var(--tiltX, 0deg)) rotateY(var(--tiltY, 0deg)) translateY(0);
 }
 
 .project-card-featured .project-shot{
@@ -180,8 +183,11 @@
 .profile-panel{
   position:relative;
   overflow:hidden;
-  transform:perspective(1000px) rotateX(var(--tiltX, 0deg)) rotateY(var(--tiltY, 0deg)) translateY(0);
   transform-style:preserve-3d;
+}
+
+.profile-panel.is-visible{
+  transform:perspective(1000px) rotateX(var(--tiltX, 0deg)) rotateY(var(--tiltY, 0deg)) translateY(0);
 }
 
 .project-shot{
@@ -226,7 +232,7 @@
 }
 
 .desktop-shot{
-  width:86%;
+  width:100%;
   height:auto;
   max-height:calc(100% - 34px);
   object-fit:cover;
@@ -906,6 +912,20 @@ body.evidence-lightbox-open{
 .work-mode,
 .profile-panel{
   transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.cred-card.reveal,
+.project-card.reveal,
+.additional-store-card.reveal,
+.expertise-card.reveal,
+.work-mode.reveal,
+.profile-panel.reveal{
+  transition:
+    opacity 980ms ease,
+    transform 1280ms cubic-bezier(.16,.62,.18,1),
+    filter 1040ms ease,
+    box-shadow .22s ease,
+    border-color .22s ease;
 }
 
 @media (hover: hover) and (pointer: fine){
