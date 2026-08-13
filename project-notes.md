@@ -428,6 +428,81 @@
 - The app is no longer live and screenshots are currently missing, so public copy should mention it carefully and avoid overpromising visual proof.
 - Potential future task: recover the GitHub repo enough to generate screenshots or a private demo.
 
+### Malone Souliers Repo Review Findings
+
+#### Theme Repo: `malone`
+
+- Shopify theme contains dedicated MTO integration files:
+  - `templates/page.made-to-order.liquid`
+  - `sections/mto-popup.liquid`
+  - `sections/made_to_order.liquid`
+  - `snippets/mto-popup-step-1.liquid` through `snippets/mto-popup-step-5.liquid`
+  - `snippets/mto-js-class.liquid`
+  - `snippets/customize-shoe-control-panel.liquid`
+  - MTO-specific cart/header rendering and notification snippets
+- Public storefront flow was a full-screen 5-step popup:
+  - choose shoe style
+  - customize parts, materials, and colours
+  - optional monogram / personalization
+  - customer details and shoe size
+  - summary and add-to-bag
+- Theme JavaScript loaded configurator data from the external MTO app JSON endpoint.
+- Add-to-cart posted a Shopify cart item with detailed line item properties, including selected shoe, base image, material layers, colour settings, monogram, size, and a unique MTO ID.
+- Cart and mini-cart reconstructed the configured shoe image using `base_img_src` plus layered part images and CSS filters from line item properties.
+- Public wording can confidently mention deep Shopify theme/cart integration and configuration data stored as line item properties.
+
+#### MTO App Repo: `malone-MTO`
+
+- Standalone PHP app with MySQL dump, image assets, admin pages, and JSON endpoint.
+- SQL dump contains configuration tables for:
+  - `mtoshoes`
+  - `mtoparts`
+  - `mtomaterials`
+  - `mtocolours`
+  - `mtoimages`
+  - `mtoswatches`
+  - `mtoswatchcolours`
+  - `mtoconfig`
+- Seed data includes 18 shoe configurations, including Maureen, Maureen Pump, Maisie, Marion, Norah, and Robyn styles.
+- The app exposes `_json-shoes-ajax.php`, which assembles frontend configurator data from DB tables into JSON for the Shopify theme.
+- Admin UI includes:
+  - dashboard / all shoes
+  - add shoe
+  - edit shoe
+  - swatches
+  - AJAX endpoints for adding, updating, deleting, and reordering shoes/swatches
+- Admin form supports selecting a Shopify product/variant, naming style/heel/pump attributes, adding parts, assigning materials, uploading layered light/dark images, and defining colours with brightness/sepia/hue/saturation/custom image behaviour.
+- The app stores and serves a large number of layered PNG assets for configurable shoes.
+- The code uses fixed legacy configuration:
+  - `$siteUrl = 'https://malonesouliersmadetoorder.com/'`
+  - MySQL DB name `malone-mto2`
+  - user `mto`
+  - legacy frontend asset/domain references to `https://mto.fullstory-marketing-dev.com/`
+- Local revive should be possible, but it requires importing the SQL dump, setting compatible DB credentials, changing the app base URL, and replacing or mapping the hardcoded asset/API domain.
+
+#### Case Study Potential
+
+- This is a strong technical reference and could justify a featured case study if screenshots can be recovered or generated.
+- Best publishable angles:
+  - custom made-to-order Shopify product configurator
+  - PHP/MySQL embedded app and admin CMS
+  - layered image configuration engine for shoes, materials, colours, and monogram
+  - Shopify theme integration with cart/add.js
+  - preserving configured product data in line item properties
+  - cart/mini-cart reconstruction of configured product visuals
+- Since the live app is not available, avoid implying it is currently live.
+- If revived locally, priority screenshots should be:
+  - MTO landing/page entry
+  - step 1 shoe style selection
+  - step 2 material/colour customization with layered shoe preview
+  - monogram step
+  - summary/add-to-bag step
+  - admin dashboard / edit shoe form showing parts, materials, colours, and preview
+- Recovered assets currently available in the CheckoutLabs repo:
+  - `assets/screenshots/malone-mto.gif`: 1517x988 GIF showing the 5-step MTO popup during the monogram/personalisation step.
+  - `assets/screenshots/malone-mto-mobile.jpeg`: 750x1334 mobile screenshot showing MTO style selection / entry state.
+- These assets are usable as compact supporting evidence, but they do not fully show the strongest technical areas such as material/colour configuration, admin CMS, summary/add-to-cart, or cart reconstruction.
+
 ### Merched
 
 - Self-acquired work through Gabor / PaprikaSoft.
