@@ -1064,7 +1064,7 @@ body.evidence-lightbox-open{
   .project-shot-compact .device-preview{
     width:calc(100% - 0px);
     height:calc(100% - 14px);
-    padding:10px;
+    padding:8px !important;
     border-radius:14px;
   }
 
