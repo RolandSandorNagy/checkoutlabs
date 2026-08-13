@@ -254,7 +254,8 @@
 ### B2C Bramley Work
 
 - Multiple frontend/theme/design implementation projects over the years.
-- Work likely included custom PDPs, theme updates, redesign implementations, and smaller storefront fixes.
+- Work included repeated UI redesign implementations, custom PDP/theme work, storefront updates, and smaller storefront fixes.
+- Before Shopify Search & Discovery was available, search and filtering were handled with a custom JavaScript implementation.
 - Exact details are less clear, so public copy should remain conservative for the B2C side unless recovered from repo/history.
 
 ### Bramley for Business B2B Work
@@ -289,6 +290,7 @@
 
 - Bramley for Business should be the main public card.
 - Bramley Products / B2C should have a separate conservative public card focused on storefront, theme, PDP, redesign implementation, and production Shopify frontend work.
+- Bramley Products public copy can also mention custom JavaScript search/filtering from the pre-Search-&-Discovery period.
 - The strongest public angle is custom B2B Shopify commerce implemented without Shopify Plus native B2B.
 - The current card should use the Bramley for Business storefront screenshot where available.
 - The Bramley Products card should use the separate Bramley Products logo plus desktop/mobile homepage screenshots.
