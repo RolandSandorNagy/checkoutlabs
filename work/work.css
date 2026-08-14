@@ -937,6 +937,80 @@ body.evidence-lightbox-open{
   padding:8px;
 }
 
+.technologies-section{
+  padding:74px 0;
+}
+
+.technologies-section .section-sub{
+  max-width:720px;
+}
+
+.tech-category-list{
+  margin-top:40px;
+  display:grid;
+  gap:34px;
+}
+
+.tech-category{
+  display:grid;
+  grid-template-columns:minmax(220px, .36fr) minmax(0, 1fr);
+  gap:28px;
+  align-items:start;
+  padding-top:32px;
+  border-top:1px solid rgba(189, 211, 242, .74);
+}
+
+.tech-category:first-child{
+  padding-top:0;
+  border-top:0;
+}
+
+.tech-category-copy h3{
+  margin:0 0 8px;
+  font-size:20px;
+  line-height:1.2;
+}
+
+.tech-category-copy p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.55;
+}
+
+.tech-logo-grid{
+  display:grid;
+  grid-template-columns:repeat(5, minmax(0, 1fr));
+  gap:12px;
+}
+
+.tech-logo-card{
+  min-height:106px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:14px 12px;
+  background:#fff;
+  border:1px solid #DCE6F8;
+  border-radius:16px;
+  box-shadow:0 10px 24px rgba(11, 27, 58, .055);
+}
+
+.tech-logo-card img{
+  width:100%;
+  height:44px;
+  object-fit:contain;
+}
+
+.tech-logo-card span{
+  color:#334155;
+  font-size:12px;
+  font-weight:800;
+  line-height:1.2;
+  text-align:center;
+}
+
 .expertise-grid,
 .work-mode-grid{
   margin-top:34px;
@@ -1069,8 +1143,13 @@ body.evidence-lightbox-open{
   .work-mode-grid,
   .logo-grid-work,
   .logo-category-grid,
-  .education-panel{
+  .education-panel,
+  .tech-category{
     grid-template-columns:1fr 1fr;
+  }
+
+  .tech-logo-grid{
+    grid-template-columns:repeat(3, minmax(0, 1fr));
   }
 
   .work-logo-copy{
@@ -1098,8 +1177,27 @@ body.evidence-lightbox-open{
   .logo-grid-compact,
   .logo-grid-education,
   .logo-category-grid,
-  .education-panel{
+  .education-panel,
+  .tech-category{
     grid-template-columns:1fr;
+  }
+
+  .technologies-section{
+    padding:58px 0;
+  }
+
+  .tech-category-list{
+    margin-top:30px;
+    gap:28px;
+  }
+
+  .tech-logo-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+  }
+
+  .tech-logo-card{
+    min-height:96px;
+    padding:12px 10px;
   }
 
   .work-snapshot-panel,
