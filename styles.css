@@ -1396,6 +1396,18 @@ section {
   max-width:62ch;
   line-height:1.55;
 }
+.logo-section-action{
+  margin-top:22px;
+  text-align:center;
+}
+.text-link{
+  color:var(--primary2);
+  font-weight:800;
+  text-decoration:none;
+}
+.text-link:hover{
+  color:#0B4FC8;
+}
 .logo-grid{
   display:grid;
   gap:12px;
@@ -1774,6 +1786,25 @@ section {
   font-weight:800;
   background:linear-gradient(135deg, #EAF2FF, #F4FAF6);
   border:1px solid #DCE6F8;
+}
+.portrait-ready{
+  position:relative;
+  overflow:hidden;
+}
+.profile-portrait{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 28%;
+  display:block;
+}
+.portrait-ready:not(.is-fallback) span{
+  display:none;
+}
+.portrait-ready.is-fallback .profile-portrait{
+  display:none;
 }
 .about-narrative{
   text-align:center;

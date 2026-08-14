@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=20260814-header-shadow-top-only" />
+  <link rel="stylesheet" href="/styles.css?v=20260814-final-portfolio-refine" />
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3CL61G458C"></script>
   <script>
@@ -79,7 +79,10 @@
 
         <aside class="about-cred-panel reveal reveal-1" aria-label="Roland Nagy credibility summary">
           <div class="about-cred-head">
-            <div class="profile-avatar">RN</div>
+            <div class="profile-avatar portrait-ready is-fallback">
+              <img class="profile-portrait" src="/assets/roland-nagy.webp" alt="Roland Nagy portrait" onload="this.parentElement.classList.remove('is-fallback')" onerror="this.hidden=true">
+              <span>RN</span>
+            </div>
             <div>
               <h2>Roland Nagy</h2>
               <p>Senior Shopify and full-stack developer behind CheckoutLabs.</p>
@@ -184,29 +187,6 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">Academic Project Areas</h2>
-        <p class="section-sub">
-          This section can grow into detailed write-ups as more publishable academic project material is added.
-        </p>
-
-        <div class="about-project-grid">
-          <article class="about-project reveal reveal-1">
-            <h3>Software Engineering & Web Applications</h3>
-            <p>Coursework and project work around application structure, data handling, backend logic, and browser-based user interfaces.</p>
-          </article>
-          <article class="about-project reveal reveal-2">
-            <h3>Data Structures, Algorithms & Databases</h3>
-            <p>Computer science foundations that support practical debugging, performance reasoning, and reliable commerce logic.</p>
-          </article>
-          <article class="about-project reveal reveal-3">
-            <h3>AI & Applied Machine Learning</h3>
-            <p>Ongoing MSc work focused on AI concepts that can inform future tooling, automation, analysis, and decision-support systems.</p>
-          </article>
-        </div>
-      </div>
-    </section>
 
     <section class="cta">
       <div class="container">
@@ -254,7 +234,7 @@
   </footer>
 
   <script src="https://unpkg.com/i18next@23.16.8/dist/umd/i18next.min.js"></script>
-  <script src="/i18n.js?v=20260814-page-hero-panels"></script>
+  <script src="/i18n.js?v=20260814-final-portfolio-refine"></script>
   <script src="/script.js?v=20260814-header-entrance"></script>
 </body>
 </html>
