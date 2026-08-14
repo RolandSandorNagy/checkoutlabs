@@ -217,6 +217,62 @@ if (y) y.textContent = String(new Date().getFullYear());
   });
 })();
 
+// Desktop case-study masonry without changing the mobile reading order.
+(function () {
+  const desktopQuery = window.matchMedia("(min-width: 981px)");
+
+  document.querySelectorAll(".project-grid").forEach((grid) => {
+    const cards = Array.from(grid.children).filter((child) => child.matches?.(".project-card:not(.project-card-featured)"));
+    if (cards.length < 3) return;
+
+    let masonry = null;
+
+    function enableMasonry() {
+      if (masonry) return;
+
+      masonry = document.createElement("div");
+      masonry.className = "project-masonry";
+
+      const leftColumn = document.createElement("div");
+      leftColumn.className = "project-column";
+
+      const rightColumn = document.createElement("div");
+      rightColumn.className = "project-column";
+
+      masonry.append(leftColumn, rightColumn);
+      grid.insertBefore(masonry, cards[0]);
+
+      cards.forEach((card, index) => {
+        (index % 2 === 0 ? leftColumn : rightColumn).appendChild(card);
+      });
+    }
+
+    function disableMasonry() {
+      if (!masonry) return;
+
+      cards.forEach((card) => grid.appendChild(card));
+      masonry.remove();
+      masonry = null;
+    }
+
+    function render() {
+      if (desktopQuery.matches) {
+        enableMasonry();
+      } else {
+        disableMasonry();
+      }
+    }
+
+    render();
+
+    if (typeof desktopQuery.addEventListener === "function") {
+      desktopQuery.addEventListener("change", render);
+    } else {
+      desktopQuery.addListener(render);
+    }
+  });
+})();
+
 // Evidence screenshot sliders
 (function () {
   const strips = Array.from(document.querySelectorAll(".evidence-strip"));

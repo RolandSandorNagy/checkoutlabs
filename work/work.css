@@ -196,6 +196,22 @@
   min-width:0;
 }
 
+.project-masonry{
+  grid-column:1 / -1;
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:22px;
+  align-items:start;
+  min-width:0;
+}
+
+.project-column{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+  min-width:0;
+}
+
 .project-card{
   background:#fff;
   border:1px solid #DCE6F8;
@@ -1196,6 +1212,7 @@ body.evidence-lightbox-open{
 
   .cred-grid,
   .project-grid,
+  .project-masonry,
   .additional-store-grid,
   .expertise-grid,
   .work-mode-grid,
@@ -1228,6 +1245,7 @@ body.evidence-lightbox-open{
   .work-hero-grid,
   .cred-grid,
   .project-grid,
+  .project-masonry,
   .additional-store-grid,
   .expertise-grid,
   .work-mode-grid,
