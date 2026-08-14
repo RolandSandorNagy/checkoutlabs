@@ -203,6 +203,7 @@
   gap:22px;
   align-items:start;
   min-width:0;
+  overflow:visible;
 }
 
 .project-column{
@@ -210,6 +211,13 @@
   flex-direction:column;
   gap:22px;
   min-width:0;
+  transform:translateY(0);
+  transition:transform .16s linear;
+  will-change:transform;
+}
+
+.project-column.is-scroll-balanced{
+  transform:translateY(var(--projectColumnOffset, 0px));
 }
 
 .project-card{

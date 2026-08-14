@@ -220,12 +220,17 @@ if (y) y.textContent = String(new Date().getFullYear());
 // Desktop case-study masonry without changing the mobile reading order.
 (function () {
   const desktopQuery = window.matchMedia("(min-width: 981px)");
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   document.querySelectorAll(".project-grid").forEach((grid) => {
     const cards = Array.from(grid.children).filter((child) => child.matches?.(".project-card:not(.project-card-featured)"));
     if (cards.length < 3) return;
 
     let masonry = null;
+    let columns = [];
+    let shorterColumn = null;
+    let balanceDistance = 0;
+    let ticking = false;
 
     function enableMasonry() {
       if (masonry) return;
@@ -241,18 +246,29 @@ if (y) y.textContent = String(new Date().getFullYear());
 
       masonry.append(leftColumn, rightColumn);
       grid.insertBefore(masonry, cards[0]);
+      columns = [leftColumn, rightColumn];
 
       cards.forEach((card, index) => {
         (index % 2 === 0 ? leftColumn : rightColumn).appendChild(card);
       });
+
+      updateBalanceMetrics();
+      requestBalanceUpdate();
     }
 
     function disableMasonry() {
       if (!masonry) return;
 
+      columns.forEach((column) => {
+        column.classList.remove("is-scroll-balanced");
+        column.style.removeProperty("--projectColumnOffset");
+      });
       cards.forEach((card) => grid.appendChild(card));
       masonry.remove();
       masonry = null;
+      columns = [];
+      shorterColumn = null;
+      balanceDistance = 0;
     }
 
     function render() {
@@ -263,13 +279,81 @@ if (y) y.textContent = String(new Date().getFullYear());
       }
     }
 
+    function updateBalanceMetrics() {
+      if (!masonry || columns.length !== 2 || prefersReduced.matches) {
+        columns.forEach((column) => {
+          column.classList.remove("is-scroll-balanced");
+          column.style.removeProperty("--projectColumnOffset");
+        });
+        shorterColumn = null;
+        balanceDistance = 0;
+        return;
+      }
+
+      const heights = columns.map((column) => column.scrollHeight);
+      const difference = Math.abs(heights[0] - heights[1]);
+
+      columns.forEach((column) => {
+        column.classList.remove("is-scroll-balanced");
+        column.style.removeProperty("--projectColumnOffset");
+      });
+
+      if (difference < 18) {
+        shorterColumn = null;
+        balanceDistance = 0;
+        return;
+      }
+
+      shorterColumn = heights[0] < heights[1] ? columns[0] : columns[1];
+      balanceDistance = difference;
+      shorterColumn.classList.add("is-scroll-balanced");
+    }
+
+    function updateBalanceOffset() {
+      ticking = false;
+      if (!masonry || !shorterColumn || balanceDistance <= 0) return;
+
+      const rect = masonry.getBoundingClientRect();
+      const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+      const scrollRange = Math.max(1, rect.height - viewportHeight * .62);
+      const progress = Math.min(1, Math.max(0, (viewportHeight * .16 - rect.top) / scrollRange));
+      const offset = balanceDistance * progress;
+
+      shorterColumn.style.setProperty("--projectColumnOffset", `${offset.toFixed(2)}px`);
+    }
+
+    function requestBalanceUpdate() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(updateBalanceOffset);
+    }
+
+    function recalculateBalance() {
+      window.requestAnimationFrame(() => {
+        updateBalanceMetrics();
+        requestBalanceUpdate();
+      });
+    }
+
     render();
+    window.setTimeout(recalculateBalance, 0);
+    window.setTimeout(recalculateBalance, 500);
 
     if (typeof desktopQuery.addEventListener === "function") {
       desktopQuery.addEventListener("change", render);
+      prefersReduced.addEventListener("change", recalculateBalance);
     } else {
       desktopQuery.addListener(render);
+      prefersReduced.addListener(recalculateBalance);
     }
+
+    window.addEventListener("scroll", requestBalanceUpdate, { passive: true });
+    window.addEventListener("resize", recalculateBalance);
+    cards.forEach((card) => {
+      card.querySelectorAll("img").forEach((img) => {
+        if (!img.complete) img.addEventListener("load", recalculateBalance, { once: true });
+      });
+    });
   });
 })();
 
