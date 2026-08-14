@@ -1505,33 +1505,68 @@ section {
 }
 .about-hero-grid{
   display:grid;
-  grid-template-columns:minmax(0, 1fr) minmax(320px, 430px);
+  grid-template-columns:minmax(0, 1fr) minmax(360px, 460px);
   gap:42px;
   align-items:center;
 }
 .about-hero-copy h1{
   margin:20px 0 14px;
-  font-size:clamp(42px, 6vw, 72px);
-  line-height:.98;
-  letter-spacing:-.055em;
+  font-size:clamp(42px, 4.6vw, 58px);
+  line-height:1.04;
+  letter-spacing:-.045em;
 }
-.about-profile-card,
+.about-cred-panel,
 .about-card,
 .about-project{
   background:#fff;
   border:1px solid #DCE6F8;
   box-shadow:var(--shadow2);
 }
-.about-profile-card{
+.about-cred-panel{
   border-radius:24px;
   padding:26px;
 }
-.about-profile-card h2{
-  margin:14px 0 8px;
+.about-cred-head{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+.about-cred-head h2{
+  margin:0 0 6px;
   font-size:26px;
   letter-spacing:-.03em;
 }
-.about-profile-card p,
+.about-cred-head p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.5;
+}
+.about-cred-grid{
+  margin:22px 0;
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:12px;
+}
+.about-cred-grid div{
+  min-height:112px;
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  border-radius:16px;
+  background:#F7FAFF;
+  border:1px solid #DCE6F8;
+}
+.about-cred-grid strong{
+  color:var(--primary2);
+  font-size:24px;
+  letter-spacing:-.03em;
+}
+.about-cred-grid span{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.35;
+}
 .about-narrative p,
 .about-card p,
 .about-project p{
@@ -1634,12 +1669,27 @@ section {
   .about-project-grid{
     grid-template-columns:1fr;
   }
+  .about-cred-panel{
+    max-width:560px;
+    width:100%;
+    justify-self:center;
+  }
 }
 @media (max-width: 560px){
   .about-hero{
     padding:44px 0 40px;
   }
-  .about-profile-card,
+  .about-hero-copy h1{
+    font-size:clamp(36px, 11vw, 44px);
+  }
+  .about-cred-grid{
+    grid-template-columns:1fr;
+  }
+  .about-cred-head{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .about-cred-panel,
   .about-card,
   .about-project{
     padding:18px;
