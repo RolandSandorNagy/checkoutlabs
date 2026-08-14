@@ -106,8 +106,15 @@ a{color:inherit; text-decoration:none}
 .brand-icon{
   width:42px;
   height:42px;
+  max-width:42px;
+  max-height:42px;
+  flex:0 0 42px;
   display:block;
   object-fit:contain;
+}
+.site-header .brand-icon{
+  width:42px;
+  height:42px;
 }
 .brand-wordmark{
   font-size:28px;
@@ -812,6 +819,9 @@ input:focus, textarea:focus{outline:3px solid rgba(11,94,215,.18); border-color:
 .footer-brand-icon{
   height:40px;
   width:40px;
+  max-width:40px;
+  max-height:40px;
+  flex-basis:40px;
   object-fit:contain;
   display:block;
 }
