@@ -67,6 +67,7 @@ a{color:inherit; text-decoration:none}
   backdrop-filter: blur(10px);
   border:1px solid rgba(229,234,243,.9);
   border-radius:12px;
+  box-shadow:0 22px 42px rgba(11,27,58,.14);
   transition:
     transform .34s cubic-bezier(.22, 1, .36, 1),
     opacity .24s ease,
