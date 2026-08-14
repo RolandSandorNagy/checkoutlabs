@@ -155,7 +155,7 @@ a{color:inherit; text-decoration:none}
 .header-cta{display:flex; align-items:center; gap:12px}
 
 .language-switcher{
-  display:inline-flex;
+  display:none;
   align-items:center;
   gap:2px;
   padding:3px;
