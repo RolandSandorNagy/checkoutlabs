@@ -615,6 +615,26 @@ h1{
 .section-title{text-align:center; margin:0; font-size:36px; letter-spacing:-0.03em}
 .section-sub{text-align:center; margin:12px auto 0; color:var(--muted2); max-width:70ch}
 
+.packages-section{
+  padding-bottom:58px;
+}
+
+.capabilities-section,
+.process-section{
+  padding-top:58px;
+  padding-bottom:58px;
+}
+
+.audience-section{
+  padding-top:58px;
+  padding-bottom:52px;
+}
+
+.faq-section{
+  padding-top:56px;
+  padding-bottom:54px;
+}
+
 /* Pricing */
 .pricing-grid{margin-top:34px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:22px; align-items:stretch}
 .price-card{
@@ -774,10 +794,10 @@ h1{
   margin-right:auto;
 }
 .with-grid{
-  margin-top:34px;
+  margin-top:28px;
   display:grid;
   grid-template-columns:minmax(520px, 1.08fr) minmax(430px, .92fr);
-  gap:34px;
+  gap:30px;
   align-items:center;
 }
 .delivery-panel{
@@ -957,6 +977,10 @@ h1{
   font-weight:700;
   color:#1F3B67;
   cursor:pointer;
+  text-align:left;
+}
+.faq-q span:first-child{
+  text-align:left;
 }
 .faq-q:hover{background:#F4F8FF}
 .chev{transition: transform .18s ease}
@@ -967,7 +991,7 @@ h1{
 
 /* CTA */
 .cta{
-  padding:70px 0;
+  padding:58px 0 56px;
   background: linear-gradient(180deg, #1E7BD5 0%, #0E5FC0 100%);
   color:#fff;
 }
@@ -975,12 +999,12 @@ h1{
 .cta p{text-align:center; margin:12px auto 0; max-width:72ch; color:rgba(255,255,255,.9)}
 
 .form-card{
-  margin:28px auto 0;
+  margin:24px auto 0;
   max-width:640px;
   background:#fff;
   color:var(--text);
   border-radius:22px;
-  padding:26px;
+  padding:24px;
   box-shadow: 0 22px 60px rgba(0,0,0,.20);
 }
 .form-card h3{margin:0 0 6px; text-align:center}
@@ -1421,16 +1445,16 @@ section {
   height:76px;
   object-fit:contain;
   box-sizing:border-box;
-  filter:saturate(.82) contrast(.96);
-  opacity:.88;
+  filter:saturate(.94) contrast(1.02);
+  opacity:.94;
 }
 .logo-item img{
   max-width:100%;
   width:auto;
   height:100px;
   object-fit:contain;
-  filter:saturate(.82) contrast(.96);
-  opacity:.88;
+  filter:saturate(.94) contrast(1.02);
+  opacity:.94;
 }
 .logo-item-wide img{
   height:100px;
@@ -2514,4 +2538,233 @@ section {
 
 .modal-body .small {
   font-size: 12px;
+}
+
+/* Homepage rhythm and mobile polish */
+@media (min-width: 981px){
+  .audience-section .with-grid{
+    max-width:1180px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .faq-section .container{
+    max-width:1040px;
+  }
+}
+
+@media (max-width: 980px){
+  .packages-section,
+  .capabilities-section,
+  .process-section,
+  .audience-section,
+  .faq-section{
+    padding-top:52px;
+    padding-bottom:52px;
+  }
+
+  .cap-grid{
+    gap:14px;
+  }
+
+  .with-grid{
+    margin-top:26px;
+    gap:24px;
+  }
+}
+
+@media (max-width: 560px){
+  .packages-section{
+    padding-top:52px;
+    padding-bottom:46px;
+  }
+
+  .capabilities-section{
+    padding-top:48px;
+    padding-bottom:44px;
+  }
+
+  .process-section{
+    padding-top:50px;
+    padding-bottom:48px;
+  }
+
+  .audience-section{
+    padding-top:48px;
+    padding-bottom:44px;
+  }
+
+  .faq-section{
+    padding-top:48px;
+    padding-bottom:44px;
+  }
+
+  .cap-grid{
+    margin-top:28px;
+    gap:14px;
+  }
+
+  .cap-card{
+    padding:16px;
+    border-radius:16px;
+  }
+
+  .cap-icon{
+    width:38px;
+    height:38px;
+    border-radius:12px;
+    font-size:16px;
+  }
+
+  .cap-card h3{
+    margin-top:10px;
+  }
+
+  .cap-card p{
+    font-size:13px;
+    line-height:1.48;
+  }
+
+  .step-card{
+    min-height:0;
+    padding:18px;
+  }
+
+  .steps{
+    margin-top:28px;
+    margin-bottom:26px;
+  }
+
+  .audience-section .section-sub,
+  .faq-section .section-sub{
+    max-width:32ch;
+  }
+
+  .delivery-panel{
+    padding:8px;
+    border-radius:18px;
+  }
+
+  .delivery-window{
+    padding:12px;
+  }
+
+  .delivery-topbar{
+    padding-bottom:12px;
+  }
+
+  .delivery-flow{
+    gap:8px;
+    padding:14px 0;
+  }
+
+  .delivery-node{
+    padding:12px;
+    gap:8px;
+    border-radius:14px;
+  }
+
+  .delivery-node span{
+    width:30px;
+    height:30px;
+    border-radius:10px;
+  }
+
+  .delivery-node strong{
+    font-size:15px;
+  }
+
+  .delivery-connector{
+    height:18px;
+  }
+
+  .delivery-metrics{
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:8px;
+  }
+
+  .delivery-metrics div{
+    padding:10px 8px;
+    border-radius:12px;
+  }
+
+  .delivery-metrics strong{
+    font-size:14px;
+  }
+
+  .delivery-metrics span{
+    font-size:10px;
+  }
+
+  .with-cards{
+    gap:12px;
+  }
+
+  .with-card{
+    padding:14px;
+    border-radius:15px;
+  }
+
+  .anon-cases{
+    gap:8px;
+  }
+
+  .anon-pill{
+    width:100%;
+    border-radius:14px;
+    line-height:1.35;
+  }
+
+  .faq{
+    margin-top:24px;
+    gap:10px;
+  }
+
+  .faq-q{
+    padding:14px 16px;
+  }
+
+  .faq-q span:first-child{
+    font-size:14px;
+    line-height:1.25;
+  }
+
+  .cta{
+    padding:46px 0 42px;
+  }
+
+  .cta h2{
+    font-size:30px;
+    line-height:1.16;
+  }
+
+  .cta p{
+    max-width:31ch;
+    font-size:15px;
+    line-height:1.35;
+  }
+
+  .form-card{
+    margin-top:22px;
+    padding:20px;
+    border-radius:20px;
+  }
+
+  .form{
+    gap:10px;
+  }
+
+  textarea{
+    min-height:112px;
+  }
+
+  .cta-badges{
+    margin-top:14px;
+    gap:10px 14px;
+    font-size:12px;
+  }
+
+  .footer{
+    padding-top:38px;
+  }
 }
