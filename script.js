@@ -88,6 +88,13 @@ document.querySelectorAll('.faq-item').forEach((item) => {
     item.classList.toggle('open', !isOpen);
     btn.setAttribute('aria-expanded', String(!isOpen));
     ans.hidden = isOpen;
+
+    if (!isOpen) {
+      trackEvent("faq_open", {
+        question: getAnalyticsText(btn),
+        section: getAnalyticsSection(item),
+      });
+    }
   });
 });
 
@@ -150,6 +157,42 @@ function getAnalyticsSection(element) {
       section: getAnalyticsSection(link),
     });
   });
+})();
+
+// Scroll depth tracking, sent once per page view for each threshold.
+(function () {
+  const thresholds = [25, 50, 75, 90];
+  const sent = new Set();
+  let ticking = false;
+
+  function getScrollPercent() {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    if (scrollable <= 0) return 100;
+    return Math.min(100, Math.max(0, (window.scrollY / scrollable) * 100));
+  }
+
+  function updateScrollDepth() {
+    ticking = false;
+    const percent = getScrollPercent();
+
+    thresholds.forEach((threshold) => {
+      if (sent.has(threshold) || percent < threshold) return;
+      sent.add(threshold);
+      trackEvent("scroll_depth", {
+        percent_scrolled: threshold,
+      });
+    });
+  }
+
+  function requestScrollDepthUpdate() {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(updateScrollDepth);
+  }
+
+  updateScrollDepth();
+  window.addEventListener("scroll", requestScrollDepthUpdate, { passive: true });
+  window.addEventListener("resize", requestScrollDepthUpdate);
 })();
 
 // Homepage hero entrance and scroll response
@@ -268,8 +311,14 @@ function getAnalyticsSection(element) {
     if (!trigger) return;
 
     trigger.addEventListener("click", () => {
+      const previousVisibleCount = visibleCount;
       visibleCount = Math.min(visibleCount + visibleStep, cards.length);
       render();
+      trackEvent("additional_work_load_more", {
+        shown_before: previousVisibleCount,
+        shown_after: visibleCount,
+        total_items: cards.length,
+      });
     });
   });
 })();
@@ -623,6 +672,18 @@ function getAnalyticsSection(element) {
     activeImages = Array.from(strip?.querySelectorAll("img") || [targetImage]);
     activeIndex = Math.max(0, activeImages.indexOf(targetImage));
     lastFocus = document.activeElement;
+
+    const projectCard = targetImage.closest(".project-card");
+    const projectTitle = projectCard?.querySelector("h3");
+    const projectBrand = projectCard?.querySelector(".project-kicker");
+
+    trackEvent("case_study_image_open", {
+      image_alt: targetImage.alt || "",
+      image_index: activeIndex + 1,
+      image_count: activeImages.length,
+      project_title: projectTitle ? getAnalyticsText(projectTitle) : "",
+      project_brand: projectBrand ? getAnalyticsText(projectBrand) : "",
+    });
 
     render();
     lightbox.hidden = false;
