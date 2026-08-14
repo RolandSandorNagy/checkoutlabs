@@ -95,6 +95,63 @@ document.querySelectorAll('.faq-item').forEach((item) => {
 const y = document.getElementById('year');
 if (y) y.textContent = String(new Date().getFullYear());
 
+function trackEvent(name, params = {}) {
+  if (typeof window.gtag !== "function") return;
+
+  window.gtag("event", name, {
+    page_location: window.location.href,
+    page_path: window.location.pathname,
+    ...params,
+  });
+}
+
+function getAnalyticsText(element) {
+  return (element.getAttribute("aria-label") || element.textContent || "")
+    .trim()
+    .replace(/\s+/g, " ");
+}
+
+function getAnalyticsSection(element) {
+  const section = element.closest("section");
+  if (!section) return "";
+  return section.id || section.className || "";
+}
+
+// Lightweight GA4 event tracking
+(function () {
+  document.addEventListener("click", (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    if (!target) return;
+
+    const languageButton = target.closest(".language-option");
+    if (languageButton instanceof HTMLElement) {
+      trackEvent("language_change", {
+        language: languageButton.dataset.language || getAnalyticsText(languageButton).toLowerCase(),
+      });
+      return;
+    }
+
+    if (target.closest(".js-book-call")) return;
+
+    const link = target.closest("a");
+    if (!(link instanceof HTMLAnchorElement)) return;
+
+    const href = link.getAttribute("href") || "";
+    if (!href.includes("#book")) return;
+
+    const text = getAnalyticsText(link);
+    const isPackageCta =
+      Boolean(link.closest("#packages, .packages-section, .pricing-section")) ||
+      /10 Hours|20 Hours|Emergency|package|csomag|óra|Stunden|Notfall/i.test(text);
+
+    trackEvent(isPackageCta ? "package_cta_click" : "get_started_click", {
+      link_text: text,
+      link_url: link.href,
+      section: getAnalyticsSection(link),
+    });
+  });
+})();
+
 // Homepage hero entrance and scroll response
 (function () {
   const hero = document.querySelector(".hero");
@@ -676,6 +733,9 @@ if (form && statusEl) {
         form.reset();
         statusEl.textContent = "✅ Thanks! Message received — we’ll reply within 1 business day.";
         statusEl.classList.add("is-success");
+        trackEvent("contact_form_submit", {
+          form_id: form.id || "contact-form",
+        });
       } else {
         statusEl.textContent = "⚠️ Something went wrong. Please try again or email us directly.";
         statusEl.classList.add("is-error");
@@ -911,6 +971,15 @@ if (form && statusEl) {
   btn.addEventListener(
     "click",
     async (e) => {
+      if (btn.dataset.analyticsReplay === "1") {
+        delete btn.dataset.analyticsReplay;
+      } else {
+        trackEvent("book_call_click", {
+          link_text: getAnalyticsText(btn),
+          section: getAnalyticsSection(btn),
+        });
+      }
+
       if (booted) return; // Cal is ready, let it handle the click normally
 
       e.preventDefault();
@@ -925,6 +994,7 @@ if (form && statusEl) {
         btn.textContent = originalText;
 
         // Re-trigger click so Cal's element-click handler opens the popup
+        btn.dataset.analyticsReplay = "1";
         setTimeout(() => btn.click(), 0);
       } catch (err) {
         btn.disabled = false;
