@@ -1,5 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 972 217">
-    <g fill="black">
-    <path d="M 0 0 L 0 216 L 971 216 L 971 0 Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 128" role="img" aria-labelledby="title desc">
+  <title id="title">CheckoutLabs logo</title>
+  <desc id="desc">CheckoutLabs wordmark with a shopping bag and laboratory flask icon.</desc>
+  <defs>
+    <clipPath id="bagClip">
+      <path d="M19.5 34h89c4.4 0 8 3.4 8.3 7.8l4.8 66.3c.6 8-5.8 14.9-13.8 14.9H20.2c-8 0-14.4-6.9-13.8-14.9l4.8-66.3c.3-4.4 3.9-7.8 8.3-7.8Z"/>
+    </clipPath>
+  </defs>
+
+  <g>
+    <path d="M42 35V27.5C42 13.8 51.1 5 64 5s22 8.8 22 22.5V35" fill="none" stroke="#17A65A" stroke-width="10" stroke-linecap="round"/>
+    <g clip-path="url(#bagClip)">
+      <path d="M0 28h128v100H0z" fill="#17A65A"/>
+      <path d="M0 92 128 58v70H0z" fill="#0B2438"/>
+      <path d="M18 34h92c3.7 0 6.8 2.8 7.1 6.5l5 69.2c.5 7.6-5.5 14.1-13.1 14.1H19c-7.6 0-13.6-6.5-13.1-14.1l5-69.2C11.2 36.8 14.3 34 18 34Z" fill="none" stroke="#0B1B3A" stroke-opacity=".15" stroke-width="3"/>
     </g>
+    <circle cx="39" cy="47" r="6" fill="#FFFFFF"/>
+    <circle cx="89" cy="47" r="6" fill="#FFFFFF"/>
+    <path d="M55 52h18v24.1l22 33.4c3.3 5 .4 11.5-5.7 11.5H38.7c-6.1 0-9-6.5-5.7-11.5l22-33.4V52Z" fill="#FFFFFF"/>
+    <path d="M61 59h6v20.1l23 35H38l23-35V59Z" fill="#F8FAFC"/>
+    <path d="M46.5 108.5 59.8 88h8.4l13.3 20.5H46.5Z" fill="#FF7A1A"/>
+    <circle cx="64" cy="75" r="7.5" fill="#FDBA12"/>
+    <circle cx="71" cy="91" r="5.4" fill="#FF9F1A"/>
+    <circle cx="68" cy="62" r="4.4" fill="#FACC15"/>
+    <circle cx="56" cy="105" r="4.5" fill="#FFFFFF"/>
+  </g>
+
+  <text x="148" y="80" font-family="Inter, Arial, Helvetica, sans-serif" font-size="42" font-weight="800" letter-spacing="-2.2">
+    <tspan fill="#0B1B3A">Checkout</tspan><tspan fill="#F97316">Labs</tspan>
+  </text>
 </svg>
