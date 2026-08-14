@@ -1003,12 +1003,33 @@ body.evidence-lightbox-open{
   object-fit:contain;
 }
 
+.tech-badge-card{
+  background:
+    radial-gradient(90px circle at 50% 20%, rgba(34,197,94,.10), transparent 72%),
+    #fff;
+}
+
 .tech-logo-card span{
   color:#334155;
   font-size:12px;
   font-weight:800;
   line-height:1.2;
   text-align:center;
+}
+
+.tech-logo-card .tech-badge-icon{
+  width:44px;
+  height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:14px;
+  background:#EAF4FF;
+  border:1px solid #CCE0FF;
+  color:var(--primary2);
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.04em;
 }
 
 .expertise-grid,
