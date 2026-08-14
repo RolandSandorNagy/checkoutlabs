@@ -1510,10 +1510,10 @@ section {
   align-items:center;
 }
 .about-hero-copy h1{
-  margin:20px 0 14px;
-  font-size:clamp(42px, 4.6vw, 58px);
-  line-height:1.04;
-  letter-spacing:-.045em;
+  margin:18px 0 12px;
+  font-size:clamp(40px, 3.8vw, 48px);
+  line-height:1.08;
+  letter-spacing:-.04em;
 }
 .about-cred-panel,
 .about-card,
@@ -1680,7 +1680,7 @@ section {
     padding:44px 0 40px;
   }
   .about-hero-copy h1{
-    font-size:clamp(36px, 11vw, 44px);
+    font-size:34px;
   }
   .about-cred-grid{
     grid-template-columns:1fr;
