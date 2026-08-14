@@ -24,9 +24,23 @@ if (toggle && mobileNav) {
   const header = document.querySelector(".site-header");
   if (!header) return;
   const progressBar = document.querySelector(".site-scroll-progress");
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   let lastScrollY = window.scrollY;
   let ticking = false;
+
+  function markHeaderLoaded() {
+    header.classList.add("is-loaded");
+  }
+
+  if (prefersReduced.matches) {
+    markHeaderLoaded();
+  } else {
+    header.classList.add("header-animate");
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(markHeaderLoaded);
+    });
+  }
 
   function updateHeaderState() {
     ticking = false;
