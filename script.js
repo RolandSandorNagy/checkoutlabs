@@ -95,6 +95,59 @@ document.querySelectorAll('.faq-item').forEach((item) => {
 const y = document.getElementById('year');
 if (y) y.textContent = String(new Date().getFullYear());
 
+// Homepage hero entrance and scroll response
+(function () {
+  const hero = document.querySelector(".hero");
+  if (!hero) return;
+
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  function markLoaded() {
+    hero.classList.add("is-loaded");
+  }
+
+  if (prefersReduced.matches) {
+    markLoaded();
+    return;
+  }
+
+  hero.classList.add("hero-animate");
+
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(markLoaded);
+  });
+
+  let ticking = false;
+
+  function updateHeroMotion() {
+    ticking = false;
+
+    const rect = hero.getBoundingClientRect();
+    const distance = Math.max(1, rect.height * 0.72);
+    const progress = Math.min(1, Math.max(0, -rect.top / distance));
+
+    const copyY = progress * -34;
+    const mediaY = progress * 28;
+    const mediaScale = 1 - progress * 0.035;
+    const opacity = 1 - progress * 0.36;
+
+    hero.style.setProperty("--heroCopyY", `${copyY.toFixed(2)}px`);
+    hero.style.setProperty("--heroMediaY", `${mediaY.toFixed(2)}px`);
+    hero.style.setProperty("--heroMediaScale", mediaScale.toFixed(4));
+    hero.style.setProperty("--heroOpacity", opacity.toFixed(4));
+  }
+
+  function requestHeroMotionUpdate() {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(updateHeroMotion);
+  }
+
+  requestHeroMotionUpdate();
+  window.addEventListener("scroll", requestHeroMotionUpdate, { passive: true });
+  window.addEventListener("resize", requestHeroMotionUpdate);
+})();
+
 // Start logo marquees only after the logo images are ready enough to render.
 (function () {
   const marquees = document.querySelectorAll(".logo-marquee");

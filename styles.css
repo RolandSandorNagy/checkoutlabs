@@ -310,12 +310,73 @@ a{color:inherit; text-decoration:none}
 .mobile-link:hover{background:#F1F6FF; color:var(--text)}
 
 /* Hero */
-.hero{padding:48px 0 40px}
+.hero{
+  padding:48px 0 40px;
+  --heroCopyY:0px;
+  --heroMediaY:0px;
+  --heroMediaScale:1;
+  --heroOpacity:1;
+}
 .hero-grid{
   display:grid;
   grid-template-columns: 1.05fr .95fr;
   gap:34px;
   align-items:center;
+}
+.hero-copy,
+.hero-proof-card{
+  opacity:var(--heroOpacity);
+  transition:
+    opacity .16s linear,
+    transform .16s linear;
+  will-change:transform, opacity;
+}
+.hero-copy{
+  transform:translate3d(0, var(--heroCopyY), 0);
+}
+.hero-proof-card{
+  transform:translate3d(0, var(--heroMediaY), 0) scale(var(--heroMediaScale));
+  transform-origin:center top;
+}
+.hero.hero-animate:not(.is-loaded) .pill,
+.hero.hero-animate:not(.is-loaded) h1,
+.hero.hero-animate:not(.is-loaded) .lede,
+.hero.hero-animate:not(.is-loaded) .checks li,
+.hero.hero-animate:not(.is-loaded) .hero-actions,
+.hero.hero-animate:not(.is-loaded) .micro,
+.hero.hero-animate:not(.is-loaded) .hero-proof-card{
+  opacity:0;
+  transform:translate3d(0, 18px, 0);
+}
+.hero.hero-animate.is-loaded .pill,
+.hero.hero-animate.is-loaded h1,
+.hero.hero-animate.is-loaded .lede,
+.hero.hero-animate.is-loaded .checks li,
+.hero.hero-animate.is-loaded .hero-actions,
+.hero.hero-animate.is-loaded .micro,
+.hero.hero-animate.is-loaded .hero-proof-card{
+  animation:heroIntro .82s cubic-bezier(.16,1,.3,1) backwards;
+}
+.hero.hero-animate.is-loaded h1{animation-delay:.06s}
+.hero.hero-animate.is-loaded .lede{animation-delay:.12s}
+.hero.hero-animate.is-loaded .checks li:nth-child(1){animation-delay:.18s}
+.hero.hero-animate.is-loaded .checks li:nth-child(2){animation-delay:.24s}
+.hero.hero-animate.is-loaded .checks li:nth-child(3){animation-delay:.30s}
+.hero.hero-animate.is-loaded .hero-actions{animation-delay:.36s}
+.hero.hero-animate.is-loaded .micro{animation-delay:.42s}
+.hero.hero-animate.is-loaded .hero-proof-card{animation-delay:.18s}
+
+@keyframes heroIntro{
+  from{
+    opacity:0;
+    transform:translate3d(0, 18px, 0) scale(.985);
+    filter:blur(6px);
+  }
+  to{
+    opacity:1;
+    transform:translate3d(0, 0, 0) scale(1);
+    filter:blur(0);
+  }
 }
 
 .pill{
@@ -1919,7 +1980,7 @@ section {
 }
 
 /* --- Hero: subtle motion --- */
-.hero-card {
+.hero-proof {
   will-change: transform;
   transform: translateZ(0);
   animation: heroFloat 7s ease-in-out infinite;
@@ -1932,7 +1993,25 @@ section {
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .hero-card { animation: none; }
+  .hero-proof { animation: none; }
+  .hero-copy,
+  .hero-proof-card{
+    opacity:1;
+    transform:none;
+    transition:none;
+  }
+  .hero.hero-animate.is-loaded .pill,
+  .hero.hero-animate.is-loaded h1,
+  .hero.hero-animate.is-loaded .lede,
+  .hero.hero-animate.is-loaded .checks li,
+  .hero.hero-animate.is-loaded .hero-actions,
+  .hero.hero-animate.is-loaded .micro,
+  .hero.hero-animate.is-loaded .hero-proof-card{
+    animation:none;
+    opacity:1;
+    transform:none;
+    filter:none;
+  }
 }
 
 .hero-card {
@@ -1964,10 +2043,9 @@ section {
 
 @media (hover: hover) and (pointer: fine) {
   .hero-card {
-    transition: transform 250ms ease, filter 250ms ease;
+    transition: transform .16s linear, opacity .16s linear, filter 250ms ease;
   }
   .hero-card:hover {
-    transform: translateY(-10px) rotate(-0.4deg);
     filter: drop-shadow(0 18px 28px rgba(11,27,58,0.18));
   }
 }
