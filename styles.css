@@ -686,7 +686,19 @@ h1{
 .center{text-align:center}
 
 /* Who we work with */
-.with-grid{margin-top:34px; display:grid; grid-template-columns:1.05fr .95fr; gap:26px; align-items:center}
+.audience-container > .section-title,
+.audience-container > .section-sub{
+  max-width:860px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.with-grid{
+  margin-top:34px;
+  display:grid;
+  grid-template-columns:minmax(520px, 1.08fr) minmax(430px, .92fr);
+  gap:34px;
+  align-items:center;
+}
 .delivery-panel{
   border-radius:24px;
   padding:18px;
@@ -696,6 +708,8 @@ h1{
     linear-gradient(135deg, #EDF6FF, #F8FBFF 52%, #EAF7F1);
   border:1px solid #DCE6F8;
   box-shadow:var(--shadow);
+  max-width:720px;
+  justify-self:end;
 }
 .delivery-window{
   position:relative;
@@ -1000,6 +1014,10 @@ input:focus, textarea:focus{outline:3px solid rgba(11,94,215,.18); border-color:
   .steps{grid-template-columns:1fr; gap:12px}
   .step-arrow{display:none}
   .with-grid{grid-template-columns:1fr}
+  .delivery-panel{
+    justify-self:center;
+    width:100%;
+  }
   .delivery-flow{
     grid-template-columns:1fr;
     gap:12px;
