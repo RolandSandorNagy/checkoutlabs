@@ -636,19 +636,19 @@ function getAnalyticsSection(element) {
   closeButton.className = "evidence-lightbox-close";
   closeButton.type = "button";
   closeButton.setAttribute("aria-label", "Close screenshot preview");
-  closeButton.innerHTML = "&times;";
+  closeButton.innerHTML = '<svg viewBox="0 0 20 20" width="18" height="18" fill="none" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
 
   const previousButton = document.createElement("button");
   previousButton.className = "evidence-lightbox-nav evidence-lightbox-prev";
   previousButton.type = "button";
   previousButton.setAttribute("aria-label", "Previous screenshot");
-  previousButton.innerHTML = "&#8249;";
+  previousButton.innerHTML = '<svg viewBox="0 0 20 20" width="20" height="20" fill="none" aria-hidden="true"><path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
   const nextButton = document.createElement("button");
   nextButton.className = "evidence-lightbox-nav evidence-lightbox-next";
   nextButton.type = "button";
   nextButton.setAttribute("aria-label", "Next screenshot");
-  nextButton.innerHTML = "&#8250;";
+  nextButton.innerHTML = '<svg viewBox="0 0 20 20" width="20" height="20" fill="none" aria-hidden="true"><path d="M8 4l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
   const figure = document.createElement("figure");
   figure.className = "evidence-lightbox-figure";
