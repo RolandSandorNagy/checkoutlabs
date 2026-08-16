@@ -545,7 +545,26 @@ const hu = {
     "Coursework and project work around application structure, data handling, backend logic, and browser-based user interfaces.": "Kurzus- és projektmunka alkalmazásstruktúra, adatkezelés, backend logika és böngészőalapú felületek körül.",
     "Computer science foundations that support practical debugging, performance reasoning, and reliable commerce logic.": "Informatikai alapok, amelyek támogatják a gyakorlati debuggingot, performance gondolkodást és megbízható commerce logikát.",
     "Ongoing MSc work focused on AI concepts that can inform future tooling, automation, analysis, and decision-support systems.": "Folyamatban lévő MSc munka AI koncepciókra fókuszálva, amelyek későbbi toolingot, automatizálást, elemzést és döntéstámogató rendszereket alapozhatnak meg.",
-    "If the work needs more than a theme tweak, I can help turn the business problem into a clear technical path.": "Ha a munka több, mint egy theme módosítás, segítek az üzleti problémát világos technikai tervvé alakítani."
+    "If the work needs more than a theme tweak, I can help turn the business problem into a clear technical path.": "Ha a munka több, mint egy theme módosítás, segítek az üzleti problémát világos technikai tervvé alakítani.",
+    "Academic Projects": "Egyetemi projektek",
+    "Selected coursework and ongoing research from the MSc in Artificial Intelligence, kept separate from commercial Shopify work.": "Válogatott kurzusmunkák és folyamatban lévő kutatás a mesterséges intelligencia MSc képzésből, elkülönítve a kereskedelmi Shopify munkától.",
+    "Multimodal LLM Development": "Multimodális LLM fejlesztés",
+    "Built a multimodal (text + image) LLM to a defined technical specification, implemented end-to-end in a Colab notebook.": "Multimodális (szöveg + kép) LLM építése egy megadott technikai specifikáció alapján, végig egy Colab notebookban implementálva.",
+    "Multimodal LLM": "Multimodális LLM",
+    "Deep Learning": "Deep Learning",
+    "FarmerToConsumer — Team MVP": "FarmerToConsumer — csapat MVP",
+    "Full-stack contribution (design, backend, frontend, documentation, testing) to a team-built MVP for a farmer-to-consumer marketplace app — Flutter mobile frontend, Fastify/Node.js backend with Sequelize and JWT auth.": "Full-stack hozzájárulás (tervezés, backend, frontend, dokumentáció, tesztelés) egy csapatban épített MVP-hez, amely egy termelőtől-fogyasztóig piactér alkalmazás — Flutter mobil frontend, Fastify/Node.js backend Sequelize-zel és JWT authentikációval.",
+    "Team Project": "Csapatmunka",
+    "Full-Stack": "Full-stack",
+    "View repo ->": "Repó megtekintése ->",
+    "Robot Perception Layer": "Robot perception réteg",
+    "Camera-based perception layer for a mecanum-wheel TurtleBot on ROS2, migrated from a Raspberry Pi 5 to an NVIDIA Jetson Orin for more onboard compute. Course milestone completed; work ongoing.": "Kamera-alapú perception réteg egy mecanum-kerekes TurtleBot robothoz ROS2-n, Raspberry Pi 5-ről NVIDIA Jetson Orinra migrálva a nagyobb fedélzeti számítási kapacitás érdekében. A tárgyhoz szükséges mérföldkő teljesítve; a munka folyamatban van.",
+    "Robotics": "Robotika",
+    "Computer Vision": "Computer Vision",
+    "Constraint-Aware Emotion Detection from Text": "Constraint-Aware érzelemfelismerés szövegből",
+    "Multi-label emotion classification (GoEmotions, DistilBERT) tackling class imbalance and rare-emotion detection through systematic experimentation — oversampling, class-weighted loss, per-label threshold calibration, and confusion analysis. Course requirement completed; now continuing at research level.": "Multi-label érzelemklasszifikáció (GoEmotions, DistilBERT), amely az osztályegyensúlytalanságot és a ritka érzelmek felismerését célozza szisztematikus kísérletezéssel — oversampling, class-weighted loss, címke-specifikus threshold kalibráció és konfúzió-elemzés. A tárgyi követelmény teljesítve; jelenleg kutatási szinten folytatva.",
+    "NLP": "NLP",
+    "ML Research": "ML kutatás"
   };
 
 const de = {
@@ -1092,7 +1111,26 @@ const de = {
     "Coursework and project work around application structure, data handling, backend logic, and browser-based user interfaces.": "Kurs- und Projektarbeit rund um Anwendungsstruktur, Datenverarbeitung, Backend-Logik und browserbasierte Benutzeroberflächen.",
     "Computer science foundations that support practical debugging, performance reasoning, and reliable commerce logic.": "Informatik-Grundlagen, die praktisches Debugging, Performance-Denken und zuverlässige Commerce-Logik unterstützen.",
     "Ongoing MSc work focused on AI concepts that can inform future tooling, automation, analysis, and decision-support systems.": "Laufende MSc-Arbeit mit Fokus auf AI-Konzepte, die zukünftiges Tooling, Automatisierung, Analyse und Entscheidungsunterstützung informieren können.",
-    "If the work needs more than a theme tweak, I can help turn the business problem into a clear technical path.": "Wenn die Arbeit mehr als ein Theme-Tweak ist, helfe ich, das Geschäftsproblem in einen klaren technischen Weg zu übersetzen."
+    "If the work needs more than a theme tweak, I can help turn the business problem into a clear technical path.": "Wenn die Arbeit mehr als ein Theme-Tweak ist, helfe ich, das Geschäftsproblem in einen klaren technischen Weg zu übersetzen.",
+    "Academic Projects": "Akademische Projekte",
+    "Selected coursework and ongoing research from the MSc in Artificial Intelligence, kept separate from commercial Shopify work.": "Ausgewählte Kursarbeiten und laufende Forschung aus dem MSc-Studium in Künstlicher Intelligenz, getrennt von der kommerziellen Shopify-Arbeit.",
+    "Multimodal LLM Development": "Multimodale LLM-Entwicklung",
+    "Built a multimodal (text + image) LLM to a defined technical specification, implemented end-to-end in a Colab notebook.": "Ein multimodales (Text + Bild) LLM nach einer definierten technischen Spezifikation gebaut, vollständig in einem Colab-Notebook implementiert.",
+    "Multimodal LLM": "Multimodales LLM",
+    "Deep Learning": "Deep Learning",
+    "FarmerToConsumer — Team MVP": "FarmerToConsumer — Team-MVP",
+    "Full-stack contribution (design, backend, frontend, documentation, testing) to a team-built MVP for a farmer-to-consumer marketplace app — Flutter mobile frontend, Fastify/Node.js backend with Sequelize and JWT auth.": "Full-Stack-Beitrag (Design, Backend, Frontend, Dokumentation, Testing) zu einem im Team gebauten MVP für eine Farmer-to-Consumer-Marktplatz-App — Flutter-Mobile-Frontend, Fastify/Node.js-Backend mit Sequelize und JWT-Authentifizierung.",
+    "Team Project": "Teamprojekt",
+    "Full-Stack": "Full-Stack",
+    "View repo ->": "Repo ansehen ->",
+    "Robot Perception Layer": "Roboter-Perception-Layer",
+    "Camera-based perception layer for a mecanum-wheel TurtleBot on ROS2, migrated from a Raspberry Pi 5 to an NVIDIA Jetson Orin for more onboard compute. Course milestone completed; work ongoing.": "Kamerabasierter Perception-Layer für einen TurtleBot mit Mecanum-Rädern auf ROS2, migriert von einem Raspberry Pi 5 zu einem NVIDIA Jetson Orin für mehr Rechenleistung an Bord. Kursmeilenstein erreicht; Arbeit läuft weiter.",
+    "Robotics": "Robotik",
+    "Computer Vision": "Computer Vision",
+    "Constraint-Aware Emotion Detection from Text": "Constraint-Aware-Emotionserkennung aus Text",
+    "Multi-label emotion classification (GoEmotions, DistilBERT) tackling class imbalance and rare-emotion detection through systematic experimentation — oversampling, class-weighted loss, per-label threshold calibration, and confusion analysis. Course requirement completed; now continuing at research level.": "Multi-Label-Emotionsklassifikation (GoEmotions, DistilBERT), die Klassenungleichgewicht und die Erkennung seltener Emotionen durch systematisches Experimentieren angeht — Oversampling, klassengewichteter Loss, label-spezifische Threshold-Kalibrierung und Konfusionsanalyse. Kursanforderung erfüllt; wird derzeit auf Forschungsebene fortgeführt.",
+    "NLP": "NLP",
+    "ML Research": "ML-Forschung"
   };
 
 module.exports = { hu, de };
