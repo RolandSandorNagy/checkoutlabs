@@ -14,27 +14,8 @@ const path = require("path");
 const ROOT = path.join(__dirname, "..");
 const SITE_ORIGIN = "https://checkoutlabs.dev";
 
-// ---- Load the hu/de dictionaries straight out of i18n.js (single source of truth) ----
-const i18nSrc = fs.readFileSync(path.join(ROOT, "i18n.js"), "utf8");
-function extractDict(varName) {
-  const start = i18nSrc.indexOf(`const ${varName} = {`);
-  if (start === -1) throw new Error(`Could not find "${varName}" dictionary in i18n.js`);
-  const braceStart = i18nSrc.indexOf("{", start);
-  let depth = 0;
-  let end = -1;
-  for (let i = braceStart; i < i18nSrc.length; i++) {
-    if (i18nSrc[i] === "{") depth++;
-    else if (i18nSrc[i] === "}") {
-      depth--;
-      if (depth === 0) { end = i + 1; break; }
-    }
-  }
-  const objectLiteral = i18nSrc.slice(braceStart, end);
-  // eslint-disable-next-line no-new-func
-  return new Function(`return (${objectLiteral});`)();
-}
-
-const DICTS = { hu: extractDict("hu"), de: extractDict("de") };
+// ---- Load the hu/de dictionaries (build-time only, never shipped to the browser) ----
+const DICTS = require("./translations.js");
 
 // ---- Page registry: source file + per-language head metadata ----
 const PAGES = [

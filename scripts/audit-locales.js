@@ -5,19 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const ROOT = path.join(__dirname, "..");
 
-const i18nSrc = fs.readFileSync(path.join(ROOT, "i18n.js"), "utf8");
-function extractDict(varName) {
-  const start = i18nSrc.indexOf(`const ${varName} = {`);
-  const braceStart = i18nSrc.indexOf("{", start);
-  let depth = 0, end = -1;
-  for (let i = braceStart; i < i18nSrc.length; i++) {
-    if (i18nSrc[i] === "{") depth++;
-    else if (i18nSrc[i] === "}") { depth--; if (depth === 0) { end = i + 1; break; } }
-  }
-  return new Function(`return (${i18nSrc.slice(braceStart, end)});`)();
-}
-const hu = extractDict("hu");
-const de = extractDict("de");
+const { hu, de } = require("./translations.js");
 
 function decodeEntities(value) {
   return value
