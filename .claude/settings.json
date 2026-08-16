@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(magick \"assets/logos/stores/the-cornish-foodbox-logo.png\" -channel RGB -negate +channel -resize 240x82 -background white -alpha remove -alpha off -strip -gravity center -extent 320x140 /tmp/cornish-inverted.png)",
+      "Bash(magick identify *)",
+      "Bash(cp /tmp/plantopia-inverted.png assets/logos/normalized/stores/plantopia-logo.png)",
+      "Bash(cp /tmp/cornish-inverted.png assets/logos/normalized/stores/the-cornish-foodbox-logo.png)"
+    ]
+  }
+}

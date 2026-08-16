@@ -581,7 +581,9 @@ const hu = {
     "Physics Simulation": "Fizikai szimuláció",
     "Hobby project": "Hobbi projekt",
     "An early C++ project built while learning the language — a CLI game where an ASCII stick-figure character moves and shoots ASCII \"bug\" enemies across the terminal.": "Egy korai C++ projekt a nyelv tanulása közben — egy CLI játék, ahol egy ASCII pálcikaember karakter mozog és lő ASCII \"bug\" ellenségekre a terminálban.",
-    "CLI Game": "CLI Game"
+    "CLI Game": "CLI Game",
+    "Shopify storefront and frontend work for a skincare commerce brand, represented in broader agency delivery experience.": "Shopify storefront és frontend munka egy bőrápolási commerce brand számára, szélesebb ügynökségi delivery tapasztalat részeként.",
+    "Shopify storefront and frontend work delivered through an agency team.": "Shopify storefront és frontend munka ügynökségi csapaton keresztül szállítva."
   };
 
 const de = {
@@ -1164,7 +1166,9 @@ const de = {
     "Physics Simulation": "Physiksimulation",
     "Hobby project": "Hobbyprojekt",
     "An early C++ project built while learning the language — a CLI game where an ASCII stick-figure character moves and shoots ASCII \"bug\" enemies across the terminal.": "Eines der ersten Projekte beim Erlernen von C++ — ein CLI-Spiel, in dem eine ASCII-Strichmännchen-Figur sich bewegt und auf ASCII-„Bug“-Gegner im Terminal schießt.",
-    "CLI Game": "CLI-Spiel"
+    "CLI Game": "CLI-Spiel",
+    "Shopify storefront and frontend work for a skincare commerce brand, represented in broader agency delivery experience.": "Shopify-Storefront- und Frontend-Arbeit für eine Skincare-Commerce-Marke, als Teil breiterer Agentur-Delivery-Erfahrung.",
+    "Shopify storefront and frontend work delivered through an agency team.": "Shopify-Storefront- und Frontend-Arbeit, geliefert über ein Agenturteam."
   };
 
 module.exports = { hu, de };
