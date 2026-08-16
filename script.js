@@ -1082,6 +1082,111 @@ if (form && statusEl) {
   );
 })();
 
+// --- Analytics consent (cookie banner gates Google Analytics 4) ---
+(function () {
+  const GA_ID = "G-3CL61G458C";
+  const CONSENT_KEY = "cl_analytics_consent";
+
+  function loadGA() {
+    if (window.__gaLoaded) return;
+    window.__gaLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID);
+    const gaScript = document.createElement("script");
+    gaScript.async = true;
+    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.appendChild(gaScript);
+  }
+
+  function getConsent() {
+    try { return window.localStorage.getItem(CONSENT_KEY); } catch (e) { return null; }
+  }
+  function setConsent(value) {
+    try { window.localStorage.setItem(CONSENT_KEY, value); } catch (e) { /* storage unavailable */ }
+  }
+
+  const consent = getConsent();
+  if (consent === "granted") { loadGA(); return; }
+  if (consent === "denied") return;
+
+  const COPY = {
+    en: {
+      text: "This site uses Google Analytics to understand traffic. No data is used for advertising. See the ",
+      link: "Privacy Policy",
+      accept: "Accept",
+      decline: "Decline",
+    },
+    hu: {
+      text: "Ez az oldal Google Analytics-et használ a forgalom megértéséhez. Az adatok nem kerülnek felhasználásra hirdetési célra. Részletek: ",
+      link: "Adatvédelmi tájékoztató",
+      accept: "Elfogadom",
+      decline: "Elutasítom",
+    },
+    de: {
+      text: "Diese Website verwendet Google Analytics, um den Traffic zu verstehen. Die Daten werden nicht für Werbezwecke verwendet. Details: ",
+      link: "Datenschutzerklärung",
+      accept: "Akzeptieren",
+      decline: "Ablehnen",
+    },
+  };
+
+  const htmlLang = document.documentElement.lang;
+  const copy = COPY[htmlLang] || COPY.en;
+
+  const banner = document.createElement("div");
+  banner.className = "cookie-banner";
+  banner.setAttribute("role", "dialog");
+  banner.setAttribute("aria-label", copy.link);
+
+  const text = document.createElement("p");
+  text.textContent = copy.text;
+  const link = document.createElement("button");
+  link.type = "button";
+  link.className = "linklike cookie-banner-link";
+  link.setAttribute("data-modal-open", "privacy");
+  link.textContent = copy.link;
+  text.appendChild(link);
+
+  const actions = document.createElement("div");
+  actions.className = "cookie-banner-actions";
+
+  const declineBtn = document.createElement("button");
+  declineBtn.type = "button";
+  declineBtn.className = "btn btn-outline";
+  declineBtn.textContent = copy.decline;
+
+  const acceptBtn = document.createElement("button");
+  acceptBtn.type = "button";
+  acceptBtn.className = "btn btn-primary";
+  acceptBtn.textContent = copy.accept;
+
+  actions.appendChild(declineBtn);
+  actions.appendChild(acceptBtn);
+  banner.appendChild(text);
+  banner.appendChild(actions);
+  document.body.appendChild(banner);
+
+  requestAnimationFrame(() => banner.classList.add("is-visible"));
+
+  function dismiss() {
+    banner.classList.remove("is-visible");
+    setTimeout(() => banner.remove(), 300);
+  }
+
+  acceptBtn.addEventListener("click", () => {
+    setConsent("granted");
+    loadGA();
+    dismiss();
+  });
+
+  declineBtn.addEventListener("click", () => {
+    setConsent("denied");
+    dismiss();
+  });
+})();
+
 // --- Modal logic (native <dialog>) ---
 (function () {
   const openButtons = document.querySelectorAll("[data-modal-open]");

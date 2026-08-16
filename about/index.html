@@ -6,18 +6,48 @@
   <link rel="icon" type="image/png" href="/assets/checkoutlabs-logo-icon.png">
   <title>About Roland Nagy | CheckoutLabs</title>
   <meta name="description" content="About Roland Nagy, the senior Shopify and full-stack developer behind CheckoutLabs. Software engineering background, Shopify specialization, and ongoing MSc studies in Artificial Intelligence." />
+  <link rel="canonical" href="https://checkoutlabs.dev/about/" />
+  <link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/about/" />
+  <link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/about/" />
+  <link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/about/" />
+  <link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/about/" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="CheckoutLabs" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://checkoutlabs.dev/about/" />
+  <meta property="og:title" content="About Roland Nagy | CheckoutLabs" />
+  <meta property="og:description" content="About Roland Nagy, the senior Shopify and full-stack developer behind CheckoutLabs. Software engineering background, Shopify specialization, and ongoing MSc studies in Artificial Intelligence." />
+  <meta property="og:image" content="https://checkoutlabs.dev/assets/screenshots/optimized/pennywell-homepage-desktop-2.webp" />
+  <meta property="og:image:width" content="1917" />
+  <meta property="og:image:height" content="945" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Roland Nagy | CheckoutLabs" />
+  <meta name="twitter:description" content="About Roland Nagy, the senior Shopify and full-stack developer behind CheckoutLabs. Software engineering background, Shopify specialization, and ongoing MSc studies in Artificial Intelligence." />
+  <meta name="twitter:image" content="https://checkoutlabs.dev/assets/screenshots/optimized/pennywell-homepage-desktop-2.webp" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Roland Nagy",
+    "url": "https://checkoutlabs.dev/about/",
+    "jobTitle": "Senior Shopify Developer",
+    "description": "Senior Shopify and full-stack developer behind CheckoutLabs, with a computer science background and ongoing MSc studies in Artificial Intelligence.",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "CheckoutLabs",
+      "url": "https://checkoutlabs.dev/"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Eötvös Loránd University"
+    }
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=20260814-final-portfolio-refine" />
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3CL61G458C"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag("js", new Date());
-    gtag("config", "G-3CL61G458C");
-  </script>
+  <link rel="stylesheet" href="/styles.css?v=20260815-seo-i18n-consent" />
+  <!-- Google Analytics 4 is loaded from script.js only after cookie consent is granted -->
 </head>
 <body class="about-page">
   <div class="site-scroll-progress" aria-hidden="true"></div>
@@ -80,7 +110,7 @@
         <aside class="about-cred-panel reveal reveal-1" aria-label="Roland Nagy credibility summary">
           <div class="about-cred-head">
             <div class="profile-avatar portrait-ready is-fallback">
-              <img class="profile-portrait" src="/assets/roland-nagy.webp" alt="Roland Nagy portrait" onload="this.parentElement.classList.remove('is-fallback')" onerror="this.hidden=true">
+              <img class="profile-portrait" fetchpriority="high" src="/assets/roland-nagy.webp" alt="Roland Nagy portrait" onload="this.parentElement.classList.remove('is-fallback')" onerror="this.hidden=true">
               <span>RN</span>
             </div>
             <div>
@@ -142,7 +172,7 @@
           <article class="about-card reveal reveal-1">
             <div class="about-card-top">
               <h3>BSc Computer Science</h3>
-              <img src="/assets/logos/normalized/education/elte-logo.png" alt="ELTE logo">
+              <img loading="lazy" decoding="async" src="/assets/logos/normalized/education/elte-logo.png" width="320" height="140" alt="ELTE logo">
             </div>
             <p>
               Computer Science background at Eotvos Lorand University, with foundations in algorithms, databases, software engineering, web development, and applied programming.
@@ -157,7 +187,7 @@
           <article class="about-card reveal reveal-2">
             <div class="about-card-top">
               <h3>MSc Artificial Intelligence</h3>
-              <img src="/assets/logos/normalized/education/elte-ai-logo.png" alt="ELTE Artificial Intelligence Department logo">
+              <img loading="lazy" decoding="async" src="/assets/logos/normalized/education/elte-ai-logo.png" width="320" height="140" alt="ELTE Artificial Intelligence Department logo">
             </div>
             <p>
               Ongoing MSc studies in Artificial Intelligence, extending the software engineering background with machine learning, data-oriented thinking, and AI system design.
@@ -231,10 +261,84 @@
         <a class="btn btn-primary" href="/#book">Get Started</a>
       </div>
     </div>
+
+    <div class="container footer-bottom">
+      <button class="footer-link linklike" type="button" data-modal-open="privacy">Privacy Policy</button>
+      <button class="footer-link linklike" type="button" data-modal-open="terms">Terms of Service</button>
+    </div>
   </footer>
 
+  <dialog class="modal" id="modal-privacy" aria-labelledby="privacy-title">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 id="privacy-title">Privacy Policy</h3>
+        <button class="modal-x" type="button" data-modal-close aria-label="Close">×</button>
+      </div>
+
+      <div class="modal-body">
+        <p><strong>Summary:</strong> Only the information needed to respond to your inquiry is collected.</p>
+
+        <h4>Information collected</h4>
+        <ul>
+          <li><strong>Contact form:</strong> work email and message content you submit.</li>
+          <li><strong>Analytics:</strong> usage data via Google Analytics 4, only loaded after cookie consent is given in the banner shown on first visit.</li>
+        </ul>
+
+        <h4>How your data is used</h4>
+        <ul>
+          <li>To respond to your request and communicate about potential work.</li>
+          <li>To improve the website’s content and performance.</li>
+        </ul>
+
+        <h4>Cookies &amp; consent</h4>
+        <p>Analytics cookies are only set if consent is given via the cookie banner. Consent can be withdrawn at any time by clearing your browser's local storage for this site and declining again, or by emailing the address below.</p>
+
+        <h4>Processors / third parties</h4>
+        <ul>
+          <li><strong>Form submissions:</strong> Formspree (handles message delivery).</li>
+          <li><strong>Analytics:</strong> Google Analytics 4 (Google Ireland Ltd.), loaded only with consent.</li>
+        </ul>
+
+        <h4>Data retention</h4>
+        <p>Messages are kept as long as needed for communication and basic record-keeping.</p>
+
+        <h4>Your rights</h4>
+        <p>You can request access, correction, or deletion of your personal data by emailing: <strong>roland.s.nagy@gmail.com</strong>.</p>
+
+        <p class="muted small">Last updated: <span id="privacy-updated">2026-08-15</span></p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="modal-terms" aria-labelledby="terms-title">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 id="terms-title">Terms of Service</h3>
+        <button class="modal-x" type="button" data-modal-close aria-label="Close">×</button>
+      </div>
+
+      <div class="modal-body">
+        <p>These terms govern the use of this website and any inquiry submitted through it.</p>
+
+        <h4>No warranties</h4>
+        <p>This website is provided “as is”. Information is kept as accurate as reasonably possible, but no warranties of any kind are provided.</p>
+
+        <h4>Engagement terms</h4>
+        <p>Any development work is subject to a separate written agreement (scope, pricing, timelines, and responsibilities).</p>
+
+        <h4>Limitation of liability</h4>
+        <p>To the maximum extent permitted by law, liability is excluded for indirect or consequential damages arising from the use of this website.</p>
+
+        <h4>Governing law</h4>
+        <p>Unless otherwise agreed in writing, disputes are governed by the applicable laws of the operating jurisdiction.</p>
+
+        <p class="muted small">Last updated: <span id="terms-updated">2026-01-01</span></p>
+      </div>
+    </div>
+  </dialog>
+
   <script src="https://unpkg.com/i18next@23.16.8/dist/umd/i18next.min.js"></script>
-  <script src="/i18n.js?v=20260814-final-portfolio-refine"></script>
-  <script src="/script.js?v=20260814-header-entrance"></script>
+  <script src="/i18n.js?v=20260815-seo-i18n-consent"></script>
+  <script src="/script.js?v=20260815-seo-i18n-consent"></script>
 </body>
 </html>

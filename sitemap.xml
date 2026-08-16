@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://checkoutlabs.dev/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/" />
+  </url>
+  <url>
+    <loc>https://checkoutlabs.dev/hu/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/" />
+  </url>
+  <url>
+    <loc>https://checkoutlabs.dev/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/" />
+  </url>
+
+  <url>
+    <loc>https://checkoutlabs.dev/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/about/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/about/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/about/" />
+  </url>
+  <url>
+    <loc>https://checkoutlabs.dev/hu/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/about/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/about/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/about/" />
+  </url>
+  <url>
+    <loc>https://checkoutlabs.dev/de/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/about/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/about/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/about/" />
+  </url>
+
+  <url>
+    <loc>https://checkoutlabs.dev/work/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/work/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/work/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/work/" />
+  </url>
+  <url>
+    <loc>https://checkoutlabs.dev/hu/work/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/work/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/work/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/work/" />
+  </url>
+  <url>
+    <loc>https://checkoutlabs.dev/de/work/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/work/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/work/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/work/" />
+  </url>
+
+</urlset>
