@@ -564,7 +564,24 @@ const hu = {
     "Constraint-Aware Emotion Detection from Text": "Constraint-Aware érzelemfelismerés szövegből",
     "Multi-label emotion classification (GoEmotions, DistilBERT) tackling class imbalance and rare-emotion detection through systematic experimentation — oversampling, class-weighted loss, per-label threshold calibration, and confusion analysis. Course requirement completed; now continuing at research level.": "Multi-label érzelemklasszifikáció (GoEmotions, DistilBERT), amely az osztályegyensúlytalanságot és a ritka érzelmek felismerését célozza szisztematikus kísérletezéssel — oversampling, class-weighted loss, címke-specifikus threshold kalibráció és konfúzió-elemzés. A tárgyi követelmény teljesítve; jelenleg kutatási szinten folytatva.",
     "NLP": "NLP",
-    "ML Research": "ML kutatás"
+    "ML Research": "ML kutatás",
+    "Built a multimodal (text + image) LLM that generates structured descriptions from images to a defined technical specification, implemented end-to-end in a Colab notebook.": "Multimodális (szöveg + kép) LLM építése, amely képekből strukturált leírásokat generál egy megadott technikai specifikáció alapján, végig egy Colab notebookban implementálva.",
+    "Object Detection & Image Captioning": "Objektumdetekció és képaláírás-generálás",
+    "Two deep learning assignments implemented in Colab notebooks: a simplified custom object detection model, and an image captioning model.": "Két deep learning beadandó, Colab notebookokban implementálva: egy egyszerűsített egyedi objektumdetekciós modell és egy képaláírás-generáló modell.",
+    "Object Detection": "Objektumdetekció",
+    "Image Captioning": "Képaláírás-generálás",
+    "Early Projects": "Korai projektek",
+    "Independent practice projects from earlier programming years — hobby builds, a thesis, and coursework kept separate from professional and academic AI work.": "Önálló gyakorlóprojektek a korábbi programozói évekből — hobbi fejlesztések, egy szakdolgozat és kurzusmunkák, elkülönítve a professzionális és akadémiai AI munkától.",
+    "Plover Stenotype Plugin": "Plover gyorsírógép plugin",
+    "Bachelor's thesis: a C++ and Python plugin for Plover, an open-source input method editor commonly used with stenotype machines by stenographers.": "Szakdolgozat: C++ és Python plugin a Plover-hez, egy nyílt forráskódú input method editorhoz, amelyet gyorsírók általában stenotype gépekkel használnak.",
+    "Input Method": "Input Method",
+    "BSc Thesis": "BSc szakdolgozat",
+    "A 2D space exploration game prototype built in Java to practice the language — a dynamically expanding map, ship control via rotation and thrust, gravity-based orbital mechanics around planets, enemies, and a planet-scanning mechanic for finding fuel.": "2D űrfelfedező játék prototípus Java nyelven, a nyelv gyakorlására építve — dinamikusan bővülő térkép, forgással és gázadással irányítható űrhajó, bolygók körüli gravitáció-alapú pályamechanika, ellenségek és bolygó-szkennelés mechanika üzemanyag keresésére.",
+    "Game Dev": "Játékfejlesztés",
+    "Physics Simulation": "Fizikai szimuláció",
+    "Hobby project": "Hobbi projekt",
+    "An early C++ project built while learning the language — a CLI game where an ASCII stick-figure character moves and shoots ASCII \"bug\" enemies across the terminal.": "Egy korai C++ projekt a nyelv tanulása közben — egy CLI játék, ahol egy ASCII pálcikaember karakter mozog és lő ASCII \"bug\" ellenségekre a terminálban.",
+    "CLI Game": "CLI Game"
   };
 
 const de = {
@@ -1130,7 +1147,24 @@ const de = {
     "Constraint-Aware Emotion Detection from Text": "Constraint-Aware-Emotionserkennung aus Text",
     "Multi-label emotion classification (GoEmotions, DistilBERT) tackling class imbalance and rare-emotion detection through systematic experimentation — oversampling, class-weighted loss, per-label threshold calibration, and confusion analysis. Course requirement completed; now continuing at research level.": "Multi-Label-Emotionsklassifikation (GoEmotions, DistilBERT), die Klassenungleichgewicht und die Erkennung seltener Emotionen durch systematisches Experimentieren angeht — Oversampling, klassengewichteter Loss, label-spezifische Threshold-Kalibrierung und Konfusionsanalyse. Kursanforderung erfüllt; wird derzeit auf Forschungsebene fortgeführt.",
     "NLP": "NLP",
-    "ML Research": "ML-Forschung"
+    "ML Research": "ML-Forschung",
+    "Built a multimodal (text + image) LLM that generates structured descriptions from images to a defined technical specification, implemented end-to-end in a Colab notebook.": "Ein multimodales (Text + Bild) LLM gebaut, das strukturierte Beschreibungen aus Bildern nach einer definierten technischen Spezifikation generiert, vollständig in einem Colab-Notebook implementiert.",
+    "Object Detection & Image Captioning": "Objekterkennung & Bildbeschreibung",
+    "Two deep learning assignments implemented in Colab notebooks: a simplified custom object detection model, and an image captioning model.": "Zwei Deep-Learning-Aufgaben, implementiert in Colab-Notebooks: ein vereinfachtes individuelles Objekterkennungsmodell und ein Bildbeschreibungsmodell (Image Captioning).",
+    "Object Detection": "Objekterkennung",
+    "Image Captioning": "Bildbeschreibung",
+    "Early Projects": "Frühe Projekte",
+    "Independent practice projects from earlier programming years — hobby builds, a thesis, and coursework kept separate from professional and academic AI work.": "Eigenständige Übungsprojekte aus früheren Programmierjahren — Hobby-Builds, eine Abschlussarbeit und Kursarbeiten, getrennt von der professionellen und akademischen KI-Arbeit.",
+    "Plover Stenotype Plugin": "Plover-Stenotyp-Plugin",
+    "Bachelor's thesis: a C++ and Python plugin for Plover, an open-source input method editor commonly used with stenotype machines by stenographers.": "Bachelorarbeit: ein C++- und Python-Plugin für Plover, einen Open-Source-Input-Method-Editor, der von Stenografen häufig mit Stenotyp-Maschinen verwendet wird.",
+    "Input Method": "Input Method",
+    "BSc Thesis": "Bachelorarbeit",
+    "A 2D space exploration game prototype built in Java to practice the language — a dynamically expanding map, ship control via rotation and thrust, gravity-based orbital mechanics around planets, enemies, and a planet-scanning mechanic for finding fuel.": "Ein 2D-Weltraumerkundungsspiel-Prototyp in Java, gebaut zum Üben der Sprache — eine dynamisch wachsende Karte, Schiffssteuerung über Rotation und Schub, gravitationsbasierte Orbitalmechanik um Planeten, Gegner und ein Planeten-Scan-Mechanismus zur Treibstoffsuche.",
+    "Game Dev": "Spieleentwicklung",
+    "Physics Simulation": "Physiksimulation",
+    "Hobby project": "Hobbyprojekt",
+    "An early C++ project built while learning the language — a CLI game where an ASCII stick-figure character moves and shoots ASCII \"bug\" enemies across the terminal.": "Eines der ersten Projekte beim Erlernen von C++ — ein CLI-Spiel, in dem eine ASCII-Strichmännchen-Figur sich bewegt und auf ASCII-„Bug“-Gegner im Terminal schießt.",
+    "CLI Game": "CLI-Spiel"
   };
 
 module.exports = { hu, de };
