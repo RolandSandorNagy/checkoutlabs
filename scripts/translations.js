@@ -592,7 +592,14 @@ const hu = {
     "A command-line Blackjack implementation in C++.": "Parancssoros Blackjack (21) implementáció C++ nyelven.",
     "A command-line Sokoban puzzle implementation in C++.": "Parancssoros Sokoban puzzle implementáció C++ nyelven.",
     "Analysis II Exam Generator": "Analízis 2 vizsgagenerátor",
-    "A tool built for the Analysis II (Calculus II) coursework to generate practice exams.": "Eszköz az Analízis 2 tárgyhoz, gyakorló vizsgák generálására."
+    "A tool built for the Analysis II (Calculus II) coursework to generate practice exams.": "Eszköz az Analízis 2 tárgyhoz, gyakorló vizsgák generálására.",
+    "Guided Frame Finder Quiz & Storefront": "Vezetett Frame Finder kvíz és storefront",
+    "Shopify frontend and UI implementation work for an eyewear storefront, including a guided Frame Finder quiz that recommends frames from multiple customer inputs — what the shopper is looking for, style preference, and fit details — before narrowing the catalog down to a small set of matched products.": "Shopify frontend és UI implementációs munka egy szemüveg storefronthoz, beleértve egy vezetett Frame Finder kvízt, amely több vásárlói input alapján ajánl kereteket — mit keres a vásárló, stílus preferencia és illeszkedési részletek — mielőtt leszűkíti a katalógust néhány illő termékre.",
+    "Helped shoppers navigate a broad eyewear catalog by turning several style and fit preferences into a short guided quiz that surfaces a focused set of matched frame recommendations.": "Segített a vásárlóknak eligazodni egy széles szemüveg-katalógusban azzal, hogy több stílus- és illeszkedési preferenciát egy rövid, vezetett kvízzé alakított, amely egy fókuszált, illő keret-ajánlást ad.",
+    "Implemented Shopify storefront frontend and UI across the eyewear catalog": "Shopify storefront frontend és UI implementáció a szemüveg-katalógusban",
+    "Built a guided, multi-step Frame Finder quiz capturing style, gender, and fit preferences": "Vezetett, több lépéses Frame Finder kvíz építése, amely stílus-, nem- és illeszkedési preferenciákat rögzít",
+    "Connected quiz answers to filtered product recommendations from the catalog": "A kvíz válaszainak összekötése a katalógusból szűrt termékajánlásokkal",
+    "Guided product recommendation quiz": "Vezetett termékajánló kvíz"
   };
 
 const de = {
@@ -1186,7 +1193,14 @@ const de = {
     "A command-line Blackjack implementation in C++.": "Eine Kommandozeilen-Implementierung von Blackjack in C++.",
     "A command-line Sokoban puzzle implementation in C++.": "Eine Kommandozeilen-Implementierung des Sokoban-Puzzles in C++.",
     "Analysis II Exam Generator": "Analysis-II-Prüfungsgenerator",
-    "A tool built for the Analysis II (Calculus II) coursework to generate practice exams.": "Ein Tool für den Kurs Analysis II, das Übungsklausuren generiert."
+    "A tool built for the Analysis II (Calculus II) coursework to generate practice exams.": "Ein Tool für den Kurs Analysis II, das Übungsklausuren generiert.",
+    "Guided Frame Finder Quiz & Storefront": "Geführter Frame-Finder-Quiz & Storefront",
+    "Shopify frontend and UI implementation work for an eyewear storefront, including a guided Frame Finder quiz that recommends frames from multiple customer inputs — what the shopper is looking for, style preference, and fit details — before narrowing the catalog down to a small set of matched products.": "Shopify-Frontend- und UI-Implementierungsarbeit für eine Brillen-Storefront, einschließlich eines geführten Frame-Finder-Quiz, das anhand mehrerer Kundeneingaben — was der Kunde sucht, Stilpräferenz und Passform-Details — Brillen empfiehlt, bevor der Katalog auf eine kleine Auswahl passender Produkte eingegrenzt wird.",
+    "Helped shoppers navigate a broad eyewear catalog by turning several style and fit preferences into a short guided quiz that surfaces a focused set of matched frame recommendations.": "Half Kunden, einen breiten Brillenkatalog zu navigieren, indem mehrere Stil- und Passform-Präferenzen in einen kurzen geführten Quiz umgewandelt wurden, der eine fokussierte Auswahl passender Brillenempfehlungen liefert.",
+    "Implemented Shopify storefront frontend and UI across the eyewear catalog": "Shopify-Storefront-Frontend und UI im gesamten Brillenkatalog implementiert",
+    "Built a guided, multi-step Frame Finder quiz capturing style, gender, and fit preferences": "Einen geführten, mehrstufigen Frame-Finder-Quiz gebaut, der Stil-, Geschlechts- und Passform-Präferenzen erfasst",
+    "Connected quiz answers to filtered product recommendations from the catalog": "Quiz-Antworten mit gefilterten Produktempfehlungen aus dem Katalog verknüpft",
+    "Guided product recommendation quiz": "Geführter Produktempfehlungs-Quiz"
   };
 
 module.exports = { hu, de };
