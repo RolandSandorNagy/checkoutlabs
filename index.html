@@ -48,7 +48,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=20260817-logo-marquee-reorder" />
+  <link rel="stylesheet" href="/styles.css?v=20260817-credibility-pricing-refine" />
   <!-- Google Analytics 4 is loaded from script.js only after cookie consent is granted -->
 
   <script>
@@ -160,6 +160,16 @@
             </li>
           </ul>
 
+          <div class="hero-credibility" aria-label="Experience summary">
+            <span>10+ years software development</span>
+            <span class="hero-credibility-sep" aria-hidden="true">&middot;</span>
+            <span>6+ years web &amp; Shopify</span>
+            <span class="hero-credibility-sep" aria-hidden="true">&middot;</span>
+            <span>20+ stores</span>
+            <span class="hero-credibility-sep" aria-hidden="true">&middot;</span>
+            <span>Agency &amp; remote delivery</span>
+          </div>
+
           <div class="hero-actions">
             <a class="btn btn-primary" href="#book">Get Started</a>
             <a class="btn btn-ghost" href="/work/">See Work</a>
@@ -217,14 +227,14 @@
           <p>Experience spanning Shopify brands, e-commerce agencies and software engineering teams.</p>
         </div>
 
-        <div class="logo-marquee" aria-label="Selected brand and team logos">
+        <div class="logo-marquee" aria-label="Selected brand and team logos" tabindex="0">
           <div class="logo-marquee-track">
             <div class="logo-item"><img loading="lazy" decoding="async" src="/assets/logos/normalized/stores/pennywell-farm-logo-devon-s-award-winning-farm.png" width="320" height="140" alt="Pennywell Farm logo"></div>
             <div class="logo-item"><img loading="lazy" decoding="async" src="/assets/logos/normalized/stores/bramley-for-business-logo.png" width="320" height="140" alt="Bramley for Business logo"></div>
             <div class="logo-item logo-item-wide"><img loading="lazy" decoding="async" src="/assets/logos/normalized/stores/ormondejayne-logo-2.png" width="320" height="140" alt="Ormonde Jayne logo"></div>
             <div class="logo-item"><img loading="lazy" decoding="async" src="/assets/logos/normalized/stores/bramley-products-logo.png" width="320" height="140" alt="Bramley Products logo"></div>
-            <div class="logo-item"><img loading="lazy" decoding="async" src="/assets/logos/normalized/stores/facetheory-logo.png" width="320" height="140" alt="FaceTheory logo"></div>
             <div class="logo-item"><img loading="lazy" decoding="async" src="/assets/logos/normalized/stores/bird-eyewear-logo-1.png" width="320" height="140" alt="Bird Eyewear logo"></div>
+            <div class="logo-item"><img loading="lazy" decoding="async" src="/assets/logos/normalized/stores/facetheory-logo.png" width="320" height="140" alt="FaceTheory logo"></div>
             <div class="logo-item"><img loading="lazy" decoding="async" src="/assets/logos/normalized/stores/malone-souliers-logo.png" width="320" height="140" alt="Malone Souliers logo"></div>
             <div class="logo-item"><img loading="lazy" decoding="async" src="/assets/logos/normalized/stores/pipers-farm-logo.png" width="320" height="140" alt="Edenmoor, formerly Pipers Farm logo"></div>
             <div class="logo-item"><img loading="lazy" decoding="async" src="/assets/logos/normalized/stores/savyll-logo.png" width="320" height="140" alt="Savyll logo"></div>
@@ -371,10 +381,6 @@
               <span class="badge">Starter</span>
               <h3>10 Hours/Month</h3>
               <p class="muted">Perfect for ongoing maintenance and smaller enhancements</p>
-              <div class="price-anchor">
-                <span class="old-price">$850</span>
-                <span class="intro-rate">Intro rate</span>
-              </div>
               <div class="price">
                 <span class="price-amount">$625</span>
                 <span class="price-period">/ month</span>
@@ -401,10 +407,6 @@
               </div>
               <h3>20 Hours/Month</h3>
               <p class="muted">Ideal for active development and feature builds</p>
-              <div class="price-anchor price-anchor-light">
-                <span class="old-price">$1,650</span>
-                <span class="intro-rate">Intro rate</span>
-              </div>
               <div class="price">
                 <span class="price-amount">$1,200</span>
                 <span class="price-period-light">/ month</span>
@@ -640,6 +642,14 @@
               </div>
             </article>
 
+            <article class="with-card reveal reveal-4">
+              <div class="with-icon" aria-hidden="true">M</div>
+              <div>
+                <h3>Established Shopify Merchants</h3>
+                <p>For established stores with complex Shopify requirements that need senior development without building a full internal team.</p>
+              </div>
+            </article>
+
             <div class="trust">
               <span class="trust-check" aria-hidden="true">&#10003;</span>
               <span>
@@ -757,6 +767,7 @@
         <div class="form-card reveal reveal-1">
           <h3>Send a message</h3>
           <p class="muted">The request will be reviewed for fit. No pressure, no commitment.</p>
+          <p class="form-helper">Send your store URL and tell me what you're trying to build, fix or improve. I typically reply within one business day.</p>
 
           <form
             id="contact-form"

@@ -610,7 +610,18 @@ const hu = {
     "Configurator stabilization & bugfixes": "Konfigurátor stabilizálás és hibajavítás",
     "Custom Object Detection": "Egyedi objektumdetekció",
     "A simplified custom object detection model, implemented in a Colab notebook.": "Egyszerűsített egyedi objektumdetekciós modell, Colab notebookban implementálva.",
-    "An image captioning model, implemented in a Colab notebook.": "Képaláírás-generáló modell, Colab notebookban implementálva."
+    "An image captioning model, implemented in a Colab notebook.": "Képaláírás-generáló modell, Colab notebookban implementálva.",
+    "10+ years software development": "10+ év szoftverfejlesztés",
+    "6+ years web & Shopify": "6+ év web és Shopify",
+    "20+ stores": "20+ store",
+    "Agency & remote delivery": "Ügynökségi és remote delivery",
+    "Established Shopify Merchants": "Established Shopify kereskedők",
+    "For established stores with complex Shopify requirements that need senior development without building a full internal team.": "Established store-oknak, akiknek komplex Shopify igényeik vannak, és senior fejlesztésre van szükségük anélkül, hogy teljes belső csapatot építenének.",
+    "Send your store URL and tell me what you're trying to build, fix or improve. I typically reply within one business day.": "Küldd el a store URL-jét, és írd le, mit szeretnél építeni, javítani vagy fejleszteni. Általában 1 munkanapon belül válaszolok.",
+    "Based in Hungary": "Magyarországon él",
+    "Remote UK/EU (CET/CEST)": "Remote UK/EU (CET/CEST)",
+    "English C1": "Angol C1",
+    "Freelance, contract & agency partnerships": "Freelance, szerződéses és ügynökségi együttműködések"
   };
 
 const de = {
@@ -1222,7 +1233,18 @@ const de = {
     "Configurator stabilization & bugfixes": "Konfigurator-Stabilisierung & Bugfixes",
     "Custom Object Detection": "Individuelle Objekterkennung",
     "A simplified custom object detection model, implemented in a Colab notebook.": "Ein vereinfachtes individuelles Objekterkennungsmodell, implementiert in einem Colab-Notebook.",
-    "An image captioning model, implemented in a Colab notebook.": "Ein Bildbeschreibungsmodell (Image Captioning), implementiert in einem Colab-Notebook."
+    "An image captioning model, implemented in a Colab notebook.": "Ein Bildbeschreibungsmodell (Image Captioning), implementiert in einem Colab-Notebook.",
+    "10+ years software development": "10+ Jahre Softwareentwicklung",
+    "6+ years web & Shopify": "6+ Jahre Web & Shopify",
+    "20+ stores": "20+ Stores",
+    "Agency & remote delivery": "Agentur- & Remote-Delivery",
+    "Established Shopify Merchants": "Etablierte Shopify-Händler",
+    "For established stores with complex Shopify requirements that need senior development without building a full internal team.": "Für etablierte Stores mit komplexen Shopify-Anforderungen, die Senior-Entwicklung brauchen, ohne ein vollständiges internes Team aufzubauen.",
+    "Send your store URL and tell me what you're trying to build, fix or improve. I typically reply within one business day.": "Sende deine Store-URL und beschreibe, was du bauen, reparieren oder verbessern möchtest. Ich antworte normalerweise innerhalb eines Werktags.",
+    "Based in Hungary": "Ansässig in Ungarn",
+    "Remote UK/EU (CET/CEST)": "Remote UK/EU (CET/CEST)",
+    "English C1": "Englisch C1",
+    "Freelance, contract & agency partnerships": "Freelance-, Vertrags- und Agenturpartnerschaften"
   };
 
 module.exports = { hu, de };
