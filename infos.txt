@@ -3,7 +3,7 @@ INFOK:
 LINKEDIN:
 I currently work with agencies and technical teams as a senior software engineer, providing flexible, async-first development capacity.
 
-Most of my recent work is focused on Shopify-based systems — custom apps, integrations, and advanced builds — typically in a white-label setup.
+Most of my recent work is focused on Shopify-based systems - custom apps, integrations, and advanced builds - typically in a white-label setup.
 
 If your team needs short-term senior capacity without long-term hiring, feel free to reach out.
 
@@ -34,7 +34,7 @@ Hi {{FirstName}},
 
 Just wanted to quickly follow up on my previous note.
 
-We help Shopify agencies add senior dev capacity in a flexible, white-label way — typically used for overflow work, complex tickets, or short-term spikes.
+We help Shopify agencies add senior dev capacity in a flexible, white-label way - typically used for overflow work, complex tickets, or short-term spikes.
 
 No worries if this isn’t relevant right now.
 Happy to reconnect later if timing changes.
@@ -48,7 +48,7 @@ Hi {{FirstName}},
 
 I’ll close the loop here.
 
-If you ever need extra Shopify development capacity without hiring — even short-term — feel free to reach out anytime.
+If you ever need extra Shopify development capacity without hiring - even short-term - feel free to reach out anytime.
 
 Wishing you a smooth delivery season.
 
@@ -62,7 +62,7 @@ Great to hear, {{FirstName}}.
 Typically agencies start with a small monthly capacity (10–20h) to test fit.
 Work is fully white-label, async-first, and integrated into your existing workflow.
 
-If helpful, we can do a quick 15-minute intro call to see if there’s a fit — or I can answer questions over email.
+If helpful, we can do a quick 15-minute intro call to see if there’s a fit - or I can answer questions over email.
 
 What works better for you?
 

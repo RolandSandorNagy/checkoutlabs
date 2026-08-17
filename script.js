@@ -806,7 +806,7 @@ if (form && statusEl) {
 
       if (res.ok) {
         form.reset();
-        statusEl.textContent = "✅ Thanks! Message received — we’ll reply within 1 business day.";
+        statusEl.textContent = "✅ Thanks! Message received - we’ll reply within 1 business day.";
         statusEl.classList.add("is-success");
         trackEvent("contact_form_submit", {
           form_id: form.id || "contact-form",
@@ -1075,7 +1075,7 @@ if (form && statusEl) {
         btn.disabled = false;
         btn.textContent = originalText;
         console.error(err);
-        alert("Sorry — the calendar failed to load. Please try again.");
+        alert("Sorry - the calendar failed to load. Please try again.");
       }
     },
     true

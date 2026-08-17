@@ -1,5 +1,5 @@
 // Language switcher routing only. Page content is pre-translated server-side
-// (see scripts/build-locales.js) — this just maps the current path to its
+// (see scripts/build-locales.js) - this just maps the current path to its
 // /hu/ or /de/ equivalent when a language button is clicked.
 (function () {
   function stripLanguagePrefix(pathname) {
