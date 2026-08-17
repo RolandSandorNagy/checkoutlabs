@@ -1430,7 +1430,7 @@ section {
   flex:0 0 auto;
   gap:12px;
   min-width:max-content;
-  animation:logo-marquee 350s linear infinite;
+  animation:logo-marquee 830s linear infinite;
   animation-play-state:paused;
   will-change:transform;
 }
