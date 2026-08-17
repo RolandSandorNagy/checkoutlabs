@@ -607,7 +607,10 @@ const hu = {
     "Handled bugfixes across size, fabric, headboard, and mattress selection steps": "Hibajavítások a méret-, anyag-, fejtámla- és matracválasztási lépéseknél",
     "Made smaller storefront adjustments alongside the configurator work": "Kisebb storefront módosítások a konfigurátor-munka mellett",
     "Stabilization": "Stabilizálás",
-    "Configurator stabilization & bugfixes": "Konfigurátor stabilizálás és hibajavítás"
+    "Configurator stabilization & bugfixes": "Konfigurátor stabilizálás és hibajavítás",
+    "Custom Object Detection": "Egyedi objektumdetekció",
+    "A simplified custom object detection model, implemented in a Colab notebook.": "Egyszerűsített egyedi objektumdetekciós modell, Colab notebookban implementálva.",
+    "An image captioning model, implemented in a Colab notebook.": "Képaláírás-generáló modell, Colab notebookban implementálva."
   };
 
 const de = {
@@ -1216,7 +1219,10 @@ const de = {
     "Handled bugfixes across size, fabric, headboard, and mattress selection steps": "Bugfixes über die Auswahlschritte für Größe, Stoff, Kopfteil und Matratze hinweg behoben",
     "Made smaller storefront adjustments alongside the configurator work": "Kleinere Storefront-Anpassungen neben der Konfigurator-Arbeit vorgenommen",
     "Stabilization": "Stabilisierung",
-    "Configurator stabilization & bugfixes": "Konfigurator-Stabilisierung & Bugfixes"
+    "Configurator stabilization & bugfixes": "Konfigurator-Stabilisierung & Bugfixes",
+    "Custom Object Detection": "Individuelle Objekterkennung",
+    "A simplified custom object detection model, implemented in a Colab notebook.": "Ein vereinfachtes individuelles Objekterkennungsmodell, implementiert in einem Colab-Notebook.",
+    "An image captioning model, implemented in a Colab notebook.": "Ein Bildbeschreibungsmodell (Image Captioning), implementiert in einem Colab-Notebook."
   };
 
 module.exports = { hu, de };
