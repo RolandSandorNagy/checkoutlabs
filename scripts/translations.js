@@ -599,7 +599,15 @@ const hu = {
     "Implemented Shopify storefront frontend and UI across the eyewear catalog": "Shopify storefront frontend és UI implementáció a szemüveg-katalógusban",
     "Built a guided, multi-step Frame Finder quiz capturing style, gender, and fit preferences": "Vezetett, több lépéses Frame Finder kvíz építése, amely stílus-, nem- és illeszkedési preferenciákat rögzít",
     "Connected quiz answers to filtered product recommendations from the catalog": "A kvíz válaszainak összekötése a katalógusból szűrt termékajánlásokkal",
-    "Guided product recommendation quiz": "Vezetett termékajánló kvíz"
+    "Guided product recommendation quiz": "Vezetett termékajánló kvíz",
+    "3D Bed Configurator Stabilization": "3D ágykonfigurátor stabilizálása",
+    "Shopify storefront fixes and stabilization work around an existing 3D bed configurator, where shoppers choose size, fabric, headboard width, and per-side mattress hardness with a live-updating 3D render and an AR \"view in your room\" option, before the selected components are added to cart as separate line items.": "Shopify storefront javítások és stabilizációs munka egy meglévő 3D ágykonfigurátor körül, ahol a vásárlók méretet, anyagot, fejtámla szélességet és oldalankénti matrac-keménységet választanak élőben frissülő 3D renderrel és AR \"nézd meg a szobádban\" opcióval, mielőtt a kiválasztott komponensek külön line itemként kerülnek a kosárba.",
+    "Kept a complex, multi-component configurator purchase path reliable in production, so shoppers could keep customizing and buying a made-to-spec bed without the flow breaking.": "Megbízhatóan tartotta production környezetben egy komplex, több komponensű konfigurátor vásárlási útvonalát, hogy a vásárlók zavartalanul tudjanak testre szabott ágyat konfigurálni és megvásárolni.",
+    "Fixed and stabilized an existing 3D product configurator built by another team": "Egy másik csapat által épített meglévő 3D termékkonfigurátor javítása és stabilizálása",
+    "Handled bugfixes across size, fabric, headboard, and mattress selection steps": "Hibajavítások a méret-, anyag-, fejtámla- és matracválasztási lépéseknél",
+    "Made smaller storefront adjustments alongside the configurator work": "Kisebb storefront módosítások a konfigurátor-munka mellett",
+    "Stabilization": "Stabilizálás",
+    "Configurator stabilization & bugfixes": "Konfigurátor stabilizálás és hibajavítás"
   };
 
 const de = {
@@ -1200,7 +1208,15 @@ const de = {
     "Implemented Shopify storefront frontend and UI across the eyewear catalog": "Shopify-Storefront-Frontend und UI im gesamten Brillenkatalog implementiert",
     "Built a guided, multi-step Frame Finder quiz capturing style, gender, and fit preferences": "Einen geführten, mehrstufigen Frame-Finder-Quiz gebaut, der Stil-, Geschlechts- und Passform-Präferenzen erfasst",
     "Connected quiz answers to filtered product recommendations from the catalog": "Quiz-Antworten mit gefilterten Produktempfehlungen aus dem Katalog verknüpft",
-    "Guided product recommendation quiz": "Geführter Produktempfehlungs-Quiz"
+    "Guided product recommendation quiz": "Geführter Produktempfehlungs-Quiz",
+    "3D Bed Configurator Stabilization": "3D-Bett-Konfigurator-Stabilisierung",
+    "Shopify storefront fixes and stabilization work around an existing 3D bed configurator, where shoppers choose size, fabric, headboard width, and per-side mattress hardness with a live-updating 3D render and an AR \"view in your room\" option, before the selected components are added to cart as separate line items.": "Shopify-Storefront-Fixes und Stabilisierungsarbeit rund um einen bestehenden 3D-Bett-Konfigurator, bei dem Kunden Größe, Stoff, Kopfteilbreite und Matratzenhärte pro Seite mit einem live aktualisierenden 3D-Rendering und einer AR-Option „im eigenen Raum ansehen“ wählen, bevor die gewählten Komponenten als separate Line Items in den Warenkorb gelegt werden.",
+    "Kept a complex, multi-component configurator purchase path reliable in production, so shoppers could keep customizing and buying a made-to-spec bed without the flow breaking.": "Hielt den Kaufpfad eines komplexen, mehrkomponentigen Konfigurators in der Produktion zuverlässig, damit Kunden ein maßgeschneidertes Bett weiter konfigurieren und kaufen konnten, ohne dass der Ablauf unterbrach.",
+    "Fixed and stabilized an existing 3D product configurator built by another team": "Einen bestehenden, von einem anderen Team gebauten 3D-Produktkonfigurator repariert und stabilisiert",
+    "Handled bugfixes across size, fabric, headboard, and mattress selection steps": "Bugfixes über die Auswahlschritte für Größe, Stoff, Kopfteil und Matratze hinweg behoben",
+    "Made smaller storefront adjustments alongside the configurator work": "Kleinere Storefront-Anpassungen neben der Konfigurator-Arbeit vorgenommen",
+    "Stabilization": "Stabilisierung",
+    "Configurator stabilization & bugfixes": "Konfigurator-Stabilisierung & Bugfixes"
   };
 
 module.exports = { hu, de };
