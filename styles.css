@@ -371,6 +371,7 @@ a{color:inherit; text-decoration:none}
 .hero.hero-animate:not(.is-loaded) h1,
 .hero.hero-animate:not(.is-loaded) .lede,
 .hero.hero-animate:not(.is-loaded) .checks li,
+.hero.hero-animate:not(.is-loaded) .hero-credibility,
 .hero.hero-animate:not(.is-loaded) .hero-actions,
 .hero.hero-animate:not(.is-loaded) .micro,
 .hero.hero-animate:not(.is-loaded) .hero-proof-card{
@@ -381,6 +382,7 @@ a{color:inherit; text-decoration:none}
 .hero.hero-animate.is-loaded h1,
 .hero.hero-animate.is-loaded .lede,
 .hero.hero-animate.is-loaded .checks li,
+.hero.hero-animate.is-loaded .hero-credibility,
 .hero.hero-animate.is-loaded .hero-actions,
 .hero.hero-animate.is-loaded .micro,
 .hero.hero-animate.is-loaded .hero-proof-card{
@@ -391,8 +393,9 @@ a{color:inherit; text-decoration:none}
 .hero.hero-animate.is-loaded .checks li:nth-child(1){animation-delay:.18s}
 .hero.hero-animate.is-loaded .checks li:nth-child(2){animation-delay:.24s}
 .hero.hero-animate.is-loaded .checks li:nth-child(3){animation-delay:.30s}
-.hero.hero-animate.is-loaded .hero-actions{animation-delay:.36s}
-.hero.hero-animate.is-loaded .micro{animation-delay:.42s}
+.hero.hero-animate.is-loaded .hero-credibility{animation-delay:.34s}
+.hero.hero-animate.is-loaded .hero-actions{animation-delay:.40s}
+.hero.hero-animate.is-loaded .micro{animation-delay:.46s}
 .hero.hero-animate.is-loaded .hero-proof-card{animation-delay:.18s}
 
 @keyframes heroIntro{
@@ -460,7 +463,7 @@ h1{
 .micro-dot{color:var(--green)}
 
 .hero-credibility{
-  margin-top:20px;
+  margin:20px 0 22px;
   display:flex;
   flex-wrap:wrap;
   align-items:center;
@@ -2309,6 +2312,7 @@ section {
   .hero.hero-animate.is-loaded h1,
   .hero.hero-animate.is-loaded .lede,
   .hero.hero-animate.is-loaded .checks li,
+  .hero.hero-animate.is-loaded .hero-credibility,
   .hero.hero-animate.is-loaded .hero-actions,
   .hero.hero-animate.is-loaded .micro,
   .hero.hero-animate.is-loaded .hero-proof-card{
