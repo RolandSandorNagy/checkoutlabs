@@ -583,7 +583,16 @@ const hu = {
     "An early C++ project built while learning the language — a CLI game where an ASCII stick-figure character moves and shoots ASCII \"bug\" enemies across the terminal.": "Egy korai C++ projekt a nyelv tanulása közben — egy CLI játék, ahol egy ASCII pálcikaember karakter mozog és lő ASCII \"bug\" ellenségekre a terminálban.",
     "CLI Game": "CLI Game",
     "Shopify storefront and frontend work for a skincare commerce brand, represented in broader agency delivery experience.": "Shopify storefront és frontend munka egy bőrápolási commerce brand számára, szélesebb ügynökségi delivery tapasztalat részeként.",
-    "Shopify storefront and frontend work delivered through an agency team.": "Shopify storefront és frontend munka ügynökségi csapaton keresztül szállítva."
+    "Shopify storefront and frontend work delivered through an agency team.": "Shopify storefront és frontend munka ügynökségi csapaton keresztül szállítva.",
+    "A Java coursework project implementing the Connect Four game.": "Java kurzusmunka, amely a Connect Four (Four in a Row) játékot valósítja meg.",
+    "A Java coursework project implementing a car service / workshop management application.": "Java kurzusmunka, amely egy autószerviz / műhelykezelő alkalmazást valósít meg.",
+    "An early hobby project. Write-up coming soon.": "Egy korai hobbi projekt. A leírás hamarosan érkezik.",
+    "BSc coursework": "BSc kurzusmunka",
+    "A command-line implementation of Nine Men's Morris, built in C++ while learning the language.": "A malom (Nine Men's Morris) parancssoros implementációja, C++ nyelven, a nyelv tanulása közben.",
+    "A command-line Blackjack implementation in C++.": "Parancssoros Blackjack (21) implementáció C++ nyelven.",
+    "A command-line Sokoban puzzle implementation in C++.": "Parancssoros Sokoban puzzle implementáció C++ nyelven.",
+    "Analysis II Exam Generator": "Analízis 2 vizsgagenerátor",
+    "A tool built for the Analysis II (Calculus II) coursework to generate practice exams.": "Eszköz az Analízis 2 tárgyhoz, gyakorló vizsgák generálására."
   };
 
 const de = {
@@ -1168,7 +1177,16 @@ const de = {
     "An early C++ project built while learning the language — a CLI game where an ASCII stick-figure character moves and shoots ASCII \"bug\" enemies across the terminal.": "Eines der ersten Projekte beim Erlernen von C++ — ein CLI-Spiel, in dem eine ASCII-Strichmännchen-Figur sich bewegt und auf ASCII-„Bug“-Gegner im Terminal schießt.",
     "CLI Game": "CLI-Spiel",
     "Shopify storefront and frontend work for a skincare commerce brand, represented in broader agency delivery experience.": "Shopify-Storefront- und Frontend-Arbeit für eine Skincare-Commerce-Marke, als Teil breiterer Agentur-Delivery-Erfahrung.",
-    "Shopify storefront and frontend work delivered through an agency team.": "Shopify-Storefront- und Frontend-Arbeit, geliefert über ein Agenturteam."
+    "Shopify storefront and frontend work delivered through an agency team.": "Shopify-Storefront- und Frontend-Arbeit, geliefert über ein Agenturteam.",
+    "A Java coursework project implementing the Connect Four game.": "Ein Java-Kursprojekt, das das Spiel Vier Gewinnt (Connect Four) umsetzt.",
+    "A Java coursework project implementing a car service / workshop management application.": "Ein Java-Kursprojekt, das eine Autowerkstatt-Verwaltungsanwendung umsetzt.",
+    "An early hobby project. Write-up coming soon.": "Ein frühes Hobbyprojekt. Beschreibung folgt in Kürze.",
+    "BSc coursework": "BSc-Kursarbeit",
+    "A command-line implementation of Nine Men's Morris, built in C++ while learning the language.": "Eine Kommandozeilen-Implementierung von Mühle (Nine Men's Morris), gebaut in C++ beim Erlernen der Sprache.",
+    "A command-line Blackjack implementation in C++.": "Eine Kommandozeilen-Implementierung von Blackjack in C++.",
+    "A command-line Sokoban puzzle implementation in C++.": "Eine Kommandozeilen-Implementierung des Sokoban-Puzzles in C++.",
+    "Analysis II Exam Generator": "Analysis-II-Prüfungsgenerator",
+    "A tool built for the Analysis II (Calculus II) coursework to generate practice exams.": "Ein Tool für den Kurs Analysis II, das Übungsklausuren generiert."
   };
 
 module.exports = { hu, de };
