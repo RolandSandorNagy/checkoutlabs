@@ -368,8 +368,13 @@ function getAnalyticsSection(element) {
       grid.insertBefore(masonry, cards[0]);
       columns = [leftColumn, rightColumn];
 
-      cards.forEach((card, index) => {
-        (index % 2 === 0 ? leftColumn : rightColumn).appendChild(card);
+      let autoIndex = 0;
+      cards.forEach((card) => {
+        const forced = card.dataset.forceColumn;
+        if (forced === "left") { leftColumn.appendChild(card); return; }
+        if (forced === "right") { rightColumn.appendChild(card); return; }
+        (autoIndex % 2 === 0 ? leftColumn : rightColumn).appendChild(card);
+        autoIndex += 1;
       });
 
       updateBalanceMetrics();
