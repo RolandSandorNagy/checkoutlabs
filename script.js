@@ -659,14 +659,23 @@ function getAnalyticsSection(element) {
   const figure = document.createElement("figure");
   figure.className = "evidence-lightbox-figure";
 
+  const imageWrap = document.createElement("div");
+  imageWrap.className = "evidence-lightbox-image-wrap";
+
   const image = document.createElement("img");
   image.className = "evidence-lightbox-image";
   image.alt = "";
 
+  const lens = document.createElement("div");
+  lens.className = "evidence-lightbox-lens";
+  lens.setAttribute("aria-hidden", "true");
+
+  imageWrap.append(image, lens);
+
   const caption = document.createElement("figcaption");
   caption.className = "evidence-lightbox-caption";
 
-  figure.append(image, caption);
+  figure.append(imageWrap, caption);
   lightbox.append(closeButton, previousButton, figure, nextButton);
   document.body.appendChild(lightbox);
 
@@ -674,10 +683,46 @@ function getAnalyticsSection(element) {
   let activeIndex = 0;
   let lastFocus = null;
 
+  const supportsHoverZoom = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const ZOOM = 2.4;
+
+  function hideLens() {
+    lens.classList.remove("is-active");
+    image.classList.remove("is-zoom-active");
+  }
+
+  function updateLens(event) {
+    const rect = image.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    if (x < 0 || y < 0 || x > rect.width || y > rect.height) {
+      hideLens();
+      return;
+    }
+
+    const lensSize = lens.offsetWidth || 220;
+    lens.style.left = `${x - lensSize / 2}px`;
+    lens.style.top = `${y - lensSize / 2}px`;
+    lens.style.backgroundImage = `url("${image.currentSrc || image.src}")`;
+    lens.style.backgroundSize = `${rect.width * ZOOM}px ${rect.height * ZOOM}px`;
+    lens.style.backgroundPosition = `${-(x * ZOOM - lensSize / 2)}px ${-(y * ZOOM - lensSize / 2)}px`;
+    lens.classList.add("is-active");
+    image.classList.add("is-zoom-active");
+  }
+
+  if (supportsHoverZoom) {
+    image.addEventListener("mouseenter", updateLens);
+    image.addEventListener("mousemove", updateLens);
+    image.addEventListener("mouseleave", hideLens);
+  }
+
   function render() {
     const activeImage = activeImages[activeIndex];
     if (!activeImage) return;
 
+    hideLens();
     image.src = activeImage.currentSrc || activeImage.src;
     image.alt = activeImage.alt || "Project screenshot";
     caption.textContent = activeImage.alt || "";
@@ -727,6 +772,7 @@ function getAnalyticsSection(element) {
   function closeLightbox() {
     lightbox.classList.remove("is-open");
     document.body.classList.remove("evidence-lightbox-open");
+    hideLens();
     window.setTimeout(() => {
       lightbox.hidden = true;
       image.removeAttribute("src");
