@@ -211,7 +211,7 @@
   gap:16px;
   max-width:760px;
   margin:56px auto 0;
-  padding:28px 20px 0;
+  padding:28px 20px;
   border-top:1px solid #E2E9F6;
 }
 .blog-post-nav[hidden]{
