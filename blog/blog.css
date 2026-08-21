@@ -166,6 +166,9 @@
 }
 .blog-figure img{
   width:100%;
+  height:auto;
+  aspect-ratio:960 / 1200;
+  object-fit:contain;
   border-radius:16px;
   border:1px solid #DCE6F8;
   box-shadow:var(--shadow2);
