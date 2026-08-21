@@ -71,16 +71,66 @@
   <url>
     <loc>https://checkoutlabs.dev/blog/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/blog/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/blog/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/blog/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/blog/" />
   </url>
   <url>
+    <loc>https://checkoutlabs.dev/hu/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/blog/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/blog/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/blog/" />
+  </url>
+  <url>
+    <loc>https://checkoutlabs.dev/de/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/blog/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/blog/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/blog/" />
+  </url>
+
+  <url>
     <loc>https://checkoutlabs.dev/blog/coding-is-getting-cheaper/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/blog/coding-is-getting-cheaper/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/blog/coding-is-getting-cheaper/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/blog/coding-is-getting-cheaper/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/blog/coding-is-getting-cheaper/" />
   </url>
   <url>
+    <loc>https://checkoutlabs.dev/hu/blog/coding-is-getting-cheaper/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/blog/coding-is-getting-cheaper/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/blog/coding-is-getting-cheaper/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/blog/coding-is-getting-cheaper/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/blog/coding-is-getting-cheaper/" />
+  </url>
+  <url>
+    <loc>https://checkoutlabs.dev/de/blog/coding-is-getting-cheaper/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/blog/coding-is-getting-cheaper/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/blog/coding-is-getting-cheaper/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/blog/coding-is-getting-cheaper/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/blog/coding-is-getting-cheaper/" />
+  </url>
+
+  <url>
     <loc>https://checkoutlabs.dev/blog/when-shopify-needs-custom-development/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/blog/when-shopify-needs-custom-development/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/blog/when-shopify-needs-custom-development/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/blog/when-shopify-needs-custom-development/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/blog/when-shopify-needs-custom-development/" />
+  </url>
+  <url>
+    <loc>https://checkoutlabs.dev/hu/blog/when-shopify-needs-custom-development/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/blog/when-shopify-needs-custom-development/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/blog/when-shopify-needs-custom-development/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/blog/when-shopify-needs-custom-development/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/blog/when-shopify-needs-custom-development/" />
+  </url>
+  <url>
+    <loc>https://checkoutlabs.dev/de/blog/when-shopify-needs-custom-development/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/blog/when-shopify-needs-custom-development/" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://checkoutlabs.dev/hu/blog/when-shopify-needs-custom-development/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://checkoutlabs.dev/de/blog/when-shopify-needs-custom-development/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/blog/when-shopify-needs-custom-development/" />
   </url>
 

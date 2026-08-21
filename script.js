@@ -846,12 +846,25 @@ function getAnalyticsSection(element) {
   });
 })();
 
-// Blog prev/next article nav. Reads the /blog/ listing at runtime (the same
-// markup that renders the blog index) so it stays a single source of truth -
-// new posts just need to be added to that listing to participate here too.
+// Blog prev/next article nav. Reads the current locale's /blog/ listing at
+// runtime (the same markup that renders the blog index) so it stays a single
+// source of truth - new posts just need to be added to that listing to
+// participate here too.
 (function () {
   const nav = document.querySelector(".blog-post-nav");
   if (!nav) return;
+
+  const NAV_LABELS = {
+    en: { prev: "Previous article", next: "Next article" },
+    hu: { prev: "Előző cikk", next: "Következő cikk" },
+    de: { prev: "Vorheriger Artikel", next: "Nächster Artikel" },
+  };
+
+  const currentPath = window.location.pathname.replace(/\/?$/, "/");
+  const localeMatch = currentPath.match(/^\/(hu|de)\//);
+  const locale = localeMatch ? localeMatch[1] : "en";
+  const localePrefix = localeMatch ? `/${localeMatch[1]}` : "";
+  const labels = NAV_LABELS[locale];
 
   function buildNavLink(direction, post) {
     const link = document.createElement("a");
@@ -860,7 +873,7 @@ function getAnalyticsSection(element) {
 
     const label = document.createElement("span");
     label.className = "blog-post-nav-label";
-    label.textContent = direction === "prev" ? "Previous article" : "Next article";
+    label.textContent = labels[direction];
 
     const title = document.createElement("span");
     title.className = "blog-post-nav-title";
@@ -870,7 +883,7 @@ function getAnalyticsSection(element) {
     return link;
   }
 
-  fetch("/blog/")
+  fetch(`${localePrefix}/blog/`)
     .then((res) => (res.ok ? res.text() : null))
     .then((html) => {
       if (!html) return;
@@ -885,7 +898,6 @@ function getAnalyticsSection(element) {
 
       if (posts.length < 2) return;
 
-      const currentPath = window.location.pathname.replace(/\/?$/, "/");
       const currentIndex = posts.findIndex((post) => post.href === currentPath);
       if (currentIndex === -1) return;
 
