@@ -121,6 +121,16 @@ const PROJECTS = [
     imageWidth: 1200,
     imageHeight: 591,
   },
+  {
+    slug: "merched",
+    kicker: "Merched",
+    title: "Custom Print Selection & Shopify Product Sync",
+    description:
+      "Shopify storefront and data work for Merched, including a custom print selection experience on the product page that carries the selected print through to cart, plus a weekly Stella Stanley API sync that keeps Shopify products, variants, inventory, prices, and metafields up to date through a scheduled GitHub Actions workflow.",
+    image: "/assets/screenshots/optimized/merched-homepage-desktop.webp",
+    imageWidth: 1915,
+    imageHeight: 942,
+  },
 ];
 
 const UI_STRINGS = {
