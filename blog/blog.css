@@ -1,0 +1,188 @@
+/* Blog listing + article page styles. Loaded only on /blog/ pages, alongside /styles.css. */
+
+.blog-hero{
+  padding:56px 0 12px;
+}
+.blog-hero .section-title{
+  text-align:left;
+  font-size:44px;
+}
+.blog-hero .section-sub{
+  text-align:left;
+  margin:12px 0 0;
+}
+
+/* ---------- Listing ---------- */
+.blog-list{
+  display:grid;
+  gap:18px;
+  margin:34px 0 80px;
+}
+.blog-post-card{
+  display:block;
+  background:#fff;
+  border:1px solid #DCE6F8;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow2);
+  padding:26px 28px;
+  text-decoration:none;
+  color:inherit;
+}
+.blog-post-card .project-kicker{
+  margin-bottom:8px;
+}
+.blog-post-card h2{
+  margin:0 0 10px;
+  font-size:26px;
+  letter-spacing:-.03em;
+  color:var(--text);
+}
+.blog-post-card p{
+  margin:0 0 16px;
+  color:var(--muted);
+  line-height:1.65;
+  max-width:70ch;
+}
+.blog-post-card .blog-read-more{
+  color:var(--primary2);
+  font-weight:700;
+  font-size:14px;
+}
+
+/* ---------- Shared post meta ---------- */
+.blog-meta{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:6px 10px;
+  color:var(--muted2);
+  font-size:13px;
+}
+.blog-meta-sep{color:rgba(15,23,42,.25); font-size:12px}
+
+/* ---------- Article page ---------- */
+.blog-back{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  max-width:720px;
+  margin:36px auto 0;
+  padding:0 20px;
+  color:var(--primary2);
+  font-weight:600;
+  font-size:14px;
+  text-decoration:none;
+}
+.blog-back:hover{text-decoration:underline}
+
+.blog-article{
+  max-width:720px;
+  margin:0 auto;
+  padding:22px 20px 90px;
+}
+.blog-article-header{
+  margin-bottom:30px;
+}
+.blog-article-header .project-kicker{
+  margin-bottom:12px;
+}
+.blog-article-header h1{
+  margin:0 0 16px;
+  font-size:42px;
+  line-height:1.14;
+  letter-spacing:-0.03em;
+}
+
+.blog-prose{
+  color:#22314F;
+  font-size:17px;
+  line-height:1.75;
+}
+.blog-prose p{
+  margin:0 0 22px;
+}
+.blog-prose h2{
+  margin:44px 0 16px;
+  font-size:26px;
+  letter-spacing:-.02em;
+  color:var(--text);
+}
+.blog-prose h2:first-child{margin-top:0}
+
+/* Rate-card block: compact visual presentation of the $5 / $20 / $100 comparison */
+.rate-card{
+  list-style:none;
+  margin:24px 0 26px;
+  padding:8px;
+  display:grid;
+  gap:2px;
+  background:#EEF5FF;
+  border:1px solid #D7E6FF;
+  border-radius:16px;
+}
+.rate-card-row{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:6px 14px;
+  padding:14px 16px;
+  border-radius:11px;
+  background:#fff;
+}
+.rate-card-label{
+  font-weight:600;
+  color:var(--text);
+  font-size:15px;
+}
+.rate-card-price{
+  font-family:var(--font-heading);
+  font-weight:800;
+  font-size:19px;
+  color:var(--primary2);
+  white-space:nowrap;
+}
+.rate-card-price span{
+  font-weight:600;
+  font-size:12px;
+  color:var(--muted2);
+  margin-left:2px;
+}
+.rate-card-row-featured{
+  background:var(--primary);
+}
+.rate-card-row-featured .rate-card-label,
+.rate-card-row-featured .rate-card-price{
+  color:#fff;
+}
+.rate-card-row-featured .rate-card-price span{
+  color:rgba(255,255,255,.75);
+}
+
+/* Optional future editorial visual, placed near the rate-card intro */
+.blog-figure{
+  margin:26px auto 30px;
+  max-width:400px;
+}
+.blog-figure img{
+  width:100%;
+  border-radius:16px;
+  border:1px solid #DCE6F8;
+  box-shadow:var(--shadow2);
+  display:block;
+}
+.blog-figure figcaption{
+  margin-top:10px;
+  font-size:13px;
+  color:var(--muted2);
+  text-align:center;
+}
+
+@media (max-width: 720px){
+  .blog-hero{padding:40px 0 8px}
+  .blog-hero .section-title{font-size:32px}
+  .blog-article-header h1{font-size:30px}
+  .blog-prose{font-size:16px}
+  .blog-post-card{padding:20px}
+  .rate-card-row{padding:12px 14px}
+}

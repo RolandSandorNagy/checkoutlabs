@@ -68,4 +68,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/work/" />
   </url>
 
+  <url>
+    <loc>https://checkoutlabs.dev/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/blog/" />
+  </url>
+  <url>
+    <loc>https://checkoutlabs.dev/blog/coding-is-getting-cheaper/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/blog/coding-is-getting-cheaper/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/blog/coding-is-getting-cheaper/" />
+  </url>
+
 </urlset>
