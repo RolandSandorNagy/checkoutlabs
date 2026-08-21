@@ -180,6 +180,13 @@
   color:var(--muted2);
   text-align:center;
 }
+.post-gallery img.is-lightbox-trigger{
+  cursor:zoom-in;
+}
+.post-gallery img.is-lightbox-trigger:focus-visible{
+  outline:3px solid rgba(11,94,215,.42);
+  outline-offset:3px;
+}
 
 @media (max-width: 720px){
   .blog-hero{padding:40px 0 8px}

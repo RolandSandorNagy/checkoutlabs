@@ -625,9 +625,10 @@ function getAnalyticsSection(element) {
   });
 })();
 
-// Evidence screenshot lightbox
+// Evidence screenshot lightbox (also powers the blog's clickable post images via .post-gallery)
 (function () {
-  const evidenceImages = Array.from(document.querySelectorAll(".evidence-strip img"));
+  const lightboxSelector = ".evidence-strip img, .post-gallery img";
+  const evidenceImages = Array.from(document.querySelectorAll(lightboxSelector));
   if (!evidenceImages.length) return;
 
   const lightbox = document.createElement("div");
@@ -687,22 +688,34 @@ function getAnalyticsSection(element) {
   }
 
   function openLightbox(targetImage) {
-    const strip = targetImage.closest(".evidence-strip");
+    const strip = targetImage.closest(".evidence-strip, .post-gallery");
     activeImages = Array.from(strip?.querySelectorAll("img") || [targetImage]);
     activeIndex = Math.max(0, activeImages.indexOf(targetImage));
     lastFocus = document.activeElement;
 
-    const projectCard = targetImage.closest(".project-card");
-    const projectTitle = projectCard?.querySelector("h3");
-    const projectBrand = projectCard?.querySelector(".project-kicker");
+    const postArticle = targetImage.closest(".blog-article");
 
-    trackEvent("case_study_image_open", {
-      image_alt: targetImage.alt || "",
-      image_index: activeIndex + 1,
-      image_count: activeImages.length,
-      project_title: projectTitle ? getAnalyticsText(projectTitle) : "",
-      project_brand: projectBrand ? getAnalyticsText(projectBrand) : "",
-    });
+    if (postArticle) {
+      const postTitle = postArticle.querySelector(".blog-article-header h1");
+      trackEvent("blog_image_open", {
+        image_alt: targetImage.alt || "",
+        image_index: activeIndex + 1,
+        image_count: activeImages.length,
+        post_title: postTitle ? getAnalyticsText(postTitle) : "",
+      });
+    } else {
+      const projectCard = targetImage.closest(".project-card");
+      const projectTitle = projectCard?.querySelector("h3");
+      const projectBrand = projectCard?.querySelector(".project-kicker");
+
+      trackEvent("case_study_image_open", {
+        image_alt: targetImage.alt || "",
+        image_index: activeIndex + 1,
+        image_count: activeImages.length,
+        project_title: projectTitle ? getAnalyticsText(projectTitle) : "",
+        project_brand: projectBrand ? getAnalyticsText(projectBrand) : "",
+      });
+    }
 
     render();
     lightbox.hidden = false;
@@ -732,17 +745,22 @@ function getAnalyticsSection(element) {
   function getEvidenceImageFromEvent(event) {
     const target = event.target;
     if (!(target instanceof Element)) return null;
-    const img = target.closest(".evidence-strip img");
+    const img = target.closest(lightboxSelector);
     return img instanceof HTMLImageElement ? img : null;
   }
 
   function canOpenFromImage(img) {
-    const strip = img.closest(".evidence-strip");
+    const strip = img.closest(".evidence-strip, .post-gallery");
     return !strip?.classList.contains("is-dragging") && strip?.dataset.dragJustEnded !== "true";
   }
 
   evidenceImages.forEach((img) => {
     img.classList.add("is-lightbox-trigger");
+    if (!img.hasAttribute("tabindex")) img.tabIndex = 0;
+    if (!img.hasAttribute("role")) img.setAttribute("role", "button");
+    if (!img.hasAttribute("aria-label")) {
+      img.setAttribute("aria-label", `${img.alt || "Image"} - open larger preview`);
+    }
   });
 
   document.addEventListener("click", (event) => {
