@@ -201,6 +201,68 @@
   outline-offset:3px;
 }
 
+/* Prev/next article nav. Populated at runtime by script.js from the /blog/
+   listing, so it's reusable as-is for every post - nothing post-specific
+   lives here. Matches .blog-article's own width so it lines up with the
+   text column above it. */
+.blog-post-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  max-width:760px;
+  margin:56px auto 0;
+  padding:28px 20px 0;
+  border-top:1px solid #E2E9F6;
+}
+.blog-post-nav[hidden]{
+  display:none;
+}
+.blog-post-nav-link{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  max-width:340px;
+  padding:16px 18px;
+  border:1px solid #DCE6F8;
+  border-radius:14px;
+  text-decoration:none;
+  color:inherit;
+  transition:border-color .16s ease, background-color .16s ease, transform .16s ease;
+}
+.blog-post-nav-next{
+  margin-left:auto;
+  text-align:right;
+  align-items:flex-end;
+}
+@media (hover: hover) and (pointer: fine){
+  .blog-post-nav-link:hover{
+    border-color:#B8D4FF;
+    background:#F5F9FF;
+    transform:translateY(-1px);
+  }
+}
+.blog-post-nav-link:focus-visible{
+  outline:3px solid rgba(11,94,215,.42);
+  outline-offset:2px;
+}
+.blog-post-nav-label{
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--primary2);
+}
+.blog-post-nav-prev .blog-post-nav-label::before{content:"\2190\00A0"}
+.blog-post-nav-next .blog-post-nav-label::after{content:"\00A0\2192"}
+.blog-post-nav-title{
+  margin-top:2px;
+  font-family:var(--font-heading);
+  font-weight:700;
+  font-size:15px;
+  line-height:1.4;
+  color:var(--text);
+}
+
 @media (max-width: 720px){
   .blog-hero{padding:40px 0 8px}
   .blog-hero .section-title{font-size:32px}
@@ -208,4 +270,18 @@
   .blog-prose{font-size:16px}
   .blog-post-card{padding:20px}
   .rate-card-row{padding:12px 14px}
+}
+
+@media (max-width: 560px){
+  .blog-post-nav{
+    flex-direction:column;
+  }
+  .blog-post-nav-link{
+    max-width:none;
+  }
+  .blog-post-nav-next{
+    margin-left:0;
+    text-align:left;
+    align-items:flex-start;
+  }
 }

@@ -846,6 +846,61 @@ function getAnalyticsSection(element) {
   });
 })();
 
+// Blog prev/next article nav. Reads the /blog/ listing at runtime (the same
+// markup that renders the blog index) so it stays a single source of truth -
+// new posts just need to be added to that listing to participate here too.
+(function () {
+  const nav = document.querySelector(".blog-post-nav");
+  if (!nav) return;
+
+  function buildNavLink(direction, post) {
+    const link = document.createElement("a");
+    link.className = `blog-post-nav-link blog-post-nav-${direction}`;
+    link.href = post.href;
+
+    const label = document.createElement("span");
+    label.className = "blog-post-nav-label";
+    label.textContent = direction === "prev" ? "Previous article" : "Next article";
+
+    const title = document.createElement("span");
+    title.className = "blog-post-nav-title";
+    title.textContent = post.title;
+
+    link.append(label, title);
+    return link;
+  }
+
+  fetch("/blog/")
+    .then((res) => (res.ok ? res.text() : null))
+    .then((html) => {
+      if (!html) return;
+
+      const doc = new DOMParser().parseFromString(html, "text/html");
+      const posts = Array.from(doc.querySelectorAll(".blog-post-card"))
+        .map((card) => ({
+          href: card.getAttribute("href"),
+          title: card.querySelector("h2")?.textContent.trim() || "",
+        }))
+        .filter((post) => post.href && post.title);
+
+      if (posts.length < 2) return;
+
+      const currentPath = window.location.pathname.replace(/\/?$/, "/");
+      const currentIndex = posts.findIndex((post) => post.href === currentPath);
+      if (currentIndex === -1) return;
+
+      // The listing is newest-first, so a lower index means a more recent post.
+      const newer = posts[currentIndex - 1];
+      const older = posts[currentIndex + 1];
+
+      if (older) nav.appendChild(buildNavLink("prev", older));
+      if (newer) nav.appendChild(buildNavLink("next", newer));
+
+      if (nav.childElementCount) nav.hidden = false;
+    })
+    .catch(() => {});
+})();
+
 
 // Formspree form
 const form = document.getElementById("contact-form");

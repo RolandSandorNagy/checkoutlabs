@@ -58,7 +58,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css?v=20260821-lightbox-zoom-fix" />
-  <link rel="stylesheet" href="/blog/blog.css?v=20260821-widths" />
+  <link rel="stylesheet" href="/blog/blog.css?v=20260821-post-nav" />
   <!-- Google Analytics 4 is loaded from script.js only after cookie consent is granted -->
 </head>
 <body class="blog-page blog-post-page">
@@ -183,6 +183,9 @@
         <p>AI makes developers faster. It doesn't remove the need to know what you're doing, and for anything running a real business, that part hasn't gotten cheaper at all.</p>
       </div>
     </article>
+
+    <!-- Populated at runtime from /blog/ so new posts get prev/next links automatically - see script.js -->
+    <nav class="blog-post-nav" aria-label="More articles" hidden></nav>
   </main>
 
   <footer class="footer">
@@ -294,6 +297,6 @@
     </div>
   </dialog>
 
-  <script src="/script.js?v=20260821-lightbox-zoom-fix"></script>
+  <script src="/script.js?v=20260821-post-nav"></script>
 </body>
 </html>
