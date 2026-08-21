@@ -621,7 +621,8 @@ const hu = {
     "Based in Hungary": "Magyarországon él",
     "Remote UK/EU (CET/CEST)": "Remote UK/EU (CET/CEST)",
     "English C1": "Angol C1",
-    "Freelance, contract & agency partnerships": "Freelance, szerződéses és ügynökségi együttműködések"
+    "Freelance, contract & agency partnerships": "Freelance, szerződéses és ügynökségi együttműködések",
+    "Shopify frontend and UI implementation work for an eyewear storefront, including a guided Frame Finder quiz that recommends frames from multiple customer inputs - what the shopper is looking for, style preference, and fit details - before narrowing the catalog down to a small set of matched products.": "Shopify frontend és UI implementációs munka egy szemüveg storefronthoz, beleértve egy vezetett Frame Finder kvízt, amely több vásárlói input alapján ajánl kereteket - mit keres a vásárló, stílus preferencia és illeszkedési részletek - mielőtt leszűkíti a katalógust néhány illő termékre."
   };
 
 const de = {
@@ -1244,7 +1245,8 @@ const de = {
     "Based in Hungary": "Ansässig in Ungarn",
     "Remote UK/EU (CET/CEST)": "Remote UK/EU (CET/CEST)",
     "English C1": "Englisch C1",
-    "Freelance, contract & agency partnerships": "Freelance-, Vertrags- und Agenturpartnerschaften"
+    "Freelance, contract & agency partnerships": "Freelance-, Vertrags- und Agenturpartnerschaften",
+    "Shopify frontend and UI implementation work for an eyewear storefront, including a guided Frame Finder quiz that recommends frames from multiple customer inputs - what the shopper is looking for, style preference, and fit details - before narrowing the catalog down to a small set of matched products.": "Shopify-Frontend- und UI-Implementierungsarbeit für eine Brillen-Storefront, einschließlich eines geführten Frame-Finder-Quiz, das anhand mehrerer Kundeneingaben - was der Kunde sucht, Stilpräferenz und Passform-Details - Brillen empfiehlt, bevor der Katalog auf eine kleine Auswahl passender Produkte eingegrenzt wird."
   };
 
 module.exports = { hu, de };
