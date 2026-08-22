@@ -1352,6 +1352,15 @@ section {
   border: 1px dashed #e2e8f0;
 }
 
+/* From the Blog (homepage) - card styling itself comes from blog.css's
+   shared .blog-post-card, this just lays them out three-up */
+.home-blog-grid{
+  margin-top:34px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:16px;
+}
+
 /* Capabilities */
 .cap-grid{
   margin-top:34px;
@@ -2220,6 +2229,7 @@ section {
 
 @media (max-width: 980px){
   .cap-grid{grid-template-columns:1fr; }
+  .home-blog-grid{grid-template-columns:1fr; }
   .work-hero-grid,
   .project-card-featured{
     grid-template-columns:1fr;

@@ -31,7 +31,8 @@
 .blog-post-card .project-kicker{
   margin-bottom:8px;
 }
-.blog-post-card h2{
+.blog-post-card h2,
+.blog-post-card h3{
   margin:0 0 10px;
   font-size:26px;
   letter-spacing:-.03em;
