@@ -7,8 +7,12 @@
    dropped in favor of the site's own equivalents. Gameplay logic in the
    original JS files is untouched. */
 
-#dragonWarriorApp,
-#dragonWarriorApp * {
+/* :where() keeps this at zero specificity (matching the original page's bare
+   "* { margin:0; padding:0 }" reset) while still scoping it to this page.
+   Without :where(), the #dragonWarriorApp ID would outrank Bootstrap's
+   class-based .row/.col-*/.form-* rules and strip their gutters/padding,
+   which is what was collapsing the game layout. */
+:where(#dragonWarriorApp, #dragonWarriorApp *) {
   margin: 0;
   padding: 0;
 }
