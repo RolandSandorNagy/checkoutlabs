@@ -678,6 +678,58 @@ h1{
   padding-bottom:54px;
 }
 
+/* Hours guide - sits inside the packages section, above the price cards */
+.hours-guide{
+  margin-top:34px;
+}
+.hours-guide-title{
+  margin:0;
+  font-size:20px;
+  letter-spacing:-0.02em;
+  text-align:center;
+}
+.hours-guide-intro{
+  margin:8px auto 0;
+  max-width:64ch;
+  text-align:center;
+  color:var(--muted2);
+  font-size:14px;
+}
+.hours-guide-grid{
+  margin-top:24px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+.hours-guide-col-title{
+  font-weight:800;
+  font-size:15px;
+  color:var(--text);
+}
+.hours-guide-col-title span{
+  display:block;
+  margin-top:4px;
+  font-weight:500;
+  font-size:13px;
+  color:var(--muted2);
+}
+.hours-guide-col .feature-list{
+  margin:12px 0 0;
+  font-size:14px;
+}
+.hours-guide-col + .hours-guide-col{
+  border-left:1px solid var(--line);
+  padding-left:28px;
+}
+.hours-guide-note{
+  margin:22px 0 0;
+  text-align:center;
+  color:var(--muted2);
+  font-size:13px;
+}
+.hours-guide-note a{color:var(--primary2); font-weight:700}
+.hours-guide-note a:hover{text-decoration:underline}
+
 /* Pricing */
 .pricing-grid{margin-top:34px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:22px; align-items:stretch}
 .price-card{
@@ -1165,6 +1217,8 @@ input:focus, textarea:focus{outline:3px solid rgba(11,94,215,.18); border-color:
     width:min(280px, 50%);
   }
   h1{font-size:40px}
+  .hours-guide-grid{grid-template-columns:1fr; gap:20px}
+  .hours-guide-col + .hours-guide-col{border-left:none; padding-left:0; padding-top:20px; border-top:1px solid var(--line)}
   .pricing-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr; gap:12px}
   .step-arrow{display:none}
