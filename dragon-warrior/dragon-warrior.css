@@ -1,0 +1,193 @@
+/* Dragon Warrior page. Adapted from the original game's css/style.css.
+   The original was written as a full standalone page (global * reset,
+   html/body background, .container/.btn/.footer classes) which would
+   collide with the site's own chrome if loaded as-is. Everything below is
+   scoped under #dragonWarriorApp, and the handful of colliding class names
+   (.container, .container2, .btn/.btn-success, .footer) were renamed or
+   dropped in favor of the site's own equivalents. Gameplay logic in the
+   original JS files is untouched. */
+
+#dragonWarriorApp,
+#dragonWarriorApp * {
+  margin: 0;
+  padding: 0;
+}
+
+#dragonWarriorApp {
+  background-color: #444;
+  padding: 20px 0 40px;
+  border-radius: var(--radius2);
+}
+
+.dw-container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 15px 50px;
+}
+.dw-container2 {
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) { .dw-container { width: 750px; } }
+@media (min-width: 992px) { .dw-container { width: 970px; } }
+@media (min-width: 1200px) { .dw-container { width: 1170px; } }
+
+#dragonWarriorApp #table {
+  border-spacing: 0;
+  display: none;
+}
+#dragonWarriorApp .tds {
+  width: 20px;
+  height: 20px;
+}
+#dragonWarriorApp #table td {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(200, 200, 200, 0);
+}
+#dragonWarriorApp tr {
+  margin: 0;
+  padding: 0;
+}
+#dragonWarriorApp .panelItem {
+  background-color: rgba(200, 200, 200, 0.3);
+}
+#dragonWarriorApp .settingsPanel input {
+  width: 30px;
+}
+#dragonWarriorApp .settingsPanel {
+  margin: 0 auto;
+}
+#dragonWarriorApp #gameDiv,
+#dragonWarriorApp #table,
+#dragonWarriorApp #table2,
+#dragonWarriorApp #panel {
+  margin: 0 auto;
+}
+#dragonWarriorApp #gameDiv {
+  border: 3px solid black;
+  margin: auto auto;
+  min-height: 500px;
+  background-image: url('img/bg.jpg');
+  background-size: cover;
+}
+#dragonWarriorApp #buttonDiv {
+  margin: 16px auto 0;
+}
+#dragonWarriorApp #M,
+#dragonWarriorApp #N,
+#dragonWarriorApp #K {
+  width: 40%;
+  display: inline;
+}
+#dragonWarriorApp .glyphicon {
+  height: 100%;
+}
+#dragonWarriorApp #playInfo {
+  background-color: rgba(200, 255, 200, 0.8);
+}
+#dragonWarriorApp i.heart {
+  color: red;
+  position: relative;
+  left: 3px;
+  top: 1px;
+}
+#dragonWarriorApp i.at {
+  position: relative;
+  left: 4px;
+  color: black;
+}
+#dragonWarriorApp #bogyo1:hover,
+#dragonWarriorApp #bogyo2:hover,
+#dragonWarriorApp #bogyo3:hover,
+#dragonWarriorApp #bogyo4:hover,
+#dragonWarriorApp #bogyo5:hover,
+#dragonWarriorApp #bogyo6:hover {
+  cursor: pointer;
+}
+#dragonWarriorApp #gameName,
+#dragonWarriorApp .masthead {
+  background-color: #ddd;
+  margin: 0;
+  padding: 5px 0;
+  border-left: 20px solid #ddd;
+}
+#dragonWarriorApp label {
+  position: relative;
+  top: 8px;
+}
+#dragonWarriorApp #headerRow {
+  border-bottom: 2px solid black;
+}
+#dragonWarriorApp #tutorial {
+  margin: 0 auto;
+}
+#dragonWarriorApp #bogyo1 { background-color: yellow; }
+#dragonWarriorApp #bogyo2 { background-color: pink; }
+#dragonWarriorApp #bogyo3 { background-color: magenta; }
+#dragonWarriorApp #bogyo4 { background-color: blue; }
+#dragonWarriorApp #bogyo5 { background-color: green; }
+#dragonWarriorApp #bogyo6 { background-color: orange; }
+#dragonWarriorApp .makeYourSettings {
+  font-weight: 900;
+  text-decoration: underline;
+}
+#dragonWarriorApp #headerCol {
+  background-color: #ddd;
+  border-bottom: 18px solid #ddd;
+}
+#dragonWarriorApp #headerColTable {
+  margin: 0 auto;
+  display: inline;
+  position: relative;
+  top: 10px;
+}
+#dragonWarriorApp .headerSneakLogo {
+  border-radius: 10px;
+  background-color: rgb(173, 166, 62);
+}
+#dragonWarriorApp .headerSneakLogoHead {
+  border-radius: 10px;
+  background-color: rgb(123, 66, 12);
+}
+#dragonWarriorApp .bgColorDDD {
+  background-color: #ddd;
+}
+#dragonWarriorApp .sideSneakLogo {
+  width: 20px;
+  border-radius: 10px;
+  background-color: rgb(173, 166, 62);
+}
+#dragonWarriorApp .sideSneakLogoHead {
+  width: 20px;
+  border-radius: 10px;
+  background-color: rgb(123, 66, 12);
+}
+#dragonWarriorApp .spiral {
+  position: relative;
+  left: 4px;
+}
+#dragonWarriorApp .sideSneakLogoTable {
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  left: -20px;
+}
+#dragonWarriorApp #bogyok {
+  border-spacing: 15px;
+  margin: 48px auto;
+}
+#dragonWarriorApp .infoTD {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#dragonWarriorApp .infoLabelTD {
+  padding-right: 25px;
+}
+#dragonWarriorApp .bogyoTD {
+  width: 20px;
+  border-radius: 10px;
+}
+#dragonWarriorApp .underLined {
+  text-decoration: underline;
+}

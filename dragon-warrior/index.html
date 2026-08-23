@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="/assets/checkoutlabs-logo-icon.png">
+  <title>Dragon Warrior - An Early Hobby Project | CheckoutLabs</title>
+  <meta name="description" content="Play Dragon Warrior, an early hobby project: a Snake-style puzzle game built with vanilla HTML, CSS and JavaScript for a university web development course." />
+  <link rel="canonical" href="https://checkoutlabs.dev/dragon-warrior/" />
+  <link rel="alternate" hreflang="en" href="https://checkoutlabs.dev/dragon-warrior/" />
+  <link rel="alternate" hreflang="x-default" href="https://checkoutlabs.dev/dragon-warrior/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CheckoutLabs" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://checkoutlabs.dev/dragon-warrior/" />
+  <meta property="og:title" content="Dragon Warrior - An Early Hobby Project" />
+  <meta property="og:description" content="Play Dragon Warrior, an early hobby project: a Snake-style puzzle game built with vanilla HTML, CSS and JavaScript for a university web development course." />
+  <meta property="og:image" content="https://checkoutlabs.dev/dragon-warrior/img/bg.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dragon Warrior - An Early Hobby Project" />
+  <meta name="twitter:description" content="Play Dragon Warrior, an early hobby project: a Snake-style puzzle game built with vanilla HTML, CSS and JavaScript for a university web development course." />
+  <meta name="twitter:image" content="https://checkoutlabs.dev/dragon-warrior/img/bg.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=20260823-game-hero" />
+  <!-- Bootstrap + Font Awesome: only used to power the original game's settings
+       panel/grid layout below, scoped to #dragonWarriorApp. Loaded after the
+       site's own styles.css so the site's .container/.btn/.badge classes in
+       the header and footer always win if a name ever collides. -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/dragon-warrior/dragon-warrior.css" />
+  <!-- Google Analytics 4 is loaded from script.js only after cookie consent is granted -->
+  <!-- Cloudflare Web Analytics: cookie-free aggregate traffic counting, loaded for everyone regardless of cookie consent -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "474b1f60348f47eca409b2ec6c0cb474"}'></script>
+</head>
+<body class="dragon-warrior-page">
+  <div class="site-scroll-progress" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="CheckoutLabs home">
+        <img src="/assets/checkoutlabs-logo-icon.png" alt="" class="brand-icon" width="42" height="42" aria-hidden="true">
+        <span class="brand-wordmark">Checkout<span>Labs</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="/about/">About</a>
+        <a class="nav-link" href="/work/">Work</a>
+        <a class="nav-link" href="/blog/">Blog</a>
+        <a class="nav-link" href="/#howitworks">Process</a>
+        <a class="nav-link" href="/#packages">Packages</a>
+        <a class="nav-link" href="/#faqs">FAQs</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-primary" href="/#book">Get Started</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" hidden>
+      <a class="mobile-link" href="/about/">About</a>
+      <a class="mobile-link" href="/work/">Work</a>
+      <a class="mobile-link" href="/blog/">Blog</a>
+      <a class="mobile-link" href="/#howitworks">Process</a>
+      <a class="mobile-link" href="/#packages">Packages</a>
+      <a class="mobile-link" href="/#faqs">FAQs</a>
+      <a class="btn btn-primary" href="/#book">Get Started</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="small-container">
+      <a class="blog-back" href="/about/">&larr; Back to About</a>
+    </div>
+
+    <section class="game-hero">
+      <div class="small-container">
+        <div class="project-kicker">Hobby Project</div>
+        <h1>Dragon Warrior</h1>
+        <p class="section-sub">An early Snake-style puzzle game, originally built in 2016 as a university web development assignment (ELTE IK, Web Development 2) with vanilla HTML, CSS and JavaScript. Pick a grid size, then use the arrow keys to move.</p>
+      </div>
+    </section>
+
+    <div id="dragonWarriorApp">
+      <div class="dw-container">
+        <div class="dw-container2">
+          <div class="row" id="headerRow">
+            <div class="col col-lg-12" id="headerCol">
+              <div id="gameName" class="text-center">Dragon Warrior
+                <table id="headerColTable">
+                  <tr>
+                    <td class="headerSneakLogo">&nbsp;</td>
+                    <td class="headerSneakLogo">&nbsp;</td>
+                    <td class="headerSneakLogo">&nbsp;</td>
+                    <td class="headerSneakLogo">&nbsp;</td>
+                    <td class="headerSneakLogoHead">&nbsp;</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col col-lg-3 bgColorDDD">
+              <h3 class="text-center">
+                <strong class="makeYourSettings">Make your settings</strong>
+              </h3>
+              <div class="settingsPanel">
+                <form class="settingsPanel">
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="N">Rows</label>
+                    <div class="col-md-6">
+                      9 &lt; <input type="text" class="form-control" id="N" placeholder="10"> &lt; 23
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="M">Columns</label>
+                    <div class="col-md-6">
+                      9 &lt; <input type="text" class="form-control" id="M" placeholder="10"> &lt; 46
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-6 control-label" for="K">Objects</label>
+                    <div class="col-md-6">
+                      0 <span class="underLined">&lt;</span> <input type="text" class="form-control" id="K" placeholder="2"> &lt; 20
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <table class="sideSneakLogoTable">
+                <tr>
+                  <td class="sideSneakLogo">&nbsp;</td>
+                  <td class="sideSneakLogo">&nbsp;</td>
+                  <td class="sideSneakLogo">&nbsp;</td>
+                  <td class="sideSneakLogo">&nbsp;</td>
+                  <td class="sideSneakLogoHead">&nbsp;</td>
+                </tr>
+              </table>
+              <div id="tutorial">
+                <table id="bogyok">
+                  <tr>
+                    <td id="bogyo1" class="bogyoTD">
+                      <i class="fa fa-bullseye at spiral">&nbsp;</i>
+                    </td>
+                    <td class="infoTD">
+                      <strong class="infoLabelTD">Wisdom:</strong><span class="pull-right"> +4 Growth</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td id="bogyo2" class="bogyoTD">
+                      <i class="fa fa-bullseye at spiral">&nbsp;</i>
+                    </td>
+                    <td class="infoTD">
+                      <strong class="infoLabelTD">Reverse:</strong><span class="pull-right"> Turn Back</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td id="bogyo3" class="bogyoTD">
+                      <i class="fa fa-bullseye at spiral">&nbsp;</i>
+                    </td>
+                    <td class="infoTD">
+                      <strong class="infoLabelTD">Mirrors:</strong><span class="pull-right"> Opposite Controls</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td id="bogyo4" class="bogyoTD">
+                      <i class="fa fa-bullseye at spiral">&nbsp;</i>
+                    </td>
+                    <td class="infoTD">
+                      <strong class="infoLabelTD">Greed:</strong><span class="pull-right"> 1.5X Fast (5 sec)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td id="bogyo5" class="bogyoTD">
+                      <i class="fa fa-bullseye at spiral">&nbsp;</i>
+                    </td>
+                    <td class="infoTD">
+                      <strong class="infoLabelTD">Laziness:</strong><span class="pull-right"> 1.5X Slow (5 sec)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td id="bogyo6" class="bogyoTD">
+                      <i class="fa fa-bullseye at">&nbsp;</i>
+                    </td>
+                    <td class="infoTD">
+                      <strong class="infoLabelTD">Gluttony:</strong> <span class="pull-right">+10 Growth</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="bogyoTD">
+                      <i class="fa fa-heart-o heart">&nbsp;</i>
+                    </td>
+                    <td class="infoTD">
+                      <strong class="infoLabelTD">Heart:</strong><span class="pull-right"> +1 Life (5 max)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="bogyoTD">
+                      <i class="fa fa-heart heart">&nbsp;</i>
+                    </td>
+                    <td class="infoTD">
+                      <strong class="infoLabelTD">Heart:</strong><span class="pull-right"> Gain max life</span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div id="buttonDiv" class="col col-md-12 text-center">
+                <button type="submit" class="btn btn-primary" id="start-btn" autofocus>Start</button>
+              </div>
+            </div>
+            <div class="col-lg-9" id="gameDiv">
+              <table id="table">
+                <tr id="playInfo">
+                  <td id="points" class="panelItem">&nbsp;</td>
+                  <td id="state" class="panelItem">&nbsp;</td>
+                  <td id="countdown" class="panelItem">&nbsp;</td>
+                  <td id="life1" class="panelItem">&nbsp;</td>
+                  <td id="life2" class="panelItem">&nbsp;</td>
+                  <td id="life3" class="panelItem">&nbsp;</td>
+                  <td id="life4" class="panelItem">&nbsp;</td>
+                  <td id="life5" class="panelItem">&nbsp;</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="small-container">
+      <p class="game-note">Use the arrow keys to move. Best played on a desktop with a keyboard.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand footer-logo">
+          <img src="/assets/checkoutlabs-logo-icon.png" alt="" class="brand-icon footer-brand-icon" width="40" height="40" aria-hidden="true">
+          <span class="brand-wordmark footer-wordmark">Checkout<span>Labs</span></span>
+        </div>
+        <p class="footer-text">White-label Shopify development for agencies and technical teams - apps, integrations, and advanced builds.</p>
+        <p class="footer-copy">&copy; <span id="year"></span> CheckoutLabs. All rights reserved.</p>
+      </div>
+
+      <div>
+        <div class="footer-title">Company</div>
+        <a class="footer-link" href="/">Home</a>
+        <a class="footer-link" href="/about/">About</a>
+        <a class="footer-link" href="/work/">Work</a>
+        <a class="footer-link" href="/blog/">Blog</a>
+        <a class="footer-link" href="/#howitworks">Process</a>
+        <a class="footer-link" href="/#packages">Packages</a>
+      </div>
+
+      <div>
+        <div class="footer-title">Resources</div>
+        <a class="footer-link" href="/#faqs">FAQs</a>
+        <a class="footer-link" href="/#book">Get Started</a>
+      </div>
+
+      <div>
+        <div class="footer-title">Get in Touch</div>
+        <p class="footer-text">Ready to discuss your Shopify development needs?</p>
+        <a class="btn btn-primary" href="/#book">Get Started</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <button class="footer-link linklike" type="button" data-modal-open="privacy">Privacy Policy</button>
+      <button class="footer-link linklike" type="button" data-modal-open="terms">Terms of Service</button>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="modal-privacy" aria-labelledby="privacy-title">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 id="privacy-title">Privacy Policy</h3>
+        <button class="modal-x" type="button" data-modal-close aria-label="Close">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p><strong>Summary:</strong> Only the information needed to respond to your inquiry is collected.</p>
+
+        <h4>Information collected</h4>
+        <ul>
+          <li><strong>Contact form:</strong> work email and message content you submit.</li>
+          <li><strong>Analytics:</strong> usage data via Google Analytics 4, only loaded after cookie consent is given in the banner shown on first visit.</li>
+          <li><strong>Aggregate traffic counting:</strong> anonymous, cookie-free visit counts via Cloudflare Web Analytics. This does not use cookies and does not track individual visitors, so it does not require consent.</li>
+        </ul>
+
+        <h4>How your data is used</h4>
+        <ul>
+          <li>To respond to your request and communicate about potential work.</li>
+          <li>To improve the website's content and performance.</li>
+        </ul>
+
+        <h4>Cookies &amp; consent</h4>
+        <p>Analytics cookies are only set if consent is given via the cookie banner. Consent can be withdrawn at any time by clearing your browser's local storage for this site and declining again, or by emailing the address below.</p>
+
+        <h4>Processors / third parties</h4>
+        <ul>
+          <li><strong>Form submissions:</strong> Formspree (handles message delivery).</li>
+          <li><strong>Analytics:</strong> Google Analytics 4 (Google Ireland Ltd.), loaded only with consent.</li>
+          <li><strong>Aggregate analytics:</strong> Cloudflare Web Analytics (Cloudflare, Inc.), cookie-free, loaded for all visitors regardless of consent.</li>
+        </ul>
+
+        <h4>Data retention</h4>
+        <p>Messages are kept as long as needed for communication and basic record-keeping.</p>
+
+        <h4>Your rights</h4>
+        <p>You can request access, correction, or deletion of your personal data by emailing: <strong>hello@checkoutlabs.com</strong>.</p>
+
+        <p class="muted small">Last updated: <span id="privacy-updated">2026-08-17</span></p>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="modal-terms" aria-labelledby="terms-title">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 id="terms-title">Terms of Service</h3>
+        <button class="modal-x" type="button" data-modal-close aria-label="Close">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p>These terms govern the use of this website and any inquiry submitted through it.</p>
+
+        <h4>No warranties</h4>
+        <p>This website is provided "as is". Information is kept as accurate as reasonably possible, but no warranties of any kind are provided.</p>
+
+        <h4>Engagement terms</h4>
+        <p>Any development work is subject to a separate written agreement (scope, pricing, timelines, and responsibilities).</p>
+
+        <h4>Limitation of liability</h4>
+        <p>To the maximum extent permitted by law, liability is excluded for indirect or consequential damages arising from the use of this website.</p>
+
+        <h4>Governing law</h4>
+        <p>Unless otherwise agreed in writing, disputes are governed by the applicable laws of the operating jurisdiction.</p>
+
+        <p class="muted small">Last updated: <span id="terms-updated">2026-01-01</span></p>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="/i18n.js?v=20260816-lang-switcher-lite"></script>
+  <script src="/script.js?v=20260821-i18n-blog-nav"></script>
+  <script src="/dragon-warrior/js/DragonWarriorUI.js"></script>
+  <script src="/dragon-warrior/js/DragonWarrior.js"></script>
+</body>
+</html>

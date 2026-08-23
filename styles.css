@@ -678,6 +678,33 @@ h1{
   padding-bottom:54px;
 }
 
+/* Shared hero/note for hobby-game pages (/sokoboy/, /dragon-warrior/) */
+.game-hero{
+  padding:56px 0 24px;
+  text-align:center;
+}
+.game-hero .project-kicker{
+  margin-bottom:10px;
+}
+.game-hero h1{
+  margin:0 0 12px;
+  font-size:40px;
+  letter-spacing:-0.03em;
+}
+.game-hero .section-sub{
+  margin:0 auto;
+  text-align:center;
+}
+.game-note{
+  margin:16px 0 0;
+  color:var(--muted2);
+  font-size:13px;
+}
+@media (max-width: 720px){
+  .game-hero{padding:40px 0 16px}
+  .game-hero h1{font-size:30px}
+}
+
 /* Hours guide - sits inside the packages section, above the price cards */
 .hours-guide{
   margin-top:34px;

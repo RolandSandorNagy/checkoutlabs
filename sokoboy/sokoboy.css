@@ -1,21 +1,6 @@
-/* SokoBoy page. Loaded only on /sokoboy/, alongside /styles.css. */
-
-.sokoboy-hero{
-  padding:56px 0 24px;
-  text-align:center;
-}
-.sokoboy-hero .project-kicker{
-  margin-bottom:10px;
-}
-.sokoboy-hero h1{
-  margin:0 0 12px;
-  font-size:40px;
-  letter-spacing:-0.03em;
-}
-.sokoboy-hero .section-sub{
-  margin:0 auto;
-  text-align:center;
-}
+/* SokoBoy page. Loaded only on /sokoboy/, alongside /styles.css.
+   Shared hero/note styling for hobby-game pages (.game-hero/.game-note)
+   lives in the main styles.css - see there for /dragon-warrior/ too. */
 
 .sokoboy-frame{
   max-width:1040px;
@@ -35,15 +20,4 @@
   border:10px solid var(--text);
   border-radius:12px;
   box-shadow:var(--shadow);
-}
-
-.sokoboy-note{
-  margin:16px 0 0;
-  color:var(--muted2);
-  font-size:13px;
-}
-
-@media (max-width: 720px){
-  .sokoboy-hero{padding:40px 0 16px}
-  .sokoboy-hero h1{font-size:30px}
 }
