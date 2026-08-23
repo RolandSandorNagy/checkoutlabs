@@ -157,6 +157,10 @@
 #dragonWarriorApp .bgColorDDD {
   background-color: #ddd;
 }
+#dragonWarriorApp .bgColorTransparent {
+  background: none;
+  color: white;  
+}
 #dragonWarriorApp .sideSneakLogo {
   width: 20px;
   border-radius: 10px;
