@@ -19,8 +19,10 @@
 
 #dragonWarriorApp {
   background-color: #444;
-  padding: 20px 0 40px;
+  padding: 20px 40px;
   border-radius: var(--radius2);
+  width: max-content;
+  margin: 0 auto;
 }
 
 .dw-container {
