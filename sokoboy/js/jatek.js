@@ -35,6 +35,22 @@ var KEYS = {
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
+// The canvas can be displayed smaller than its internal 1000x600 resolution
+// (responsive CSS scaling). e.layerX/e.layerY report position in displayed
+// pixels, so clicks land in the wrong place once the canvas is scaled down.
+// This maps client coordinates back to the canvas's internal coordinate space.
+function getCanvasMousePos(e) {
+    var rect = canvas.getBoundingClientRect();
+    // clientWidth/clientHeight and clientLeft/clientTop exclude the CSS
+    // border, matching the canvas's actual drawing surface.
+    var scaleX = canvas.width / canvas.clientWidth;
+    var scaleY = canvas.height / canvas.clientHeight;
+    return {
+        x: (e.clientX - rect.left - canvas.clientLeft) * scaleX,
+        y: (e.clientY - rect.top - canvas.clientTop) * scaleY
+    };
+}
+
 var Bullet = fw.entity(fw.EntityWithSprite, {
     init: function () {
         this.image = bullet;
@@ -408,8 +424,9 @@ var m3Btn = false;
 var m4Btn = false;
 
 var canvasMouseMoveListener = function (e) {
-        var eX = e.layerX;
-        var eY = e.layerY;
+        var pos = getCanvasMousePos(e);
+        var eX = pos.x;
+        var eY = pos.y;
         if(133 < eX && eX < 355 && 275 < eY && eY < 330) {
             ctx.drawImage(m2, 0, 0);
             if(m2Btn === false) {
@@ -438,8 +455,9 @@ var canvasMouseMoveListener = function (e) {
 
 var canvasClickListener = function (e) {
         //console.log(e);
-        var eX = e.layerX;
-        var eY = e.layerY;
+        var pos = getCanvasMousePos(e);
+        var eX = pos.x;
+        var eY = pos.y;
         if(133 < eX && eX < 355 && 275 < eY && eY < 330) {
             document.getElementById('canvas').removeEventListener('click', canvasClickListener, false);
             document.getElementById('canvas').removeEventListener('mousemove', canvasMouseMoveListener, false);
@@ -459,8 +477,9 @@ var canvasClickListener = function (e) {
 
 
 var canvasMouseMoveListenerForStory = function (e) {
-        var eX = e.layerX;
-        var eY = e.layerY;
+        var pos = getCanvasMousePos(e);
+        var eX = pos.x;
+        var eY = pos.y;
         if(30 < eX && eX < 140 && 260 < eY && eY < 340) {
             ctx.drawImage(story2, 0, 0);
         } else {
@@ -469,8 +488,9 @@ var canvasMouseMoveListenerForStory = function (e) {
     };
 
 var canvasClickListenerForStory = function (e) {
-        var eX = e.layerX;
-        var eY = e.layerY;
+        var pos = getCanvasMousePos(e);
+        var eX = pos.x;
+        var eY = pos.y;
         if(30 < eX && eX < 140 && 260 < eY && eY < 340) {
             document.getElementById('canvas').removeEventListener('click', canvasClickListenerForStory, false);
             document.getElementById('canvas').removeEventListener('mousemove', canvasMouseMoveListenerForStory, false);
@@ -480,8 +500,9 @@ var canvasClickListenerForStory = function (e) {
     };
 
 var canvasMouseMoveListenerForHelp = function (e) {
-        var eX = e.layerX;
-        var eY = e.layerY;
+        var pos = getCanvasMousePos(e);
+        var eX = pos.x;
+        var eY = pos.y;
         if(35 < eX && eX < 140 && 267 < eY && eY < 360) {
             ctx.drawImage(help2, 0, 0);
         } else {
@@ -490,8 +511,9 @@ var canvasMouseMoveListenerForHelp = function (e) {
     };
 
 var canvasClickListenerForHelp = function (e) {
-        var eX = e.layerX;
-        var eY = e.layerY;
+        var pos = getCanvasMousePos(e);
+        var eX = pos.x;
+        var eY = pos.y;
         if(35 < eX && eX < 140 && 267 < eY && eY < 360) {
             document.getElementById('canvas').removeEventListener('click', canvasClickListenerForHelp, false);
             document.getElementById('canvas').removeEventListener('mousemove', canvasMouseMoveListenerForHelp, false);
